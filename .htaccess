@@ -1,0 +1,32 @@
+# Activar el motor de reescritura
+RewriteEngine On
+
+# ############################
+# # # MODO MANTENIMIENTO
+# # ############################
+
+# # # Permitir acceso a la página de mantenimiento
+# RewriteCond %{REQUEST_URI} !^/mantenimiento/mantenimiento.html$
+
+# # # Permitir tu IP (79.117.227.111) para ver la web real
+# RewriteCond %{REMOTE_ADDR} !^79\.117\.227\.111$
+
+# # # Redirigir todo a mantenimiento
+
+# RewriteRule ^.*$ /mantenimiento/mantenimiento.html [L]
+
+############################
+# REGLAS NORMALES DE LA WEB
+############################
+
+# Redirigir /index.html o /index a la raíz del sitio
+RewriteCond %{THE_REQUEST} /index(\.html)? [NC]
+RewriteRule ^index(\.html)?$ / [R=301,L]
+
+# Reescribir URLs sin extensión a archivos .html existentes
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Redirigir URLs con .html a versión sin extensión (SEO friendly)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
