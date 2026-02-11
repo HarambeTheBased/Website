@@ -73,6 +73,11 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
   </noscript>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
+
+
   <!-- SEO: Structured Data (Schema.org) for Law Firm -->
   <script type="application/ld+json">
     {
@@ -100,10 +105,22 @@
     }
     </script>
 
+  <!-- Iconos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
-
+  <div class="topbar">
+    <div class="topbar-content">
+      <a href="tel:+34671398925">+34 671 39 89 25</a>
+      <a href="mailto:contacto@antoniogaitanabogados.com">contacto@antoniogaitanabogados.com</a>
+      <span class="topbar-item">
+        <i class="bi bi-clock"></i>
+        L–J 9:00–18:30 · V 9:00–14:00
+      </span>
+    </div>
+  </div>
   <header class="cabecera">
     <div class="logo-container">
       <a href="index.html"><img class="logo" src="img/logo-Antonio-Gaitan-abogados.svg"
@@ -117,11 +134,27 @@
     <div class="nav" id="nav">
       <div class="menu">
         <ul class="menu__nav">
-          <li class="menu_list"><a class="menu_link" href="index.html">Inicio</a></li>
-          <li class="menu_list"><a class="menu_link" href="nosotros.html">Nosotros</a></li>
-          <li class="menu_list"><a class="menu_link" href="servicios.html">Servicios</a></li>
-          <li class="menu_list"><a class="menu_link" href="contacto.html">Contacto</a></li>
+          <li class="menu_list"><a class="menu_link" href="leySegundaOportunidad.html">Cancela deudas</a></li>
+          <li class="menu_list"><a class="menu_link" href="gastoshipoteca.html">Desahucios</a></li>
+          <li class="menu_list"><a class="menu_link" href="derechoFamilia.html">Derecho de familia</a></li>
+          <li class="menu_list has-submenu">
+            <a class="menu_link submenu-link" href="servicios.html">
+              + Servicios
+
+            </a>
+
+            <ul class="submenu">
+              <li><a href="leySegundaOportunidad.html">Ley de segunda oportunidad</a></li>
+              <li><a href="regularizacion-de-fincas.html">Regularización de fincas</a></li>
+              <li><a href="derechoFamilia.html">Derecho de familia</a></li>
+              <li><a href="gastoshipoteca.html">Gastos de hipoteca</a></li>
+              <li><a href="accidentesTrafico.html">Accidentes de tráfico</a></li>
+              <li><a href="servicios.html">Ver todos</a></li>
+            </ul>
+          </li>
           <li class="menu_list"><a class="menu_link" href="blog.html">Blog</a></li>
+          <li id="contacto" class="menu_list"><a class="menu_link" href="tel:+34671398925"><i class="bi bi-telephone"
+                style="margin-right: 5px;"></i>Contactar</a></li>
 
         </ul>
       </div>
@@ -130,110 +163,205 @@
   <div class="filtro display-none"></div>
   <div class="main">
 
-    <div class="container portada">
-      <div class="row">
-        <div class="portada-layout">
-          <img class="portada-desktop" src="img/paginas/home.png"
-            alt="Imagen principal de Antonio Gaitán Abogados, despacho en Adra, Almería" loading="lazy">
-          <img class="portada-movil" src="img/paginas/home-movil-buena.avif"
-            alt="Imagen principal para móviles de Antonio Gaitán Abogados, Adra, Almería" loading="lazy">
-          <video style="display:none;" src=""></video>
+    <section class="hero py-5">
+
+      <!-- Vídeo de fondo -->
+      <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="img/video-fondo.mp4" type="video/mp4">
+        Tu navegador no soporta vídeo HTML5.
+      </video>
+
+      <!-- Capa oscura para legibilidad -->
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <!-- Título principal -->
+        <h1 class="titulo-hero fw-bold mb-3 text-center">
+          <span style="font-size: 70px; text-transform: uppercase;">El derecho</span>, desde todas las aristas
+        </h1>
+
+
+        <div class="row hero-texto">
+          <div class="col-lg-6 contenido-hero">
+
+            <p class="hero-text">
+              <strong>Asesoramiento jurídico integral</strong> en materia de <strong>Derecho
+                Civil</strong> <strong>Desahucios</strong>,
+              <strong>Cancelación de Deudas</strong>,
+              <strong>Regularización de fincas</strong>,
+              <strong>Divorcios</strong> y más en
+              <strong>Adra</strong>, <strong>Almería</strong>.
+            </p>
+            <p style="font-size: 20px;" class="ayuda text-center fw-bold">
+              ¿CÓMO PODEMOS AYUDARTE?
+            </p>
+
+            <a class="ver-servicios" href="servicios.html">Ver servicios</a>
+          </div>
+
+          <div class="contacto-hero col-lg-6">
+            <h3>CUÉNTANOS TU CASO</h3>
+            <a href="tel:+34671398925" class="btn llamar">Llamar</a>
+            <a href="https://wa.me/+34671398925" class="btn WhatsApp-b">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row antonio-home">
+          <div class="col-lg-5">
+            <img class="img-fluid rounded" src="img/colaboradores/antonio-gaitan-abogados.png" alt="">
+          </div>
+          <div class="col-lg-7 mt-4 mt-lg-0">
+
+            <h2 class="mb-4 intro-titulo carousel-title">SOBRE NOSOTROS</h2>
+            <p class="carousel-text intro-parrafo">En Antonio Gaitán Abogados ofrecemos las mejores soluciones para
+              nuestros clientes. Nuestro equipo altamente formado y especializado en Derecho Civil y Mercantil ofrece
+              asesoramiento jurídico de alto nivel sin perder cercanía.
+            </p>
+            <a href="nosotros.html" class="btn-sobreNosotros">Sobre nosotros</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="container introduccion">
-      <div class="row">
-        <div class="container cita">
-          <div class="row">
-            <h1 class="intro-titulo">Tu tranquilidad legal comienza aquí.</h1> <!-- Changed to h1 for SEO -->
-          </div>
-        </div>
-        <div class="container presentacion">
-          <div class="row">
-            <p class="intro-text">En un mundo donde cada decisión puede tener implicaciones jurídicas, contar
-              con respaldo profesional no es un lujo, es una necesidad.
-              En nuestro despacho, con sede en Adra (Almería), escuchamos, analizamos y
-              actuamos con rigor y cercanía. Estamos especializados en derecho civil
-              —contratos, responsabilidad, seguros, banca y defensa del consumidor— y
-              orientamos cada caso con una estrategia clara, eficaz y a medida.
-              Nos mueve un compromiso: que entiendas cada paso, cada opción, cada
-              consecuencia. Porque tu caso no es uno más; es tu tranquilidad en juego.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section class="servicios-home py-5">
+      <div class="container">
 
-    <div class="container servicios">
-      <div class="row">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <!-- Imagenes -->
-          <div class="carousel-inner">
-            <!--Imagen 1-->
-            <div class="carousel-item active">
-              <img class="carousel-img-desktop" src="img/servicios/LSO ESCRITORIO.svg"
-                alt="Ley de Segunda Oportunidad - Antonio Gaitán Abogados, Adra, Almería" loading="lazy">
-              <img class="carousel-img-movil" src="img/servicios/SEGUNA OPORTUNIDAD MOVIL.svg"
-                alt="Ley de Segunda Oportunidad para móviles - Antonio Gaitán Abogados, Adra, Almería" loading="lazy">
-              <div class="carousel-card">
-                <div class="carousel-info">
-                  <h2 class="carousel-title">Ley de Segunda Oportunidad</h2>
-                  <p class="carousel-text">Cancelamos tus deudas de forma legal y definitiva a través de la Ley de
-                    Segunda Oportunidad. Asesoramiento profesional desde el primer momento y sin compromiso.</p>
-                </div>
-                <a class="info-botton" href="leySegundaOportunidad.html">+ info</a>
-              </div>
+        <!-- Título -->
+        <div class="row mb-5">
+          <div class="col text-center text-white">
+            <h2 style="color: var(--color-white); font-size: 40px;" class="servicios-title carousel-title">Áreas de
+              especialización</h2>
+            <p class="servicios-subtitle text-center text-white ">
+              Tus problemas, en las mejores manos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Servicios -->
+        <div class="row g-4">
+
+          <!-- Servicio 1 -->
+          <div class="col-12 col-md-4">
+            <div class="servicio-card h-100">
+              <img style="width: 100%; border-radius: 5px;" src="img/servicios/SEGUNA OPORTUNIDAD MOVIL.svg" alt="">
+              <h3 class="servicio-title carousel-title">Cancela tus deudas</h3>
+              <p class="servicio-text carousel-text">
+                Empieza de cero, una segunda oportunidad es posible.
+              </p>
+              <a href="leySegundaOportunidad.html" class="btn">
+                Ver servicio
+              </a>
             </div>
-            <!--Imagen 2-->
-            <div class="carousel-item">
-              <img class="carousel-img-desktop" src="img/servicios/GASTOS HIPOTECA SLIDER ESCRITORIO.svg"
-                alt="Gastos de hipoteca - Antonio Gaitán Abogados, Adra, Almería" loading="lazy">
-              <img class="carousel-img-movil" src="img/servicios/GASTOS HIPOTECA MOVIL.svg"
-                alt="Gastos de hipoteca para móviles - Antonio Gaitán Abogados, Adra, Almería" loading="lazy">
-              <div class="carousel-card">
-                <div class="carousel-info">
-                  <h2 class="carousel-title">Gastos de Hipoteca</h2>
-                  <p class="carousel-text">Si firmaste una hipoteca con gastos abusivos, puedes recuperar lo que pagaste
-                    de más. Estudiamos tu caso y reclamamos lo que te corresponde, con eficacia y transparencia.</p>
-                </div>
-                <a class="info-botton" href="gastoshipoteca.html">+ info</a>
-              </div>
+          </div>
+
+          <!-- Servicio 2 -->
+          <div class="col-12 col-md-4">
+            <div class="servicio-card h-100">
+              <img style="width: 100%; border-radius: 5px;" src="img/servicios/GASTOS HIPOTECA MOVIL.svg" alt="">
+              <h3 class="servicio-title carousel-title">¿Problemas con tus inquilinos?</h3>
+              <p class="servicio-text carousel-text">
+                Mediación extrajudicial y gestión de desahucios rápida y eficaz.
+              </p>
+              <a href="gastoshipoteca.html" class="btn">
+                Ver servicio
+              </a>
             </div>
-            <!--Imagen 3-->
-            <div class="carousel-item">
-              <img class="carousel-img-desktop" src="img/servicios/ACCIDENTE SLIDER.svg"
-                alt="Accidentes de tráfico - Antonio Gaitán Abogados, Adra, Almería" loading="lazy">
-              <img class="carousel-img-movil" src="img/servicios/ACCIDENTE MOVIL.svg"
-                alt="Accidentes de tráfico para móviles - Antonio Gaitán Abogados, Adra, Almería" loading="lazy">
-              <div class="carousel-card">
-                <div class="carousel-info">
-                  <h2 class="carousel-title">Accidentes de Tráfico</h2>
-                  <p class="carousel-text">Reclamamos tu indemnización por accidente con rigor, rapidez y experiencia.
-                    Defendemos tus derechos frente a aseguradoras y gestionamos todo el proceso.</p>
+          </div>
+
+          <!-- Servicio 3 -->
+          <div class="col-12 col-md-4">
+            <div class="servicio-card h-100">
+              <img style="width: 100%; border-radius: 5px;" src="img/servicios/familia.jpg" alt="">
+              <h3 class="servicio-title carousel-title">¿Quieres regularizar tu vivienda o parcela?</h3>
+              <p class="servicio-text carousel-text">
+                Te acompañamos durante todo el proceso, desde la consulta a la notaría.
+              </p>
+              <a href="derechoFamilia.html" class="btn">
+                Ver servicio
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botón ver todos -->
+        <div class="row mt-5">
+          <div class="col text-center">
+            <a href="servicios.html" class="ver-servicios-home btn btn-lg">
+              Ver todos los servicios
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <div class="seccion-caracteristicas container-fluid py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6" style="min-height: 500px;">
+            <div class="position-relative h-100 rounded overflow-hidden">
+              <img class="caracteristicas position-absolute w-100 h-100" src="img/feature.png"
+                style="object-fit: cover;">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-5 pb-lg-5">
+            <div class="feature-text rounded p-lg-5">
+              <h3 class="mb-4 carousel-title">¿QUÉ NOS DIFERENCIA?</h3>
+              <div class="d-flex mb-4">
+                <div class=" btn-lg-square px-3" style="border-radius: 50px;">
+                  <h5 class="text-secondary m-0">01</h5>
                 </div>
-                <a class="info-botton" href="accidentesTrafico.html">+ info</a>
+                <div class="ml-4">
+                  <h5>Especialización reconocida:</h5>
+                  <p class="m-0 carousel-text">No solo practicamos el derecho; lo estudiamos y contribuimos a él. En
+                    Antonio Gaitán Abogados participamos en congresos jurídicos de ámbito internacional y publicamos en
+                    revistas especializadas, llevando el conocimiento más actual a cada caso.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div class=" btn-lg-square px-3" style="border-radius: 50px;">
+                  <h5 class="text-secondary m-0">02</h5>
+                </div>
+                <div class="ml-4">
+                  <h5>Eficiencia que tranquiliza:</h5>
+                  <p class="m-0 carousel-text">Combinamos agilidad procesal con un trato cercano. Te mantenemos
+                    informado en cada paso, buscando siempre la solución más favorable para tu situación personal.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class=" btn-lg-square px-3" style="border-radius: 50px;">
+                  <h5 class="text-secondary m-0">03</h5>
+                </div>
+                <div class="ml-4">
+                  <h5>La confianza de nuestros clientes:</h5>
+                  <p class="m-0 carousel-text">No lo decimos nosotros; lo dicen quienes han confiado en nosotros. Te
+                    invitamos a leer las experiencias reales de clientes a los que hemos ayudado a cancelar deudas,
+                    resolver desahucios o regularizar sus propiedades. Su satisfacción es nuestro mejor aval.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Botones -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
 
     <div class="container formulario">
-      <div class="row">
+      <div class="texto-form row">
+        <h3 class="form__title">El primer paso para <span class="resolverlo">resolverlo</span> <span
+            style="font-family: meddon;">empieza aquí</span></h3>
+      </div>
+      <div class="row formula">
         <form action="https://formsubmit.co/contacto@antoniogaitanabogados.com" method="POST">
-          <h3 class="form__title">Déjanos tu consulta a través del siguiente formulario</h3>
           <div class="form-container">
             <div class="input-form mb-3">
               <input type="text" name="nombre" class="form-control" placeholder="Nombre y apellido" required
@@ -248,31 +376,91 @@
                 aria-label="Mensaje de consulta"></textarea>
             </div>
             <button type="submit" class="btn-form">Enviar</button>
-            <div class="input-form mb-3">
-              <p class="form-info">Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
-            </div>
+
           </div>
         </form>
       </div>
     </div>
-    <section class="newsletter-home">
-      <div class="newsletter-home-inner">
 
-        <div class="newsletter-text">
-          <h2 class="carousel-title">Suscríbete a nuestra newsletter jurídica</h2>
-          <p class="carousel-text">
-            Recibe artículos legales claros y útiles sobre derecho civil,
-            seguros y actualidad jurídica directamente en tu correo.
-          </p>
+
+
+    <!-- Blog -->
+    <section id="entradas" class="text-center">
+      <div class="row entradas">
+        <h3>Últimas noticias</h3>
+        <div id="ultimas-entradas"></div>
+      </div>
+    </section>
+
+
+
+    <script>
+      fetch('blog.html')
+        .then(response => response.text())
+        .then(html => {
+          // Crear un contenedor temporal para parsear el HTML
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+
+          // Seleccionar todos los artículos
+          const posts = Array.from(doc.querySelectorAll('.post'));
+
+          // Tomar las últimas 3 entradas
+          const ultimas3 = posts.slice(-3).reverse();
+
+          // Insertarlas en la Home
+          const contenedor = document.getElementById('ultimas-entradas');
+          ultimas3.forEach(post => {
+            contenedor.appendChild(post.cloneNode(true));
+          });
+        })
+        .catch(err => console.error('Error cargando posts:', err));
+    </script>
+
+    <section class="preguntas">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Texto izquierda -->
+          <div class="texto-preguntas col-lg-6 mb-4 mb-lg-0">
+            <h3 class="fw-bold mb-3 carousel-title">¿Tienes dudas?</h3>
+
+            <p class="mb-3 carousel-text">
+              Entendemos que cada caso genera preguntas, por lo que hemos recopilado las más frecuentes sobre nuestros
+              servicios y
+              procesos legales para que puedas consultarlas antes de contactar con nosotros.
+            </p>
+
+            <a href="preguntas-frecuentes.html" class="btn btn-lg">
+              Ir a Preguntas Frecuentes
+            </a>
+          </div>
+
+          <!-- Imagen derecha -->
+          <div class="col-lg-6 text-center">
+            <img src="img/iconos/interrogacion-.svg" alt="Preguntas frecuentes" class="img-fluid"
+              style="max-width: 250px;">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="reviews" class="py-5 ">
+      <div class="container text-center">
+        <h2 class="text-center mb-4">Opiniones de nuestros clientes</h2>
+        <div>
+          <a href="https://search.google.com/local/writereview?placeid=ChIJ81YZVO5PcA0RwqMuwD7DmiA" target="_blank"
+            rel="noopener" class="review-btn btn btn-lg d-inline-flex align-items-center gap-2">
+            <i class="bi bi-star-fill"></i>
+            Déjanos tu reseña
+          </a>
         </div>
 
-        <form class="newsletter-form" id="newsletter-form-home">
-          <input type="email" name="email" placeholder="Tu email" required aria-label="Correo electrónico">
-          <button type="submit">
-            Suscribirme
-          </button>
-        </form>
-
+        <!-- Widget Google Reviews -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-ecfc4bf1-a4fd-4c39-94d2-d446cc6f50a6" data-elfsight-app-lazy></div>
       </div>
     </section>
 
