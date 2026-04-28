@@ -44,16 +44,31 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
  
-    <!-- Google Fonts -->
+    <!-- Google Fonts con preload diferido -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
+ 
+    <!-- Preconnect and Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
- 
-    <!-- Bootstrap CSS (una sola versión) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" fetchpriority="high">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    </noscript>
+    <link rel="stylesheet" href="css/style.css" fetchpriority="high">
  
     <!-- Structured Data (JSON-LD) con foco local -->
     <script type="application/ld+json">
@@ -100,25 +115,48 @@
         .carousel-text {
             text-align: justify;
         }
+        
+        /* Estilo para las tarjetas de ventajas */
+        .ventaja-card {
+            transition: transform 0.2s ease;
+        }
+        
+        .ventaja-card:hover {
+            transform: translateY(-8px);
+            background: #ffffff;
+            box-shadow: 0 12px 25px rgba(41, 82, 78, 0.12);
+        }
+        
+        .ventajas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .ventajas-grid {
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
  
 <body>
     <div class="topbar">
-        <div class="topbar-content">
-            <a href="tel:+34671398925">+34 671 39 89 25</a>
-            <a href="mailto:contacto@antoniogaitanabogados.com">contacto@antoniogaitanabogados.com</a>
-            <span class="topbar-item">
-                <i class="bi bi-clock"></i>
-                L–J 9:00–18:30 · V 9:00–14:00
-            </span>
-        </div>
+    <div class="topbar-content">
+        <a href="tel:+34671398925">+34 671 39 89 25</a>
+        <a href="mailto:contacto@antoniogaitanabogados.com">contacto@antoniogaitanabogados.com</a>
+        <span class="topbar-item">
+            <i class="bi bi-clock"></i>
+            L–J 9:00–18:30 · V 9:00–14:00
+        </span>
     </div>
-    
+</div>
     <header class="cabecera" role="banner">
         <div class="logo-container">
             <a href="index.html"><img class="logo" src="img/logo-Antonio-Gaitan-abogados.svg"
-                    alt="Antonio Gaitán Abogados Logo" loading="lazy"></a>
+                    alt="Antonio Gaitán Abogados Logo" loading="lazy" fetchpriority="high"></a>
         </div>
         <button class="burguer" id="burguer" aria-label="Toggle navigation menu">
             <div class="burguer-sticks"></div>
@@ -133,6 +171,7 @@
                     <li class="menu_list"><a class="menu_link" href="servicios.html">Servicios</a></li>
                     <li class="menu_list"><a class="menu_link" href="contacto.html">Contacto</a></li>
                     <li class="menu_list"><a class="menu_link" href="blog.html">Blog</a></li>
+ 
                 </ul>
             </div>
         </nav>
@@ -155,95 +194,129 @@
                     Gaitán Abogados · Abogado en Adra, Almería</p>
             </header>
  
+ 
             <!-- Imagen destacada -->
             <figure class="mb-4 mx-auto">
                 <img src="img/articulos/foto-divorcio-mutuo-acuerdo.png"
-                    alt="Divorcio de mutuo acuerdo: la mejor opción para una separación" class="img-fluid" loading="lazy" />
+                    alt="Divorcio de mutuo acuerdo: la mejor opción para una separación" style="width:100%;" loading="lazy" />
             </figure>
+ 
  
             <!-- Contenido -->
             <section class="mx-auto col-lg-8 post-content">
+ 
                 <p class="carousel-text">
                     Tomar la decisión de poner fin a un matrimonio es, sin duda, uno de los momentos más difíciles en la vida de cualquier persona. Sin embargo, la forma en que se lleva a cabo ese proceso puede marcar una enorme diferencia en el bienestar de ambas partes y, especialmente, en el de los hijos si los hubiera. En <strong>Antonio Gaitán Abogados</strong>, despacho especializado en derecho de familia en Adra (Almería), acompañamos a nuestros clientes en estos procesos con profesionalidad, discreción y plena dedicación.
-                </p>
+                </p><br>
  
                 <p class="carousel-text">
                     En este artículo analizamos en profundidad las <strong>ventajas del divorcio de mutuo acuerdo</strong>, la modalidad de separación que, cuando es posible, recomendamos por su eficacia, menor coste emocional y económico, y por los resultados más satisfactorios para ambas partes.
-                </p>
+                </p><br>
  
                 <h2 class="blog-titulo">¿Qué es el divorcio de mutuo acuerdo?</h2>
  
                 <p class="carousel-text">
                     El <strong>divorcio de mutuo acuerdo</strong>, también conocido como divorcio consensual, es aquel en el que ambos cónyuges están de acuerdo en disolver el vínculo matrimonial y en las condiciones que regularán su separación. Estas condiciones quedan recogidas en un documento denominado <strong>convenio regulador</strong>, que abarca aspectos como la custodia de los hijos, el régimen de visitas, la pensión de alimentos, el uso de la vivienda familiar y, en su caso, la pensión compensatoria.
-                </p>
+                </p><br>
  
                 <p class="carousel-text">
                     En España, el divorcio de mutuo acuerdo puede tramitarse ante el <strong>Juzgado de Primera Instancia</strong> o, si no existen hijos menores o dependientes, ante <strong>Notario</strong>, lo que agiliza aún más el procedimiento. Como abogados especialistas en derecho de familia en Adra y en toda la provincia de Almería, orientamos a cada cliente sobre la vía más conveniente en función de su situación particular.
-                </p>
+                </p><br>
  
                 <h2 class="blog-titulo">Principales ventajas del divorcio de mutuo acuerdo</h2>
- 
-                <p class="carousel-text">
-                    <strong>1. Reducción significativa de los plazos.</strong> Una de las ventajas más valoradas por quienes optan por esta vía es la <strong>rapidez del procedimiento</strong>. Mientras que un divorcio contencioso —es decir, aquel en el que no existe acuerdo entre las partes— puede prolongarse durante meses o incluso años, el divorcio de mutuo acuerdo se resuelve habitualmente en pocas semanas desde la presentación de la solicitud. Esta agilidad resulta especialmente relevante cuando es necesario resolver con urgencia cuestiones relativas a la custodia de los hijos o al uso de la vivienda familiar.
-                </p>
- 
-                <p class="carousel-text">
-                    <strong>2. Menor coste económico.</strong> El aspecto económico es otro de los factores determinantes. El <strong>divorcio contencioso requiere la intervención de dos abogados y dos procuradores</strong> (uno por cada parte), y el proceso puede generar gastos considerables en honorarios profesionales y costas judiciales. En cambio, el divorcio de mutuo acuerdo puede tramitarse con una representación jurídica coordinada y con honorarios sensiblemente <strong>inferiores a los de un procedimiento contencioso</strong>, lo que supone un alivio económico importante en un momento ya de por sí costoso.
-                </p>
- 
-                <p class="carousel-text">
-                    <strong>3. Menor impacto emocional y psicológico.</strong> El proceso judicial contencioso implica, en muchas ocasiones, enfrentamientos directos entre las partes, declaraciones en sede judicial y una exposición al conflicto que deteriora gravemente la relación entre los excónyuges. Este clima de confrontación afecta no solo a las personas directamente implicadas, sino también a sus hijos, familiares y entorno cercano. El divorcio de mutuo acuerdo, por el contrario, favorece un <strong>clima de diálogo y entendimiento</strong>, preservando en la medida de lo posible una relación respetuosa entre ambas partes. Esto resulta especialmente beneficioso cuando existen hijos en común, ya que los progenitores deberán mantener una relación de coparentalidad durante años.
-                </p>
- 
-                <p class="carousel-text">
-                    <strong>4. Mayor control sobre el acuerdo final.</strong> En un divorcio contencioso, es el juez quien tiene la última palabra sobre las condiciones de la separación, lo que significa que ninguna de las partes tiene garantizado un resultado favorable en todos los aspectos que le interesan. En el divorcio de mutuo acuerdo, son <strong>los propios cónyuges quienes diseñan el convenio regulador</strong>, adaptándolo a sus circunstancias particulares y a sus necesidades reales. Este mayor grado de autonomía suele traducirse en acuerdos más equilibrados, más estables en el tiempo y con menor probabilidad de ser impugnados en el futuro.
-                </p>
- 
-                <p class="carousel-text">
-                    <strong>5. Confidencialidad del proceso.</strong> A diferencia de los procedimientos contenciosos, en los que los conflictos entre las partes pueden quedar registrados en documentos judiciales más extensos, el divorcio de mutuo acuerdo preserva en mayor medida la <strong>privacidad de ambas partes</strong>. Los detalles de la separación quedan circunscritos al convenio regulador y a la documentación estrictamente necesaria.
-                </p>
- 
-                <p class="carousel-text">
-                    <strong>6. Mayor cumplimiento voluntario de los acuerdos.</strong> La experiencia jurídica demuestra que los acuerdos alcanzados de forma consensuada tienen una <strong>tasa de cumplimiento voluntario muy superior</strong> a las resoluciones judiciales impuestas por sentencia. Cuando ambas partes han participado activamente en la negociación y han aceptado libremente las condiciones, es mucho más probable que las respeten sin necesidad de acudir nuevamente a los tribunales.
-                </p>
+                
+                <p class="carousel-text mb-4">El divorcio consensual no solo es más rápido y económico, sino que también protege su bienestar emocional y el de su familia. Estas son sus grandes ventajas:</p>
+                
+                <div class="ventajas-grid">
+                    
+                    <div class="ventaja-card" style="background: #f8f9fa; border-radius: 20px; padding: 1.8rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h3 style="color: #29524E; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem;">Rapidez extrema</h3>
+                        <p style="color: #4a5568; line-height: 1.5; margin: 0;">Resuelto en semanas, no meses. Ideal para empezar una nueva etapa sin demoras innecesarias.</p>
+                    </div>
+                
+                    <div class="ventaja-card" style="background: #f8f9fa; border-radius: 20px; padding: 1.8rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h3 style="color: #29524E; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem;">Ahorro económico</h3>
+                        <p style="color: #4a5568; line-height: 1.5; margin: 0;">Honorarios mucho más bajos que en un contencioso. Sin dos procuradores ni costas innecesarias.</p>
+                    </div>
+                
+                    <div class="ventaja-card" style="background: #f8f9fa; border-radius: 20px; padding: 1.8rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h3 style="color: #29524E; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem;">Menos conflicto</h3>
+                        <p style="color: #4a5568; line-height: 1.5; margin: 0;">Proceso respetuoso que protege la salud mental de toda la familia, sobre todo los hijos.</p>
+                    </div>
+                
+                    <div class="ventaja-card" style="background: #f8f9fa; border-radius: 20px; padding: 1.8rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h3 style="color: #29524E; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem;">Usted decide</h3>
+                        <p style="color: #4a5568; line-height: 1.5; margin: 0;">Diseña el convenio a su medida, sin imposiciones de un juez. Más control sobre su futuro.</p>
+                    </div>
+                
+                    <div class="ventaja-card" style="background: #f8f9fa; border-radius: 20px; padding: 1.8rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h3 style="color: #29524E; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem;">Cumplimiento asegurado</h3>
+                        <p style="color: #4a5568; line-height: 1.5; margin: 0;">Lo acordado se respeta más porque ambas partes participaron en la solución.</p>
+                    </div>
+                
+                    <div class="ventaja-card" style="background: #f8f9fa; border-radius: 20px; padding: 1.8rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h3 style="color: #29524E; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem;">Máxima confidencialidad</h3>
+                        <p style="color: #4a5568; line-height: 1.5; margin: 0;">Sus asuntos privados no quedan expuestos en un largo litigio judicial.</p>
+                    </div>
+                </div>
  
                 <h2 class="blog-titulo">¿Cuándo no es posible el divorcio de mutuo acuerdo?</h2>
  
                 <p class="carousel-text">
                     Aunque esta modalidad presenta numerosas ventajas, no siempre es viable. Puede resultar inaccesible cuando existe un desequilibrio de poder significativo entre las partes, cuando hay situaciones de violencia doméstica, o cuando las posiciones sobre aspectos fundamentales —como la custodia de los hijos— son irreconciliables. En estos casos, el divorcio contencioso es el camino adecuado, y contar con un <strong>abogado experto en derecho de familia en Almería</strong> resulta indispensable para defender los intereses del cliente con rigor y eficacia.
-                </p>
+                </p><br>
  
                 <h2 class="blog-titulo">La importancia de contar con asesoramiento jurídico especializado</h2>
  
                 <p class="carousel-text">
                     Aunque el proceso de mutuo acuerdo es más sencillo que el contencioso, eso no significa que deba afrontarse sin orientación profesional. La redacción del <strong>convenio regulador</strong> es un documento de gran relevancia jurídica que puede tener consecuencias importantes a largo plazo. Un convenio mal redactado, con cláusulas ambiguas o que no contemple determinadas situaciones, puede dar lugar a conflictos futuros y a la reapertura del procedimiento judicial.
-                </p>
+                </p><br>
  
                 <p class="carousel-text">
                     En <strong>Antonio Gaitán Abogados</strong>, contamos con amplia experiencia en la tramitación de divorcios de mutuo acuerdo en Adra y en toda la provincia de Almería. Analizamos cada caso de forma individualizada, asesoramos a nuestros clientes sobre sus derechos y obligaciones, y redactamos el convenio regulador garantizando que todas las condiciones queden definidas con claridad y precisión. Nuestro objetivo es que el proceso sea lo más ágil, económico y tranquilo posible para todas las partes implicadas.
-                </p>
+                </p><br>
  
                 <div class="share-article">
                     <span class="share-label">Compartir:</span>
-                    <a href="#" class="share-btn whatsapp" aria-label="Compartir en WhatsApp">WhatsApp</a>
-                    <a href="#" class="share-btn linkedin" aria-label="Compartir en LinkedIn">LinkedIn</a>
-                    <a href="#" class="share-btn facebook" aria-label="Compartir en Facebook">Facebook</a>
-                    <a href="#" class="share-btn twitter" aria-label="Compartir en X">X</a>
-                    <button class="share-btn print" onclick="window.print()">Imprimir</button>
+ 
+                    <a href="#" class="share-btn whatsapp" aria-label="Compartir en WhatsApp">
+                        WhatsApp
+                    </a>
+ 
+                    <a href="#" class="share-btn linkedin" aria-label="Compartir en LinkedIn">
+                        LinkedIn
+                    </a>
+ 
+                    <a href="#" class="share-btn facebook" aria-label="Compartir en Facebook">
+                        Facebook
+                    </a>
+ 
+                    <a href="#" class="share-btn twitter" aria-label="Compartir en X">
+                        X
+                    </a>
+ 
+                    <button class="share-btn print" onclick="window.print()">
+                        Imprimir
+                    </button>
                 </div>
+ 
             </section>
+ 
  
             <!-- CTA con enfoque local -->
             <section class="mt-5 p-4 text-center" style="background:#29524E; border-radius:8px;">
-                <h3 class="text-white">¿Necesita iniciar un divorcio en Adra o Almería?</h3>
-                <p class="text-white mt-3 mb-3">Contacte con Antonio Gaitán Abogados, su abogado en Adra especializado en derecho de familia y divorcios de mutuo acuerdo. Estudiaremos su caso sin compromiso y le acompañaremos en cada etapa del proceso con profesionalidad y discreción.</p>
-                <a href="contacto.html" class="btn" style="background-color: #00989A; color: white;">Contactar ahora</a>
+                <h3 style="color: white;">¿Necesita iniciar un divorcio en Adra o Almería?</h3>
+                <p class="text-center text-white mt-3 mb-3">Contacte con Antonio Gaitán Abogados, su abogado en Adra especializado en derecho de familia y divorcios de mutuo acuerdo. Estudiaremos su caso sin compromiso y le acompañaremos en cada etapa del proceso con profesionalidad y discreción.</p>
+                <a href="contacto.html" class="btn" style="background-color: #00989A; color: white; text-decoration: none; padding: 10px 25px; border-radius: 5px;">Contactar ahora</a>
             </section>
  
-            <!-- Volver al blog -->
+ 
+            <!-- Volver -->
             <nav class="mt-4 mb-5">
                 <a style="color: #29524E;" href="blog.html">← Volver al blog</a>
             </nav>
+ 
+ 
         </article>
     </main>
  
@@ -257,24 +330,37 @@
                 <section class="contacto-container" aria-labelledby="contacto-title">
                     <h2 class="footer-menu__titulo" id="contacto-title">Contacto</h2>
                     <ul class="contacto-listado">
-                        <li class="footer__list"><a href="mailto:contacto@antoniogaitanabogados.com">contacto@antoniogaitanabogados.com</a></li>
-                        <li><a href="https://acortar.link/xGETC0"><img style="margin-right:10px;" src="img/linkedin.svg" alt="LinkedIn de Antonio Javier Gaitán Peña" loading="lazy"> Antonio Javier Gaitán Peña</a></li>
-                        <li style="margin-top:10px;"><a style="display: flex;justify-content: center;align-items: center;" href="https://acortar.link/98y5US"><img style="width: 22px;" src="img/dialnet.svg" alt="Dialnet de Antonio Javier Gaitán Peña" loading="lazy"> Dialnet: Antonio Javier Gaitán Peña</a></li>
+                        <li class="footer__list"><a
+                                href="mailto:contacto@antoniogaitanabogados.com">contacto@antoniogaitanabogados.com</a>
+                        </li>
+                        <li><a href="https://acortar.link/xGETC0"><img style="margin-right:10px;" src="img/linkedin.svg"
+                                    alt="LinkedIn de Antonio Javier Gaitán Peña" loading="lazy"> Antonio Javier Gaitán
+                                Peña</a></li>
+                        <li style="margin-top:10px;"><a
+                                style="display: flex;justify-content: center;align-items: center;"
+                                href="https://acortar.link/98y5US"><img style="width: 22px;" src="img/dialnet.svg"
+                                    alt="Dialnet de Antonio Javier Gaitán Peña" loading="lazy"> Dialnet: Antonio Javier
+                                Gaitán Peña</a>
+                        </li>
                         <li class="footer__list"><a href="tel:+34671398925">+34 671 39 89 25</a></li>
-                        <li class="footer__list footer-list-direccion">C. Natalio Rivas, 15, Portal 1, 3º Oficina, Centro, 04770, Adra, Almería, España</li>
+                        <li class="footer__list footer-list-direccion">C. Natalio Rivas, 15, Portal 1, 3º Oficina,
+                            Centro, 04770,
+                            Adra, Almería, España</li>
                     </ul>
-                </section>
             </div>
-            <div class="politicas-container">
-                <section class="politicas-container" aria-labelledby="politicas-title">
-                    <h2 class="footer-menu__titulo" id="politicas-title">Información</h2>
-                    <ul class="politicas-listado">
-                        <li class="politicas-list"><a class="politicas__link" href="politica-cookies.html">Política de cookies</a></li>
-                        <li class="politicas-list"><a class="politicas__link" href="aviso-legal.html">Aviso legal</a></li>
-                        <li class="politicas-list"><a class="politicas__link" href="politica-proteccion-datos.html">Política de protección de datos</a></li>
-                    </ul>
-                </section>
-            </div>
+            <section class="politicas-container" aria-labelledby="politicas-title">
+                <h2 class="footer-menu__titulo" id="politicas-title">Información</h2>
+                <ul class="politicas-listado">
+                    <li class="politicas-list"><a class="politicas__link" href="politica-cookies.html">Política de
+                            cookies</a>
+                    </li>
+                    <li class="politicas-list"><a class="politicas__link" href="aviso-legal.html">Aviso legal</a></li>
+                    <li class="politicas-list"><a class="politicas__link" href="politica-proteccion-datos.html">Política
+                            de
+                            protección de datos</a></li>
+                </ul>
+        </div>
+        </div>
         </div>
         <div class="footer-subinfo">
             <div class="footer-subinfo__copyright">
@@ -282,41 +368,115 @@
             </div>
             <div class="footer-subinfo__pepedesign">
                 <div class="footer-subinfo__pepedesign__rrss">
-                    <a href="https://www.linkedin.com/in/antonio-javier-gait%C3%A1n-pe%C3%B1a-a51b6a277/"><img src="img/linkedin.svg" alt="LinkedIn de Antonio Gaitán" loading="lazy"></a>
+                    <a href="https://www.linkedin.com/in/antonio-javier-gait%C3%A1n-pe%C3%B1a-a51b6a277/"><img src="img/linkedin.svg"
+                            alt="LinkedIn de Antonio Gaitán" loading="lazy"></a>
+                    
                 </div>
             </div>
         </div>
     </footer>
  
-    <a href="https://wa.me/+34671398925" target="_blank" class="whatsapp-boton-container" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/+34671398925" target="_blank" class="whatsapp-boton-container"
+        aria-label="Contactar por WhatsApp">
         <img class="whatsapp-img" src="img/iconos/whatsapp-2.svg" alt="Icono de WhatsApp" loading="lazy">
     </a>
  
-    <!-- Bootstrap JS (una sola versión, la más reciente) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
     <script src="js/main.js" defer></script>
-    
-    <!-- Script para los botones de compartir -->
+    <!-- Small inline search filter -->
     <script>
-        (function() {
+        (function () {
+            const searchInput = document.getElementById('search');
+            const noResults = document.getElementById('no-results');
+            if (!searchInput) return;
+ 
+            searchInput.addEventListener('input', function () {
+                const q = this.value.toLowerCase().trim();
+                let found = false;
+ 
+                document.querySelectorAll('.post-card').forEach(card => {
+                    const title = card.querySelector('.post-title').textContent.toLowerCase();
+                    const excerpt = card.querySelector('.post-excerpt').textContent.toLowerCase();
+                    const match = title.includes(q) || excerpt.includes(q);
+ 
+                    card.style.display = match ? '' : 'none';
+                    if (match) found = true;
+                });
+ 
+                if (q !== '' && !found) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            });
+        })();
+    </script>
+    <script>
+        (function () {
             const url = encodeURIComponent(window.location.href);
             const title = encodeURIComponent(document.title);
  
-            const whatsappBtn = document.querySelector('.share-btn.whatsapp');
-            const linkedinBtn = document.querySelector('.share-btn.linkedin');
-            const facebookBtn = document.querySelector('.share-btn.facebook');
-            const twitterBtn = document.querySelector('.share-btn.twitter');
-            
-            if (whatsappBtn) whatsappBtn.href = `https://wa.me/?text=${title}%20${url}`;
-            if (linkedinBtn) linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-            if (facebookBtn) facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-            if (twitterBtn) twitterBtn.href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+            document.querySelector('.whatsapp').href =
+                `https://wa.me/?text=${title}%20${url}`;
+ 
+            document.querySelector('.linkedin').href =
+                `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+ 
+            document.querySelector('.facebook').href =
+                `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+ 
+            document.querySelector('.twitter').href =
+                `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
         })();
     </script>
+
+ <script>
+    (function() {
+        // Función mejorada para volver atrás
+        function goBackSafely() {
+            // Caso 1: Venimos de otra página (más confiable)
+            if (document.referrer && document.referrer !== '') {
+                // Verificar que no sea la misma página
+                if (document.referrer !== window.location.href) {
+                    window.location.href = document.referrer;
+                    return true;
+                }
+            }
+            
+            // Caso 2: Hay historial del navegador
+            if (window.history.length > 1) {
+                history.back();
+                return true;
+            }
+            
+            // Caso 3: No hay historial, redirigir a blog
+            window.location.href = 'blog.html';
+            return false;
+        }
+        
+        // Seleccionar el botón (puede ser button o a)
+        const btnVolver = document.querySelector('.btn-volver');
+        
+        if (btnVolver) {
+            btnVolver.addEventListener('click', function(event) {
+                // Si es un enlace (<a>), prevenir que vaya directo al href
+                if (btnVolver.tagName === 'A') {
+                    event.preventDefault();
+                }
+                goBackSafely();
+            });
+        }
+        
+        // Opcional: También responder al atajo de teclado (Alt+Izquierda o Backspace)
+        window.addEventListener('popstate', function() {
+            // No hacer nada aquí, solo para mantener consistencia
+        });
+    })();
+</script>
+ 
 </body>
  
 </html>
-</body>
- 
-</html>
- 
