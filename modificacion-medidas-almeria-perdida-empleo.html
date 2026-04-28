@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: http://ogp.me/ns#">
+ 
 <head>
-
-    <!-- Google tag (gtag.js) -->
+    <!-- Character Encoding and Viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BFV875PX7"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -10,37 +14,32 @@
         gtag('js', new Date());
         gtag('config', 'G-0BFV875PX7');
     </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Antonio Gaitán Abogados | Modificación de medidas por pérdida de empleo" />
-    <meta property="og:description" content="¿Puedo cambiar la pensión si pierdo mi trabajo? Requisitos, procedimiento y errores a evitar." />
+ 
+    <!-- SEO básico -->
+    <title>Modificación de medidas en Almería: ¿Puedo cambiar la pensión si pierdo mi trabajo? | Antonio Gaitán Abogados</title>
+    <meta name="description" content="¿Ha perdido su empleo? Descubra los requisitos, procedimiento y documentación necesaria para modificar la pensión de alimentos en Almería. Asesoramiento legal en Adra y Poniente." />
+    <meta name="author" content="Antonio Gaitán Abogados" />
+    <link rel="canonical" href="https://antoniogaitanabogados.com/blog/modificacion-medidas-perdida-empleo-almeria" />
+ 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Modificación de medidas en Almería: ¿Puedo cambiar la pensión si pierdo mi trabajo?" />
+    <meta property="og:description" content="Guía legal sobre la modificación de la pensión de alimentos por pérdida de empleo. Requisitos, documentación y errores a evitar." />
     <meta property="og:image" content="https://antoniogaitanabogados.com/img/logo-Antonio-Gaitan-abogados.svg" />
-    <meta property="og:url" content="https://antoniogaitanabogados.com/modificacion-medidas-perdida-empleo.html" />
     <meta property="og:type" content="article" />
-
-    <title>Antonio Gaitán Abogados | Modificación de la pensión por pérdida de empleo en Almería</title>
-
-    <!-- Bootstrap CSS no bloqueante -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    </noscript>
-
+    <meta property="og:site_name" content="Antonio Gaitán Abogados" />
+    <meta property="og:locale" content="es_ES" />
+ 
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modificación de pensiones por pérdida de empleo | Antonio Gaitán Abogados">
+    <meta name="twitter:description" content="¿Puede cambiar la pensión de alimentos si pierde su trabajo? Requisitos y procedimiento en Almería.">
+    <meta name="twitter:image" content="https://antoniogaitanabogados.com/img/logo-Antonio-Gaitan-abogados.svg">
+ 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-
-    <!-- Hoja de estilos personalizada -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Preconexión a Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google Fonts con preload diferido -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+ 
+    <!-- Google Fonts -->
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         onload="this.onload=null;this.rel='stylesheet'">
@@ -48,9 +47,22 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
     </noscript>
-    
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" fetchpriority="high">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    </noscript>
+    <link rel="stylesheet" href="css/style.css" fetchpriority="high">
+ 
     <style>
-        /* Estilos adicionales para la tabla y coherencia visual */
+        /* Estilo adicional para justificar el texto */
+        .post-content p, .post-content ul, .post-content li, .carousel-text {
+            text-align: justify;
+        }
+        
+        /* Estilos para la tabla de documentación */
         .documentacion-table {
             width: 100%;
             border-collapse: separate;
@@ -72,16 +84,75 @@
             border-bottom: 1px solid #e2e8f0;
         }
         .documentacion-table tbody tr:hover {
-            background: #f8f9fa;
+            background: #f1f5f9;
         }
         .documentacion-table th:first-child { border-top-left-radius: 12px; }
         .documentacion-table th:last-child { border-top-right-radius: 12px; }
         
-        .carousel-text {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            color: #1e293b;
+        /* Estilos para FAQ - Acordeón funcional */
+        .faq-section {
+            margin: 2rem 0 1rem 0;
         }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #29524E;
+            background: white;
+            transition: all 0.2s;
+            margin: 0;
+            font-size: 1.05rem;
+        }
+        
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+        
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            font-weight: normal;
+            transition: transform 0.2s;
+            color: #00989A;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: "−";
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: white;
+            border-top: 0px solid transparent;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.25rem 1.25rem 1.25rem;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .faq-answer p {
+            margin: 0.75rem 0;
+            line-height: 1.5;
+            color: #334155;
+        }
+        
         .blog-titulo {
             font-size: 1.75rem;
             font-weight: 600;
@@ -91,69 +162,96 @@
             border-left: 4px solid #00989A;
             padding-left: 1rem;
         }
-        .faq-section {
-            margin-top: 2rem;
-        }
-        .faq-item {
-            background: white;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid #e9ecef;
-        }
-        .faq-question {
-            padding: 1rem 1.25rem;
+        
+        h3 {
+            font-size: 1.3rem;
             font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
             color: #29524E;
-            transition: all 0.2s;
         }
-        .faq-question::after {
-            content: "+";
-            font-size: 1.5rem;
-            font-weight: normal;
-            transition: transform 0.2s;
+        
+        .share-article {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
         }
-        .faq-item.active .faq-question::after {
-            content: "−";
+        .share-label {
+            font-weight: 600;
+            color: #29524E;
         }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 1.25rem;
-            border-top: 0px solid transparent;
-        }
-        .faq-item.active .faq-answer {
-            max-height: 600px;
-            padding: 0rem 1.25rem 1.25rem 1.25rem;
-            border-top: 1px solid #e9ecef;
-        }
-        .btn-custom {
-            background-color: #00989A;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 40px;
-            font-weight: 500;
+        .share-btn {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            background: #f1f5f9;
+            color: #334155;
             text-decoration: none;
-            display: inline-block;
+            font-size: 0.85rem;
             transition: 0.2s;
         }
-        .btn-custom:hover {
-            background-color: #007a7c;
+        .share-btn:hover {
+            background: #29524E;
             color: white;
         }
-        .bg-verde-agua {
-            background: #29524E;
+        
+        .btn-volver {
+            background: none;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            color: #29524E;
+            font-weight: 500;
+        }
+        .btn-volver-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .btn-volver .hover {
+            display: none;
+        }
+        .btn-volver:hover .normal {
+            display: none;
+        }
+        .btn-volver:hover .hover {
+            display: inline-block;
         }
     </style>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Modificación de medidas en Almería: ¿Puedo cambiar la pensión si pierdo mi trabajo?",
+        "description": "Guía legal sobre la modificación de la pensión de alimentos por pérdida de empleo en Almería. Requisitos, procedimiento y documentación necesaria.",
+        "author": {
+            "@type": "Organization",
+            "name": "Antonio Gaitán Abogados"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Antonio Gaitán Abogados",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://antoniogaitanabogados.com/img/logo-Antonio-Gaitan-abogados.svg"
+            }
+        },
+        "datePublished": "2026-04-28",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://antoniogaitanabogados.com/blog/modificacion-medidas-perdida-empleo-almeria"
+        }
+    }
+    </script>
 </head>
-
+ 
 <body>
-
     <div class="topbar">
         <div class="topbar-content">
             <a href="tel:+34671398925">+34 671 39 89 25</a>
@@ -164,244 +262,269 @@
             </span>
         </div>
     </div>
-    <header class="cabecera">
+    <header class="cabecera" role="banner">
         <div class="logo-container">
             <a href="index.html"><img class="logo" src="img/logo-Antonio-Gaitan-abogados.svg"
-                    alt="Logo de Antonio Gaitán Abogados, despacho en Adra, Almería" loading="lazy"></a>
+                    alt="Antonio Gaitán Abogados Logo" loading="lazy" fetchpriority="high"></a>
         </div>
-        <div class="burguer" id="burguer">
+        <button class="burguer" id="burguer" aria-label="Toggle navigation menu">
             <div class="burguer-sticks"></div>
             <div class="burguer-sticks"></div>
             <div class="burguer-sticks"></div>
-        </div>
-        <div class="nav" id="nav">
+        </button>
+        <nav class="nav" id="nav" aria-label="Main navigation">
             <div class="menu">
                 <ul class="menu__nav">
-                    <li class="menu_list"><a class="menu_link" href="leySegundaOportunidad.html">Cancela deudas</a></li>
-                    <li class="menu_list"><a class="menu_link" href="gastoshipoteca.html">Desahucios</a></li>
-                    <li class="menu_list"><a class="menu_link" href="derechoFamilia.html">Derecho de familia</a></li>
-                    <li class="menu_list has-submenu">
-                        <a class="menu_link submenu-link" href="servicios.html">
-                            + Servicios
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="leySegundaOportunidad.html">Ley de segunda oportunidad</a></li>
-                            <li><a href="regularizacion-de-fincas.html">Regularización de fincas</a></li>
-                            <li><a href="derechoFamilia.html">Derecho de familia</a></li>
-                            <li><a href="gastoshipoteca.html">Gastos de hipoteca</a></li>
-                            <li><a href="accidentesTrafico.html">Accidentes de tráfico</a></li>
-                            <li><a href="servicios.html">Ver todos</a></li>
-                        </ul>
-                    </li>
+                    <li class="menu_list"><a class="menu_link" href="index.html">Inicio</a></li>
+                    <li class="menu_list"><a class="menu_link" href="nosotros.html">Nosotros</a></li>
+                    <li class="menu_list"><a class="menu_link" href="servicios.html">Servicios</a></li>
+                    <li class="menu_list"><a class="menu_link" href="contacto.html">Contacto</a></li>
                     <li class="menu_list"><a class="menu_link" href="blog.html">Blog</a></li>
-                    <li id="contacto" class="menu_list"><a class="menu_link" href="tel:+34671398925"><i class="bi bi-telephone" style="margin-right: 5px;"></i>Contactar</a></li>
                 </ul>
             </div>
-        </div>
+        </nav>
     </header>
+ 
+    <div class="filtro display-none" aria-hidden="true"></div>
+ 
+    <!-- Contenido del artículo -->
+    <main class="container post-main" style="padding-top: 80px;">
+        <article class="articulo">
+            <header class="header-articulo mb-4">
+                <!-- Volver -->
+                <button class="btn-volver" onclick="history.back()" aria-label="Volver atrás">
+                    <img src="img/iconos/atras-logotipo.png" alt="" class="btn-volver-icon normal">
+                    <img src="img/iconos/atras-logotipo-hover.png" alt="" class="btn-volver-icon hover">
+                    <span>Atrás</span>
+                </button>
+                <!-- TÍTULO -->
+                <h1 class="blog-titulo">Modificación de medidas en Almería: ¿Puedo cambiar la pensión si pierdo mi trabajo?</h1>
+                <p class="post-meta">Publicado el <time datetime="2026-04-28">28 de abril de 2026</time> · Antonio
+                    Gaitán Abogados · Abogado en Adra, Almería</p>
+            </header>
+ 
+            <!-- Contenido -->
+            <section class="mx-auto col-lg-8 post-content">
+ 
+                <p class="carousel-text">
+                    La pérdida del empleo es una de las causas más frecuentes para solicitar la <strong>modificación de medidas en Almería capital y el Poniente</strong>. El ordenamiento jurídico permite revisar la pensión de alimentos o compensatoria cuando se acredita un cambio sustancial y duradero en la capacidad económica del obligado al pago. En <strong>Antonio Gaitán Abogados</strong>, despacho especializado en derecho de familia en Adra (Almería), acompañamos a nuestros clientes en estos procesos con profesionalidad, discreción y plena dedicación.
+                </p><br>
+ 
+                <h2 class="blog-titulo">¿Qué dice la ley sobre la modificación de medidas?</h2>
+ 
+                <p class="carousel-text">
+                    El artículo 91 del Código Civil establece el principio fundamental: las medidas adoptadas en un procedimiento de divorcio o separación pueden ser modificadas cuando alteren sustancialmente las circunstancias que se tuvieron en cuenta al momento de acordarlas.
+                </p><br>
 
-    <main class="container my-5">
-        <article>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 post-content">
-                    
-                    <!-- Título principal H1 -->
-                    <h1 class="mb-4" style="color: #29524E; font-weight: 700;">Modificación de medidas en Almería: ¿Puedo cambiar la pensión si pierdo mi trabajo?</h1>
-                    
-                    <p class="carousel-text">
-                        Tomar la decisión de poner fin a un matrimonio es, sin duda, uno de los momentos más difíciles en la vida de cualquier persona. Sin embargo, la forma en que se lleva a cabo ese proceso puede marcar una enorme diferencia en el bienestar de ambas partes y, especialmente, en el de los hijos si los hubiera. En <strong>Antonio Gaitán Abogados</strong>, despacho especializado en derecho de familia en Adra (Almería), acompañamos a nuestros clientes en estos procesos con profesionalidad, discreción y plena dedicación.
-                    </p><br>
+                <p class="carousel-text">
+                    En la práctica judicial, se consideran causas objetivas de modificación las siguientes:
+                </p>
+                <ul class="carousel-text">
+                    <li><strong>Pérdida involuntaria del empleo:</strong> despido objetivo o disciplinario, finalización de contrato, o cese de actividad por cuenta propia.</li>
+                    <li><strong>Reducción significativa de los ingresos:</strong> acreditada mediante nóminas, declaraciones de la Renta o documentación del SEPE.</li>
+                    <li><strong>Nuevas obligaciones familiares sobrevenidas:</strong> nacimiento de hijos en una nueva relación, o asunción de cargas de familiares dependientes.</li>
+                    <li><strong>Incapacidad laboral temporal o permanente:</strong> siempre que afecte a la capacidad de generar ingresos.</li>
+                </ul><br>
 
-                    <p class="carousel-text">
-                        La pérdida del empleo es una de las causas más frecuentes para solicitar la <strong>modificación de medidas en Almería capital y el Poniente</strong>. El ordenamiento jurídico permite revisar la pensión de alimentos o compensatoria cuando se acredita un cambio sustancial y duradero en la capacidad económica del obligado al pago. A continuación, se exponen los requisitos, el procedimiento y los errores más comunes que deben evitarse.
-                    </p><br>
+                <p class="carousel-text">
+                    El mero desempleo transitorio no siempre justifica la modificación. El tribunal evaluará la duración previsible de la situación, las posibilidades reales de reinserción laboral en el mercado de Almería y su comarca, y el impacto sobre las necesidades del menor o del cónyuge beneficiario.
+                </p><br>
 
-                    <h2 class="blog-titulo">¿Qué dice la ley sobre la modificación de medidas?</h2>
-                    <p class="carousel-text">
-                        El artículo 91 del Código Civil establece el principio fundamental: las medidas adoptadas en un procedimiento de divorcio o separación pueden ser modificadas cuando alteren sustancialmente las circunstancias que se tuvieron en cuenta al momento de acordarlas.
-                    </p>
-                    <p class="carousel-text">
-                        En la práctica judicial, se consideran causas objetivas de modificación las siguientes:
-                    </p>
-                    <ul class="carousel-text" style="margin-bottom: 1rem;">
-                        <li><strong>Pérdida involuntaria del empleo:</strong> despido objetivo o disciplinario, finalización de contrato, o cese de actividad por cuenta propia.</li>
-                        <li><strong>Reducción significativa de los ingresos:</strong> acreditada mediante nóminas, declaraciones de la Renta o documentación del SEPE.</li>
-                        <li><strong>Nuevas obligaciones familiares sobrevenidas:</strong> nacimiento de hijos en una nueva relación, o asunción de cargas de familiares dependientes.</li>
-                        <li><strong>Incapacidad laboral temporal o permanente:</strong> siempre que afecte a la capacidad de generar ingresos.</li>
-                    </ul>
-                    <p class="carousel-text">
-                        El mero desempleo transitorio no siempre justifica la modificación. El tribunal evaluará la duración previsible de la situación, las posibilidades reales de reinserción laboral en el mercado de Almería y su comarca, y el impacto sobre las necesidades del menor o del cónyuge beneficiario.
-                    </p>
-                    <p class="carousel-text">
-                        El procedimiento puede iniciarse por dos vías: de mutuo acuerdo (si la otra parte reconoce el cambio) o contenciosa (cuando no existe acuerdo). En ambos casos, no es aconsejable dejar de pagar unilateralmente. La vía correcta es solicitar la modificación judicial y, si la urgencia del caso lo requiere, pedir medidas cautelares.
-                    </p><br>
+                <p class="carousel-text">
+                    El procedimiento puede iniciarse por dos vías: <strong>de mutuo acuerdo</strong> (si la otra parte reconoce el cambio) o <strong>contenciosa</strong> (cuando no existe acuerdo). En ambos casos, no es aconsejable dejar de pagar unilateralmente. La vía correcta es solicitar la modificación judicial y, si la urgencia del caso lo requiere, pedir medidas cautelares.
+                </p><br>
 
-                    <h2 class="blog-titulo">El proceso paso a paso para modificar su pensión</h2>
-                    <p class="carousel-text"><strong>Paso 1: Documentación necesaria</strong> — La carga de la prueba recae sobre quien solicita la modificación. A continuación, se detallan los documentos imprescindibles:</p>
-                    
-                    <!-- TABLA DE DOCUMENTACIÓN -->
-                    <table class="documentacion-table">
-                        <thead>
-                            <tr><th>Tipo de documento</th><th>Detalle / Obligatoriedad</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Sentencia de divorcio / convenio regulador</td><td>Original donde se fijó la pensión.</td></tr>
-                            <tr><td>Vida laboral actualizada</td><td>Informe de la Tesorería General de la Seguridad Social.</td></tr>
-                            <tr><td>Acreditación de la nueva situación laboral</td><td>Carta de despido, finiquito, resolución del SEPE, cese de actividad de autónomos.</td></tr>
-                            <tr><td>Declaraciones del IRPF (dos últimos ejercicios)</td><td>Para acreditar la disminución de ingresos.</td></tr>
-                            <tr><td>Contratos de trabajo anteriores y actuales</td><td>Si procede, para evidenciar el cambio de salario.</td></tr>
-                            <tr><td>Certificado de ingresos del núcleo familiar</td><td>Otras fuentes de ingreso en la unidad familiar.</td></tr>
-                            <tr><td>Gastos fijos ineludibles (recomendado)</td><td>Recibo hipotecario, alquiler, gastos comunidad, escolarización.</td></tr>
-                        </tbody>
-                    </table>
-                    
-                    <p class="carousel-text"><strong>Paso 2: Presentación de la demanda</strong> — Debe presentarse ante el juzgado que dictó la sentencia original o, en su caso, ante el juzgado de primera instancia del domicilio del demandado. La demanda deberá incluir una exposición detallada de las circunstancias, una comparativa económica y la propuesta concreta de nueva cuantía.</p>
-                    <p class="carousel-text"><strong>Paso 3: Desarrollo del procedimiento</strong> — Admitida la demanda, se da traslado a la otra parte. Si hay oposición, se abre fase probatoria y vista oral. Si ambas partes alcanzan un acuerdo, se presenta convenio regulador modificado para homologación judicial.</p><br>
+                <h2 class="blog-titulo">El proceso paso a paso para modificar su pensión</h2>
+ 
+                <p class="carousel-text"><strong>Paso 1: Documentación necesaria</strong> — La carga de la prueba recae sobre quien solicita la modificación. A continuación, se detallan los documentos imprescindibles:</p>
+                
+                <!-- TABLA DE DOCUMENTACIÓN -->
+                <table class="documentacion-table">
+                    <thead>
+                        <tr><th>Tipo de documento</th><th>Detalle / Obligatoriedad</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Sentencia de divorcio / convenio regulador</td><td>Original donde se fijó la pensión.</td></tr>
+                        <tr><td>Vida laboral actualizada</td><td>Informe de la Tesorería General de la Seguridad Social.</td></tr>
+                        <tr><td>Acreditación de la nueva situación laboral</td><td>Carta de despido, finiquito, resolución del SEPE, cese de actividad de autónomos.</td></tr>
+                        <tr><td>Declaraciones del IRPF (dos últimos ejercicios)</td><td>Para acreditar la disminución de ingresos.</td></tr>
+                        <tr><td>Contratos de trabajo anteriores y actuales</td><td>Si procede, para evidenciar el cambio de salario.</td></tr>
+                        <tr><td>Certificado de ingresos del núcleo familiar</td><td>Otras fuentes de ingreso en la unidad familiar.</td></tr>
+                        <tr><td>Gastos fijos ineludibles (recomendado)</td><td>Recibo hipotecario, alquiler, gastos comunidad, escolarización.</td></tr>
+                    </tbody>
+                </table>
+                
+                <p class="carousel-text"><strong>Paso 2: Presentación de la demanda</strong> — Debe presentarse ante el juzgado que dictó la sentencia original o, en su caso, ante el juzgado de primera instancia del domicilio del demandado. La demanda deberá incluir una exposición detallada de las circunstancias, una comparativa económica y la propuesta concreta de nueva cuantía.</p><br>
 
-                    <h2 class="blog-titulo">Errores que cuestan caro en materia de modificación de medidas</h2>
-                    <p class="carousel-text"><strong>Error 1: Dejar de pagar sin autorización judicial.</strong> Constituye el error más grave. Dejar de abonar la pensión unilateralmente expone al deudor a un procedimiento de ejecución con intereses y costas. La posición correcta es pagar mientras se tramita la modificación o solicitar medidas cautelares.</p>
-                    <p class="carousel-text"><strong>Error 2: Presentar únicamente el certificado de desempleo.</strong> El tribunal necesita acreditar la búsqueda activa de empleo y la ausencia de ingresos alternativos. Aportar certificado de demandante del SAE, formación realizada y envíos de currículum.</p>
-                    <p class="carousel-text"><strong>Error 3: No justificar los gastos fijos del hogar.</strong> Sin contextualizar la situación real (hipoteca, suministros, gastos escolares), el tribunal no puede valorar el esfuerzo económico. Aportar recibos y un cuadro resumen de ingresos y gastos.</p><br>
+                <p class="carousel-text"><strong>Paso 3: Desarrollo del procedimiento</strong> — Admitida la demanda, se da traslado a la otra parte. Si hay oposición, se abre fase probatoria y vista oral. Si ambas partes alcanzan un acuerdo, se presenta convenio regulador modificado para homologación judicial.</p><br>
 
-                    <h2 class="blog-titulo">Preguntas frecuentes sobre modificación de pensiones</h2>
-                    
-                    <!-- Sección FAQ en formato acordeón -->
-                    <div class="faq-section">
-                        <div class="faq-item">
-                            <div class="faq-question">¿Cuánto tiempo debo estar en situación de desempleo para solicitar la modificación?</div>
-                            <div class="faq-answer"><p>No existe un plazo mínimo legal establecido. Sin embargo, la jurisprudencia es más favorable cuando el desempleo se prolonga durante un período significativo y se acredita una búsqueda activa de empleo sin éxito. Cada caso se valora individualmente atendiendo a sus circunstancias concretas.</p></div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">Si encuentro un trabajo peor remunerado, ¿puedo solicitar la reducción de la pensión?</div>
-                            <div class="faq-answer"><p>Sí. La reducción sustancial de ingresos constituye causa legítima para solicitar la modificación de medidas, siempre que se acredite documentalmente la diferencia entre el salario anterior y el actual, y se demuestre que no ha existido mala fe en el cambio laboral.</p></div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">¿Qué sucede si la otra parte se niega a negociar el nuevo importe?</div>
-                            <div class="faq-answer"><p>En ese caso deberá iniciarse la vía contenciosa mediante la presentación de la correspondiente demanda. El tribunal decidirá, pero es recomendable intentar un acuerdo extrajudicial previo, pues el rechazo injustificado a la negociación puede ser valorado en materia de costas.</p></div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">¿Puede la pensión ser reducida a cero?</div>
-                            <div class="faq-answer"><p>Es posible, aunque excepcional. El tribunal debe ponderar las necesidades del beneficiario, especialmente si existen hijos menores, con la capacidad económica real del obligado al pago. La reducción a cero solo procede cuando el obligado carece absolutamente de ingresos y no dispone de bienes o rentas.</p></div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">¿Qué documentos son imprescindibles para acreditar el cambio de circunstancias?</div>
-                            <div class="faq-answer"><p>Resulta fundamental aportar: vida laboral actualizada, documentación acreditativa del cese laboral (carta de despido, finiquito o resolución del SEPE), declaraciones del IRPF de los dos últimos ejercicios, contratos de trabajo anteriores y actuales, y certificado de ingresos del núcleo familiar si existen otras fuentes de ingreso.</p></div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">¿Puedo solicitar la modificación si mi ex pareja no cumple con sus obligaciones económicas?</div>
-                            <div class="faq-answer"><p>La modificación de medidas se refiere a cambiar las condiciones establecidas en la sentencia. Si lo que procede es reclamar el impago de las pensiones ya devengadas, debe iniciarse un procedimiento de ejecución de sentencia, no una modificación de medidas. Le asesoramos sobre la vía procesal adecuada en cada caso.</p></div>
+                <h2 class="blog-titulo">Errores que cuestan caro en materia de modificación de medidas</h2>
+ 
+                <p class="carousel-text"><strong>Error 1: Dejar de pagar sin autorización judicial.</strong> Constituye el error más grave. Dejar de abonar la pensión unilateralmente expone al deudor a un procedimiento de ejecución con intereses y costas. La posición correcta es pagar mientras se tramita la modificación o solicitar medidas cautelares.</p><br>
+
+                <p class="carousel-text"><strong>Error 2: Presentar únicamente el certificado de desempleo.</strong> El tribunal necesita acreditar la búsqueda activa de empleo y la ausencia de ingresos alternativos. Aportar certificado de demandante del SAE, formación realizada y envíos de currículum.</p><br>
+
+                <p class="carousel-text"><strong>Error 3: No justificar los gastos fijos del hogar.</strong> Sin contextualizar la situación real (hipoteca, suministros, gastos escolares), el tribunal no puede valorar el esfuerzo económico. Aportar recibos y un cuadro resumen de ingresos y gastos.</p><br>
+
+                <h2 class="blog-titulo">Preguntas frecuentes sobre modificación de pensiones</h2>
+                
+                <!-- FAQ ACORDEÓN FUNCIONAL -->
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cuánto tiempo debo estar en situación de desempleo para solicitar la modificación?</div>
+                        <div class="faq-answer">
+                            <p>No existe un plazo mínimo legal establecido. Sin embargo, la jurisprudencia es más favorable cuando el desempleo se prolonga durante un período significativo y se acredita una búsqueda activa de empleo sin éxito. Cada caso se valora individualmente.</p>
                         </div>
                     </div>
                     
-                    <div class="share-article mt-5">
-                        <span class="share-label">Compartir:</span>
-                        <a href="#" class="share-btn whatsapp" aria-label="Compartir en WhatsApp">WhatsApp</a>
-                        <a href="#" class="share-btn linkedin" aria-label="Compartir en LinkedIn">LinkedIn</a>
-                        <a href="#" class="share-btn facebook" aria-label="Compartir en Facebook">Facebook</a>
-                        <a href="#" class="share-btn twitter" aria-label="Compartir en X">X</a>
-                        <button class="share-btn print" onclick="window.print()">Imprimir</button>
+                    <div class="faq-item">
+                        <div class="faq-question">Si encuentro un trabajo peor remunerado, ¿puedo solicitar la reducción de la pensión?</div>
+                        <div class="faq-answer">
+                            <p>Sí. La reducción sustancial de ingresos constituye causa legítima para solicitar la modificación de medidas, siempre que se acredite documentalmente la diferencia entre el salario anterior y el actual, y se demuestre que no ha existido mala fe en el cambio laboral.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué sucede si la otra parte se niega a negociar el nuevo importe?</div>
+                        <div class="faq-answer">
+                            <p>En ese caso deberá iniciarse la vía contenciosa mediante la presentación de la correspondiente demanda. El tribunal decidirá, pero es recomendable intentar un acuerdo extrajudicial previo, pues el rechazo injustificado a la negociación puede ser valorado en materia de costas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Puede la pensión ser reducida a cero?</div>
+                        <div class="faq-answer">
+                            <p>Es posible, aunque excepcional. El tribunal debe ponderar las necesidades del beneficiario, especialmente si existen hijos menores, con la capacidad económica real del obligado al pago. La reducción a cero solo procede cuando el obligado carece absolutamente de ingresos y no dispone de bienes o rentas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué documentos son imprescindibles para acreditar el cambio de circunstancias?</div>
+                        <div class="faq-answer">
+                            <p>Resulta fundamental aportar: vida laboral actualizada, documentación acreditativa del cese laboral (carta de despido, finiquito o resolución del SEPE), declaraciones del IRPF de los dos últimos ejercicios, contratos de trabajo anteriores y actuales, y certificado de ingresos del núcleo familiar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Puedo solicitar la modificación si mi ex pareja no cumple con sus obligaciones económicas?</div>
+                        <div class="faq-answer">
+                            <p>La modificación de medidas se refiere a cambiar las condiciones establecidas en la sentencia. Si lo que procede es reclamar el impago de las pensiones ya devengadas, debe iniciarse un procedimiento de ejecución de sentencia, no una modificación de medidas. Le asesoramos sobre la vía procesal adecuada en cada caso.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+ 
+                <div class="share-article">
+                    <span class="share-label">Compartir:</span>
+                    <a href="#" class="share-btn whatsapp" aria-label="Compartir en WhatsApp">WhatsApp</a>
+                    <a href="#" class="share-btn linkedin" aria-label="Compartir en LinkedIn">LinkedIn</a>
+                    <a href="#" class="share-btn facebook" aria-label="Compartir en Facebook">Facebook</a>
+                    <a href="#" class="share-btn twitter" aria-label="Compartir en X">X</a>
+                    <button class="share-btn print" onclick="window.print()">Imprimir</button>
+                </div>
+ 
+            </section>
+ 
+            <!-- CTA con enfoque local -->
+            <section class="mt-5 p-4 text-center" style="background:#29524E; border-radius:8px;">
+                <h3 style="color: white;">¿Necesita modificar su pensión por pérdida de empleo?</h3>
+                <p class="text-center text-white mt-3 mb-3">Si ha perdido su empleo o ha visto reducidos sus ingresos de forma significativa, le ofrecemos un primer análisis de su caso sin compromiso. Contacte con Antonio Gaitán Abogados, su abogado en Adra especializado en derecho de familia y modificación de medidas.</p>
+                <a href="contacto.html" class="btn" style="background-color: #00989A; color: white;">Solicitar asesoramiento</a>
+            </section>
+ 
+            <!-- Volver -->
+            <nav class="mt-4 mb-5">
+                <a style="color: #29524E;" href="blog.html">← Volver al blog</a>
+            </nav>
+ 
         </article>
-
-        <!-- CTA con enfoque local (modificado para el tema de modificación de medidas) -->
-        <section class="mt-5 p-4 text-center" style="background:#29524E; border-radius:8px;">
-            <h3 class="text-white">¿Necesita modificar su pensión por pérdida de empleo?</h3>
-            <p class="text-center text-white mt-3 mb-3">Si ha perdido su empleo o ha visto reducidos sus ingresos de forma significativa, le ofrecemos un primer análisis de su caso sin compromiso. Contacte con Antonio Gaitán Abogados, su abogado en Adra especializado en derecho de familia y modificación de medidas.</p>
-            <a href="contacto.html" class="btn btn-custom" style="background-color: #00989A;">Contactar ahora</a>
-        </section>
-
-        <!-- Volver al blog -->
-        <nav class="mt-4 mb-5">
-            <a style="color: #29524E;" href="blog.html">← Volver al blog</a>
-        </nav>
     </main>
-
-    <!-- Footer dinámico -->
-    <div id="footer-container"></div>
-
-    <!-- Script de carga footer -->
-    <script src="js/footer-loader.js"></script>
-
+ 
+    <footer role="contentinfo">
+        <div class="footer-info-container" style="margin-top: -7px;">
+            <div class="footer-logo">
+                <img class="logo-footer-img" src="img/logo-Antonio-Gaitan-abogados-footer.svg"
+                    alt="Antonio Gaitán Abogados Logo Footer" loading="lazy">
+            </div>
+            <div class="footer-menu">
+                <section class="contacto-container" aria-labelledby="contacto-title">
+                    <h2 class="footer-menu__titulo" id="contacto-title">Contacto</h2>
+                    <ul class="contacto-listado">
+                        <li class="footer__list"><a href="mailto:contacto@antoniogaitanabogados.com">contacto@antoniogaitanabogados.com</a></li>
+                        <li><a href="https://acortar.link/xGETC0"><img style="margin-right:10px;" src="img/linkedin.svg" alt="LinkedIn de Antonio Javier Gaitán Peña" loading="lazy"> Antonio Javier Gaitán Peña</a></li>
+                        <li style="margin-top:10px;"><a style="display: flex;justify-content: center;align-items: center;" href="https://acortar.link/98y5US"><img style="width: 22px;" src="img/dialnet.svg" alt="Dialnet de Antonio Javier Gaitán Peña" loading="lazy"> Dialnet: Antonio Javier Gaitán Peña</a></li>
+                        <li class="footer__list"><a href="tel:+34671398925">+34 671 39 89 25</a></li>
+                        <li class="footer__list footer-list-direccion">C. Natalio Rivas, 15, Portal 1, 3º Oficina, Centro, 04770, Adra, Almería, España</li>
+                    </ul>
+                </section>
+            </div>
+            <section class="politicas-container" aria-labelledby="politicas-title">
+                <h2 class="footer-menu__titulo" id="politicas-title">Información</h2>
+                <ul class="politicas-listado">
+                    <li class="politicas-list"><a class="politicas__link" href="politica-cookies.html">Política de cookies</a></li>
+                    <li class="politicas-list"><a class="politicas__link" href="aviso-legal.html">Aviso legal</a></li>
+                    <li class="politicas-list"><a class="politicas__link" href="politica-proteccion-datos.html">Política de protección de datos</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer-subinfo">
+            <div class="footer-subinfo__copyright">
+                <p class="subinfo-copyright_text">Copyright 2026 © Antonio Gaitán Abogados</p>
+            </div>
+            <div class="footer-subinfo__pepedesign">
+                <div class="footer-subinfo__pepedesign__rrss">
+                    <a href="https://www.linkedin.com/in/antonio-javier-gait%C3%A1n-pe%C3%B1a-a51b6a277/"><img src="img/linkedin.svg" alt="LinkedIn de Antonio Gaitán" loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
     <a href="https://wa.me/+34671398925" target="_blank" class="whatsapp-boton-container" aria-label="Contactar por WhatsApp">
         <img class="whatsapp-img" src="img/iconos/whatsapp-2.svg" alt="Icono de WhatsApp" loading="lazy">
     </a>
-
+ 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
     <script src="js/main.js" defer></script>
     
-    <!-- Script para el funcionamiento del acordeón FAQ -->
     <script>
-        document.querySelectorAll('.faq-question').forEach((question) => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
+        // Inicializar FAQ cuando el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar FAQ
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(function(item) {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    // Clonar para evitar duplicados de eventos
+                    const newQuestion = question.cloneNode(true);
+                    question.parentNode.replaceChild(newQuestion, question);
+                    
+                    newQuestion.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        item.classList.toggle('active');
+                    });
+                }
             });
-        });
-        
-        // Script para compartir en redes
-        (function () {
+            
+            // Configurar botones de compartir en redes
             const url = encodeURIComponent(window.location.href);
             const title = encodeURIComponent(document.title);
+            
             const whatsappBtn = document.querySelector('.share-btn.whatsapp');
             const linkedinBtn = document.querySelector('.share-btn.linkedin');
             const facebookBtn = document.querySelector('.share-btn.facebook');
             const twitterBtn = document.querySelector('.share-btn.twitter');
-            if(whatsappBtn) whatsappBtn.href = `https://wa.me/?text=${title}%20${url}`;
-            if(linkedinBtn) linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-            if(facebookBtn) facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-            if(twitterBtn) twitterBtn.href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
-        })();
-        
-      <script>
-    (function() {
-        // Función mejorada para volver atrás
-        function goBackSafely() {
-            // Caso 1: Venimos de otra página (más confiable)
-            if (document.referrer && document.referrer !== '') {
-                // Verificar que no sea la misma página
-                if (document.referrer !== window.location.href) {
-                    window.location.href = document.referrer;
-                    return true;
-                }
-            }
             
-            // Caso 2: Hay historial del navegador
-            if (window.history.length > 1) {
-                history.back();
-                return true;
-            }
-            
-            // Caso 3: No hay historial, redirigir a blog
-            window.location.href = 'blog.html';
-            return false;
-        }
-        
-        // Seleccionar el botón (puede ser button o a)
-        const btnVolver = document.querySelector('.btn-volver');
-        
-        if (btnVolver) {
-            btnVolver.addEventListener('click', function(event) {
-                // Si es un enlace (<a>), prevenir que vaya directo al href
-                if (btnVolver.tagName === 'A') {
-                    event.preventDefault();
-                }
-                goBackSafely();
-            });
-        }
-        
-        // Opcional: También responder al atajo de teclado (Alt+Izquierda o Backspace)
-        window.addEventListener('popstate', function() {
-            // No hacer nada aquí, solo para mantener consistencia
+            if (whatsappBtn) whatsappBtn.href = `https://wa.me/?text=${title}%20${url}`;
+            if (linkedinBtn) linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            if (facebookBtn) facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            if (twitterBtn) twitterBtn.href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
         });
-    })();
-</script>
-                }
-            });
-        }
     </script>
+ 
 </body>
+ 
+</html>
 </html>
