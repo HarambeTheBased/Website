@@ -160,7 +160,7 @@
         <article class="articulo">
             <header class="header-articulo mb-4">
                 <!-- Volver -->
-                <button class="btn-volver" onclick="history.back()" aria-label="Volver atrás">
+                <a href="blog.html" class="btn-volver" id="btnVolver" aria-label="Volver atrás">
                     <img src="img/iconos/atras-logotipo.png" alt="" class="btn-volver-icon normal">
                     <img src="img/iconos/atras-logotipo-hover.png" alt="" class="btn-volver-icon hover">
                     <span>Atrás</span>
@@ -398,6 +398,50 @@
                 `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
         })();
     </script>
+
+ <script>
+    (function() {
+        // Función mejorada para volver atrás
+        function goBackSafely() {
+            // Caso 1: Venimos de otra página (más confiable)
+            if (document.referrer && document.referrer !== '') {
+                // Verificar que no sea la misma página
+                if (document.referrer !== window.location.href) {
+                    window.location.href = document.referrer;
+                    return true;
+                }
+            }
+            
+            // Caso 2: Hay historial del navegador
+            if (window.history.length > 1) {
+                history.back();
+                return true;
+            }
+            
+            // Caso 3: No hay historial, redirigir a blog
+            window.location.href = 'blog.html';
+            return false;
+        }
+        
+        // Seleccionar el botón (puede ser button o a)
+        const btnVolver = document.querySelector('.btn-volver');
+        
+        if (btnVolver) {
+            btnVolver.addEventListener('click', function(event) {
+                // Si es un enlace (<a>), prevenir que vaya directo al href
+                if (btnVolver.tagName === 'A') {
+                    event.preventDefault();
+                }
+                goBackSafely();
+            });
+        }
+        
+        // Opcional: También responder al atajo de teclado (Alt+Izquierda o Backspace)
+        window.addEventListener('popstate', function() {
+            // No hacer nada aquí, solo para mantener consistencia
+        });
+    })();
+</script>
  
 </body>
  
