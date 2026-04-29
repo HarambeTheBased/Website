@@ -394,28 +394,30 @@
 
 
 
-    <script>
-      fetch('blog.html')
-        .then(response => response.text())
-        .then(html => {
-          // Crear un contenedor temporal para parsear el HTML
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
+ <script>
+  fetch('blog.html?v=' + Date.now())
+    .then(response => response.text())
+    .then(html => {
+      // Crear un contenedor temporal para parsear el HTML
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
 
-          // Seleccionar todos los artículos
-          const posts = Array.from(doc.querySelectorAll('.post'));
+      // Seleccionar todos los artículos
+      const posts = Array.from(doc.querySelectorAll('.post'));
 
-          // Tomar las últimas 3 entradas
-          const ultimas3 = posts.slice(-3).reverse();
+      // Tomar las últimas 3 entradas
+      const ultimas3 = posts.slice(-3).reverse();
 
-          // Insertarlas en la Home
-          const contenedor = document.getElementById('ultimas-entradas');
-          ultimas3.forEach(post => {
-            contenedor.appendChild(post.cloneNode(true));
-          });
-        })
-        .catch(err => console.error('Error cargando posts:', err));
-    </script>
+      // Limpiar el contenedor antes de meter las nuevas
+      const contenedor = document.getElementById('ultimas-entradas');
+      contenedor.innerHTML = ''; 
+      
+      ultimas3.forEach(post => {
+        contenedor.appendChild(post.cloneNode(true));
+      });
+    })
+    .catch(err => console.error('Error cargando posts:', err));
+</script>
 
     <section class="preguntas">
       <div class="container">
