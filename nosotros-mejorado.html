@@ -93,10 +93,6 @@
             href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
     </noscript>
 
-    <!-- ─────────────────────────────────────────────────────
-         MEJORAS VISUALES — solo tarjetas + sección de méritos.
-         Todo lo demás lo gestiona style.css sin ningún cambio.
-         ───────────────────────────────────────────────────── -->
     <style>
         /* ── Hero con imagen de fondo ── */
         .hero-nosotros {
@@ -175,16 +171,16 @@
             text-decoration: none;
         }
 
-        /* ── Botón de méritos ── */
+        /* ── Botón de méritos — +15% sobre los valores originales ── */
         .btn-meritos {
             display: inline-flex;
             align-items: center;
-            gap: 7px;
+            gap: 8px;           /* 7 × 1.15 ≈ 8 */
             margin-top: 14px;
-            padding: 7px 16px;
+            padding: 8px 18px;  /* 7×1.15≈8 / 16×1.15≈18 */
             border: 1px solid currentColor;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 15px;    /* 13 × 1.15 ≈ 15 */
             letter-spacing: 0.03em;
             background: transparent;
             cursor: pointer;
@@ -353,7 +349,7 @@
             <div class="row">
                 <div class="container cita">
                     <div class="row">
-                        <h2 class="intro-titulo">Sobre el Despacho</h2>
+                        <h2 class="intro-titulo" style="text-align: center;">Sobre el despacho</h2>
                     </div>
                 </div>
                 <div class="container presentacion">
@@ -361,7 +357,7 @@
                         <p class="intro-text">Fundado por Antonio Javier Gaitán Peña, este despacho en Adra, Almería
                             nace de una convicción: el derecho, en su esencia, es una herramienta para resolver
                             problemas y guiar a las personas. Aquí, la formación académica rigurosa y la experiencia
-                            práctica se unen para ofrecer un servicio legal claro, directo y centrado en usted.</p>
+                            práctica se unen para ofrecer un servicio legal claro, directo y centrado en ti.</p>
                     </div>
                 </div>
             </div>
@@ -399,75 +395,88 @@
                         <!-- ══ PANEL MÉRITOS ══ -->
                         <div class="meritos-panel" id="meritos-panel" aria-hidden="true">
 
-                            <p class="meritos-categoria">Congresos internacionales</p>
+                            <p class="meritos-categoria">Congresos nacionales e internacionales</p>
                             <ul class="timeline">
                                 <li class="timeline-item">
-                                    <span class="timeline-year">2024</span>
+                                    <span class="timeline-year">2025</span>
                                     <span class="timeline-dot"></span>
                                     <div class="timeline-content">
-                                        <strong>Nombre del congreso · Ciudad, País</strong>
-                                        <span>Ponencia: «Título de la ponencia»</span>
+                                        <strong>A vent'anni dal codice del consumo. Un'analisi comparata con altri Paesi · Universidad de Perugia, Terni, Italia</strong>
+                                        <span>Ponencia: «La atribución y exención de responsabilidad civil por la venta en línea de productos defectuosos.»</span>
                                     </div>
                                 </li>
                                 <li class="timeline-item">
-                                    <span class="timeline-year">2023</span>
+                                    <span class="timeline-year">2026</span>
                                     <span class="timeline-dot"></span>
                                     <div class="timeline-content">
-                                        <strong>Nombre del congreso · Ciudad, País</strong>
-                                        <span>Ponencia: «Título de la ponencia»</span>
+                                        <strong>XII Congreso Internacional de Derecho Privado, Consumo, Responsabilidad Civil y Representación · Universidad de Granada, España</strong>
+                                        <span>Ponencia: «La formación del consentimiento mediante inteligencia artificial algorítmica y sus implicaciones en el ámbito del derecho de consumo.»</span>
                                     </div>
                                 </li>
-                                <!-- Añade más ítems con el mismo patrón -->
+                                <li class="timeline-item">
+                                    <span class="timeline-year">2026</span>
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <strong>XV Forum Internacional de expertos y jóvenes investigadores en Derecho y Nuevas Tecnologías · Universidad de Salamanca, España</strong>
+                                        <span>Ponencia: «La prueba de la autoría del software desarrollado con asistencia de inteligencia artificial agéntica en el proceso civil.»</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-year">2026</span>
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <strong>II Congreso Internacional y Multidisciplinar: Hacia una sociedad digital centrada en las necesidades de las personas · Universidad de Granada, España</strong>
+                                        <span>Ponencia: «Transmisión inter vivos y mortis causa del software desarrollado con inteligencia artificial: la "capacidad de interacción" como bien jurídico patrimonializable.»</span>
+                                    </div>
+                                </li>
                             </ul>
 
-                            <p class="meritos-categoria">Artículos en revistas especializadas</p>
+                            <p class="meritos-categoria">Artículos relevantes revistas especializadas</p>
                             <ul class="timeline">
                                 <li class="timeline-item">
-                                    <span class="timeline-year">2024</span>
+                                    <span class="timeline-year">2025</span>
                                     <span class="timeline-dot"></span>
                                     <div class="timeline-content">
-                                        <strong>«Título del artículo»</strong>
-                                        <span>Revista / Editorial · Vol. X, núm. Y</span>
+                                        <strong>«La responsabilidad civil subsidiaria y los delitos contra el derecho al honor contra la libertad de expresión e información.»</strong>
+                                        <span>Revista División Operativa de Criminalística (DOCRIM), nº 20. Universidad de Granada.</span>
                                     </div>
                                 </li>
                                 <li class="timeline-item">
-                                    <span class="timeline-year">2023</span>
+                                    <span class="timeline-year">2025</span>
                                     <span class="timeline-dot"></span>
                                     <div class="timeline-content">
-                                        <strong>«Título del artículo»</strong>
-                                        <span>DOCRIM, Universidad de Granada</span>
+                                        <strong>«La responsabilidad civil del abogado en caso de negligencia profesional.»</strong>
+                                        <span>Práctica derecho de daños: Revista de Responsabilidad Civil y Seguros, nº 163. LaLey ARANZADI.</span>
                                     </div>
                                 </li>
                                 <li class="timeline-item">
-                                    <span class="timeline-year">2023</span>
+                                    <span class="timeline-year">2025</span>
                                     <span class="timeline-dot"></span>
                                     <div class="timeline-content">
-                                        <strong>«Título del artículo»</strong>
-                                        <span>Diario LaLey</span>
+                                        <strong>«Impugnación de maternidad biológica en supuestos de gestación subrogada de ámbito internacional.»</strong>
+                                        <span>Revista de Derecho de Familia: Doctrina, jurisprudencia, legislación, nº 107. LaLey ARANZADI.</span>
                                     </div>
                                 </li>
                                 <li class="timeline-item">
-                                    <span class="timeline-year">2022</span>
+                                    <span class="timeline-year">2025</span>
                                     <span class="timeline-dot"></span>
                                     <div class="timeline-content">
-                                        <strong>«Título del artículo»</strong>
-                                        <span>Revista de Derecho de Daños, ARANZADI</span>
+                                        <strong>«El interés superior del menor en los procesos de custodia en que exista violencia de género.»</strong>
+                                        <span>Revista Digital Familia y Sucesiones, artículo monográfico (abril 2025). Sepín Editorial Jurídica.</span>
                                     </div>
                                 </li>
-                                <!-- Añade más ítems con el mismo patrón -->
                             </ul>
 
                             <p class="meritos-categoria">Capítulos de libro</p>
                             <ul class="timeline">
                                 <li class="timeline-item">
-                                    <span class="timeline-year">2024</span>
+                                    <span class="timeline-year">2025</span>
                                     <span class="timeline-dot"></span>
                                     <div class="timeline-content">
-                                        <strong>«Título del capítulo»</strong>
-                                        <span>En: <em>Título del libro</em> · Editorial · ISBN</span>
+                                        <strong>«La atribución y exención de responsabilidad civil por la venta en línea de productos defectuosos»</strong>
+                                        <span>En: <em>A vent'anni dal codice del consumo: Un'analisi comparata con altri paesi</em> / coord. por Lorenzo Mezzasoma, Francisco Javier Pérez-Serrabona González, Eugenio Llamas Pombo, Francesco Rizzo, Giovanni Berti de Marinis, 2025, ISBN 9788849560237, págs. 1287-1296.</span>
                                     </div>
                                 </li>
-                                <!-- Añade más ítems con el mismo patrón -->
                             </ul>
 
                         </div><!-- /meritos-panel -->
@@ -477,16 +486,7 @@
                 <!-- Continuación integrada visualmente con la hero-card -->
                 <div class="bio-continua">
 
-                    <p class="carousel-text">
-                        Mi interés por el derecho va más allá de la práctica diaria. Participo activamente en la
-                        conversación jurídica a través de la publicación de artículos en revistas especializadas
-                        como DOCRIM de la Universidad de Granada, el Diario LaLey o las revistas de Derecho de Daños
-                        y de Familia de ARANZADI, entre otras. También he tenido la oportunidad de realizar
-                        ponencias en diversos congresos internacionales, lo que me
-                        permite mantener una perspectiva actualizada y comparada.
-                    </p>
-
-                    <div class="seccion-interna">
+                    <div class="seccion-interna" style="margin-top:0; border-top:none; padding-top:0;">
                         <h3 class="nosotros-titulo">Nuestro Enfoque</h3>
                         <p class="carousel-text">
                             Trabajamos sobre una idea simple: cada asunto es único y merece una atención que lo refleje. No
@@ -504,27 +504,27 @@
                             personales son cruciales:
                         </p>
                         <div class="row mt-4 m-auto">
-                            <div class="col-lg-6 pastilla">
-                                <h4 class="nosotros-titulo">Derecho de Familia:</h4>
+                            <a href="https://antoniogaitanabogados.com/derechoFamilia.html" class="col-lg-6 pastilla" style="text-decoration:none; color:inherit; display:block;">
+                                <h4 class="nosotros-titulo">Derecho de Familia</h4>
                                 <p class="carousel-text mb-0">
                                     Atendemos las necesidades legales derivadas de separaciones, divorcios, custodias y
                                     régimen de visitas.
                                 </p>
-                            </div>
+                            </a>
                             <div class="col-lg-6 pastilla">
-                                <h4 class="nosotros-titulo">Responsabilidad Civil:</h4>
+                                <h4 class="nosotros-titulo">Responsabilidad Civil</h4>
                                 <p class="carousel-text mb-0">
                                     Gestionamos la reclamación integral de daños y perjuicios.
                                 </p>
                             </div>
                             <div class="col-lg-6 pastilla">
-                                <h4 class="nosotros-titulo">Derecho del Consumo:</h4>
+                                <h4 class="nosotros-titulo">Derecho del Consumo</h4>
                                 <p class="carousel-text mb-0">
                                     Defendemos sus derechos frente a prácticas abusivas o productos defectuosos.
                                 </p>
                             </div>
                             <div class="col-lg-6 pastilla">
-                                <h4 class="nosotros-titulo">Mediación:</h4>
+                                <h4 class="nosotros-titulo">Mediación</h4>
                                 <p class="carousel-text mb-0">
                                     Ofrecemos esta alternativa para resolver desacuerdos de manera más eficiente y menos
                                     confrontacional.
@@ -536,6 +536,7 @@
                 </div>
             </div>
         </section>
+
         <section class="colaboradores-section">
             <div class="container">
                 <h3 class="nosotros-titulo colaboradores-titulo">Colaboradores</h3>
@@ -560,15 +561,13 @@
                         <h4 class=" carousel-title">Pastor Antonio Cañas Pérez</h4>
                         <p class="carousel-text">
                             Abogado colegiado en Córdoba y Tenerife, con más de diez años de experiencia en Derecho
-                            Penal,
-                            Familia y Administrativo. Atiende en español, inglés y catalán.
+                            Penal, Familia y Administrativo. Atiende en español, inglés y catalán.
                         </p>
                         <img src="img/linkedin-blue.svg" alt="Linkedin" style="width:20px;opacity:0.6;">
                     </a>
                 </div>
             </div>
         </section>
-
 
         <!-- Contenedor vacío donde se cargará el footer -->
         <div id="footer-container"></div>
