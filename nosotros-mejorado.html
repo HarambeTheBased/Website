@@ -126,7 +126,7 @@
             border: 1px solid #e4dfd8;
             border-top: none;
             border-radius: 0 0 14px 14px;
-            padding: 36px 40px 32px;
+            padding: 32px;          /* igual que hero-card para ancho homogéneo */
             background: #fff;
             margin-top: -14px;
         }
@@ -137,13 +137,45 @@
             border-top: 1px solid #e4dfd8;
         }
 
-        /* ── Pastillas de áreas (fondo gris suave) ── */
+        /* ── Botón grande centrado de méritos ── */
+        .btn-meritos-grande {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            width: fit-content;
+            margin: 0 auto 0;
+            padding: 12px 32px;
+            border: 2px solid var(--color-primary, #3a8c8c);
+            border-radius: 30px;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            font-weight: 500;
+            color: var(--color-primary, #3a8c8c);
+            background: transparent;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.22s, color 0.22s;
+        }
+        .btn-meritos-grande:hover {
+            background: var(--color-primary, #3a8c8c);
+            color: #fff;
+        }
+        .btn-meritos-grande .chevron {
+            display: inline-block;
+            font-style: normal;
+            transition: transform 0.25s;
+            line-height: 1;
+        }
+        .btn-meritos-grande.open .chevron { transform: rotate(180deg); }
+
+        /* ── Pastillas de áreas (fondo blanco) ── */
         .pastilla {
             border: 1px solid #e4dfd8;
             border-radius: 12px;
             padding: 20px 22px !important;
             margin-bottom: 16px;
-            background: #f4f1ed;
+            background: #fff;
             transition: box-shadow 0.22s, transform 0.22s;
             cursor: default;
         }
@@ -385,106 +417,109 @@
                             <a class="linkedin" href="https://acortar.link/xGETC0">
                                 <img src="img/linkedin-blue.svg" alt="Linkedin">
                             </a>
-                            <!-- ══ BOTÓN MÉRITOS ══ -->
-                            <button class="btn-meritos" id="btn-meritos" onclick="toggleMeritos()" aria-expanded="false">
-                                Méritos y eventos destacados
-                                <i class="chevron" aria-hidden="true">&#8964;</i>
-                            </button>
                         </div>
-
-                        <!-- ══ PANEL MÉRITOS ══ -->
-                        <div class="meritos-panel" id="meritos-panel" aria-hidden="true">
-
-                            <p class="meritos-categoria">Congresos nacionales e internacionales</p>
-                            <ul class="timeline">
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2025</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>A vent'anni dal codice del consumo. Un'analisi comparata con altri Paesi · Universidad de Perugia, Terni, Italia</strong>
-                                        <span>Ponencia: «La atribución y exención de responsabilidad civil por la venta en línea de productos defectuosos.»</span>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2026</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>XII Congreso Internacional de Derecho Privado, Consumo, Responsabilidad Civil y Representación · Universidad de Granada, España</strong>
-                                        <span>Ponencia: «La formación del consentimiento mediante inteligencia artificial algorítmica y sus implicaciones en el ámbito del derecho de consumo.»</span>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2026</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>XV Forum Internacional de expertos y jóvenes investigadores en Derecho y Nuevas Tecnologías · Universidad de Salamanca, España</strong>
-                                        <span>Ponencia: «La prueba de la autoría del software desarrollado con asistencia de inteligencia artificial agéntica en el proceso civil.»</span>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2026</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>II Congreso Internacional y Multidisciplinar: Hacia una sociedad digital centrada en las necesidades de las personas · Universidad de Granada, España</strong>
-                                        <span>Ponencia: «Transmisión inter vivos y mortis causa del software desarrollado con inteligencia artificial: la "capacidad de interacción" como bien jurídico patrimonializable.»</span>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <p class="meritos-categoria">Artículos relevantes revistas especializadas</p>
-                            <ul class="timeline">
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2025</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>«La responsabilidad civil subsidiaria y los delitos contra el derecho al honor contra la libertad de expresión e información.»</strong>
-                                        <span>Revista División Operativa de Criminalística (DOCRIM), nº 20. Universidad de Granada.</span>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2025</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>«La responsabilidad civil del abogado en caso de negligencia profesional.»</strong>
-                                        <span>Práctica derecho de daños: Revista de Responsabilidad Civil y Seguros, nº 163. LaLey ARANZADI.</span>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2025</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>«Impugnación de maternidad biológica en supuestos de gestación subrogada de ámbito internacional.»</strong>
-                                        <span>Revista de Derecho de Familia: Doctrina, jurisprudencia, legislación, nº 107. LaLey ARANZADI.</span>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2025</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>«El interés superior del menor en los procesos de custodia en que exista violencia de género.»</strong>
-                                        <span>Revista Digital Familia y Sucesiones, artículo monográfico (abril 2025). Sepín Editorial Jurídica.</span>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <p class="meritos-categoria">Capítulos de libro</p>
-                            <ul class="timeline">
-                                <li class="timeline-item">
-                                    <span class="timeline-year">2025</span>
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-content">
-                                        <strong>«La atribución y exención de responsabilidad civil por la venta en línea de productos defectuosos»</strong>
-                                        <span>En: <em>A vent'anni dal codice del consumo: Un'analisi comparata con altri paesi</em> / coord. por Lorenzo Mezzasoma, Francisco Javier Pérez-Serrabona González, Eugenio Llamas Pombo, Francesco Rizzo, Giovanni Berti de Marinis, 2025, ISBN 9788849560237, págs. 1287-1296.</span>
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </div><!-- /meritos-panel -->
                     </div>
                 </div>
 
                 <!-- Continuación integrada visualmente con la hero-card -->
                 <div class="bio-continua">
+
+                    <!-- ══ BOTÓN GRANDE MÉRITOS ══ -->
+                    <div style="text-align: center; padding-bottom: 8px;">
+                        <button class="btn-meritos-grande" id="btn-meritos" onclick="toggleMeritos()" aria-expanded="false">
+                            Méritos y eventos destacados
+                            <i class="chevron" aria-hidden="true">&#8964;</i>
+                        </button>
+                    </div>
+
+                    <!-- ══ PANEL MÉRITOS (se despliega bajo el botón) ══ -->
+                    <div class="meritos-panel" id="meritos-panel" aria-hidden="true">
+
+                        <p class="meritos-categoria">Congresos nacionales e internacionales</p>
+                        <ul class="timeline">
+                            <li class="timeline-item">
+                                <span class="timeline-year">2025</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>A vent'anni dal codice del consumo. Un'analisi comparata con altri Paesi · Universidad de Perugia, Terni, Italia</strong>
+                                    <span>Ponencia: «La atribución y exención de responsabilidad civil por la venta en línea de productos defectuosos.»</span>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-year">2026</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>XII Congreso Internacional de Derecho Privado, Consumo, Responsabilidad Civil y Representación · Universidad de Granada, España</strong>
+                                    <span>Ponencia: «La formación del consentimiento mediante inteligencia artificial algorítmica y sus implicaciones en el ámbito del derecho de consumo.»</span>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-year">2026</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>XV Forum Internacional de expertos y jóvenes investigadores en Derecho y Nuevas Tecnologías · Universidad de Salamanca, España</strong>
+                                    <span>Ponencia: «La prueba de la autoría del software desarrollado con asistencia de inteligencia artificial agéntica en el proceso civil.»</span>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-year">2026</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>II Congreso Internacional y Multidisciplinar: Hacia una sociedad digital centrada en las necesidades de las personas · Universidad de Granada, España</strong>
+                                    <span>Ponencia: «Transmisión inter vivos y mortis causa del software desarrollado con inteligencia artificial: la "capacidad de interacción" como bien jurídico patrimonializable.»</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p class="meritos-categoria">Artículos relevantes revistas especializadas</p>
+                        <ul class="timeline">
+                            <li class="timeline-item">
+                                <span class="timeline-year">2025</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>«La responsabilidad civil subsidiaria y los delitos contra el derecho al honor contra la libertad de expresión e información.»</strong>
+                                    <span>Revista División Operativa de Criminalística (DOCRIM), nº 20. Universidad de Granada.</span>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-year">2025</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>«La responsabilidad civil del abogado en caso de negligencia profesional.»</strong>
+                                    <span>Práctica derecho de daños: Revista de Responsabilidad Civil y Seguros, nº 163. LaLey ARANZADI.</span>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-year">2025</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>«Impugnación de maternidad biológica en supuestos de gestación subrogada de ámbito internacional.»</strong>
+                                    <span>Revista de Derecho de Familia: Doctrina, jurisprudencia, legislación, nº 107. LaLey ARANZADI.</span>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-year">2025</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>«El interés superior del menor en los procesos de custodia en que exista violencia de género.»</strong>
+                                    <span>Revista Digital Familia y Sucesiones, artículo monográfico (abril 2025). Sepín Editorial Jurídica.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p class="meritos-categoria">Capítulos de libro</p>
+                        <ul class="timeline">
+                            <li class="timeline-item">
+                                <span class="timeline-year">2025</span>
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <strong>«La atribución y exención de responsabilidad civil por la venta en línea de productos defectuosos»</strong>
+                                    <span>En: <em>A vent'anni dal codice del consumo: Un'analisi comparata con altri paesi</em> / coord. por Lorenzo Mezzasoma, Francisco Javier Pérez-Serrabona González, Eugenio Llamas Pombo, Francesco Rizzo, Giovanni Berti de Marinis, 2025, ISBN 9788849560237, págs. 1287-1296.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div><!-- /meritos-panel -->
 
                     <div class="seccion-interna" style="margin-top:0; border-top:none; padding-top:0;">
                         <h3 class="nosotros-titulo">Nuestro Enfoque</h3>
