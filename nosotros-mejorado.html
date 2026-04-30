@@ -101,33 +101,55 @@
         /* ── Tarjeta principal del abogado ── */
         .hero-card {
             border: 1px solid #e4dfd8;
-            border-radius: 4px;
+            border-radius: 14px;
             padding: 32px;
             background: #fff;
             box-shadow: 0 2px 12px rgba(0,0,0,0.05);
         }
 
+        /* ── Bloque integrado: continuación bio + enfoque + áreas ── */
+        .bio-continua {
+            border: 1px solid #e4dfd8;
+            border-top: none;
+            border-radius: 0 0 14px 14px;
+            padding: 36px 40px 32px;
+            background: #faf9f7;
+            margin-top: -14px; /* se solapa levemente con la tarjeta de arriba */
+        }
+
+        .bio-continua .seccion-interna {
+            padding-top: 28px;
+            margin-top: 28px;
+            border-top: 1px solid #e4dfd8;
+        }
+
         /* ── Pastillas de áreas ── */
         .pastilla {
             border: 1px solid #e4dfd8;
-            border-left: 3px solid currentColor;
-            border-radius: 3px;
+            border-radius: 12px;
             padding: 20px 22px !important;
             margin-bottom: 16px;
             background: #fff;
+            transition: box-shadow 0.22s, transform 0.22s;
+            cursor: default;
+        }
+        .pastilla:hover {
+            box-shadow: 0 6px 22px rgba(0,0,0,0.09);
+            transform: translateY(-2px);
         }
 
         /* ── Tarjetas de colaboradores ── */
         .colaborador-card {
             border: 1px solid #e4dfd8;
-            border-radius: 4px;
+            border-radius: 14px;
             padding: 28px 24px;
             background: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.22s, transform 0.22s;
         }
         .colaborador-card:hover {
-            box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+            transform: translateY(-3px);
         }
 
         /* ── Botón de méritos ── */
@@ -138,7 +160,7 @@
             margin-top: 14px;
             padding: 7px 16px;
             border: 1px solid currentColor;
-            border-radius: 2px;
+            border-radius: 20px;
             font-size: 13px;
             letter-spacing: 0.03em;
             background: transparent;
@@ -429,7 +451,9 @@
                     </div>
                 </div>
 
-                <div class="hero-info" style="width: 80%; margin: auto;">
+                <!-- Continuación integrada visualmente con la hero-card -->
+                <div class="bio-continua">
+
                     <p class="carousel-text">
                         Mi interés por el derecho va más allá de la práctica diaria. Participo activamente en la
                         conversación jurídica a través de la publicación de artículos en revistas especializadas
@@ -439,50 +463,52 @@
                         permite mantener una perspectiva actualizada y comparada.
                     </p>
 
+                    <div class="seccion-interna">
+                        <h3 class="nosotros-titulo">Nuestro Enfoque</h3>
+                        <p class="carousel-text">
+                            Trabajamos sobre una idea simple: cada asunto es único y merece una atención que lo refleje. No
+                            aplicamos soluciones prefabricadas. En su lugar, nos dedicamos a entender a fondo la situación
+                            particular de cada cliente para, desde ahí, construir una estrategia legal coherente y realista.
+                            Priorizamos una comunicación transparente en cada paso, asegurando que comprenda el proceso y
+                            las decisiones que se toman.
+                        </p>
+                    </div>
 
-                    <h3 class="nosotros-titulo">Nuestro Enfoque</h3>
-                    <p class="carousel-text">
-                        Trabajamos sobre una idea simple: cada asunto es único y merece una atención que lo refleje. No
-                        aplicamos soluciones prefabricadas. En su lugar, nos dedicamos a entender a fondo la situación
-                        particular de cada cliente para, desde ahí, construir una estrategia legal coherente y realista.
-                        Priorizamos una comunicación transparente en cada paso, asegurando que comprenda el proceso y
-                        las decisiones que se toman.
-                    </p>
-                    <br>
-                    <h3 class="nosotros-titulo">Áreas de Trabajo</h3>
-                    <p class="carousel-text">
-                        Nos especializamos en campos donde la atención al detalle y la comprensión de las circunstancias
-                        personales son cruciales:
-                    </p>
-                    <div class="row mt-5 m-auto">
-                        <div class="col-lg-6 pastilla">
-                            <h4 class="nosotros-titulo">Derecho de Familia:</h4>
-                            <p class="carousel-text mb-5">
-                                Atendemos las necesidades legales derivadas de separaciones, divorcios, custodias y
-                                régimen de visitas.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 pastilla">
-                            <h4 class="nosotros-titulo">Responsabilidad Civil:</h4>
-                            <p class="carousel-text">
-                                Gestionamos la reclamación integral de daños y perjuicios.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 pastilla">
-                            <h4 class="nosotros-titulo">Derecho del Consumo:</h4>
-                            <p class="carousel-text">
-                                Defendemos sus derechos frente a prácticas abusivas o productos defectuosos.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 pastilla">
-                            <h4 class="nosotros-titulo">Mediación:</h4>
-                            <p class="carousel-text">
-                                Ofrecemos esta alternativa para resolver desacuerdos de manera más eficiente y menos
-                                confrontacional.
-                            </p>
+                    <div class="seccion-interna">
+                        <h3 class="nosotros-titulo">Áreas de Trabajo</h3>
+                        <p class="carousel-text">
+                            Nos especializamos en campos donde la atención al detalle y la comprensión de las circunstancias
+                            personales son cruciales:
+                        </p>
+                        <div class="row mt-4 m-auto">
+                            <div class="col-lg-6 pastilla">
+                                <h4 class="nosotros-titulo">Derecho de Familia:</h4>
+                                <p class="carousel-text mb-0">
+                                    Atendemos las necesidades legales derivadas de separaciones, divorcios, custodias y
+                                    régimen de visitas.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 pastilla">
+                                <h4 class="nosotros-titulo">Responsabilidad Civil:</h4>
+                                <p class="carousel-text mb-0">
+                                    Gestionamos la reclamación integral de daños y perjuicios.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 pastilla">
+                                <h4 class="nosotros-titulo">Derecho del Consumo:</h4>
+                                <p class="carousel-text mb-0">
+                                    Defendemos sus derechos frente a prácticas abusivas o productos defectuosos.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 pastilla">
+                                <h4 class="nosotros-titulo">Mediación:</h4>
+                                <p class="carousel-text mb-0">
+                                    Ofrecemos esta alternativa para resolver desacuerdos de manera más eficiente y menos
+                                    confrontacional.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <br>
 
                 </div>
             </div>
