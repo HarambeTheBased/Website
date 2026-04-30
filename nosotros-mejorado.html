@@ -98,6 +98,24 @@
          Todo lo demás lo gestiona style.css sin ningún cambio.
          ───────────────────────────────────────────────────── -->
     <style>
+        /* ── Hero con imagen de fondo ── */
+        .hero-nosotros {
+            position: relative;
+            background-image: url('img/nosotros-mejorado.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-nosotros::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.52);
+        }
+        .hero-nosotros .container {
+            position: relative;
+            z-index: 1;
+        }
+
         /* ── Tarjeta principal del abogado ── */
         .hero-card {
             border: 1px solid #e4dfd8;
@@ -113,8 +131,8 @@
             border-top: none;
             border-radius: 0 0 14px 14px;
             padding: 36px 40px 32px;
-            background: #faf9f7;
-            margin-top: -14px; /* se solapa levemente con la tarjeta de arriba */
+            background: #fff;
+            margin-top: -14px;
         }
 
         .bio-continua .seccion-interna {
@@ -123,13 +141,13 @@
             border-top: 1px solid #e4dfd8;
         }
 
-        /* ── Pastillas de áreas ── */
+        /* ── Pastillas de áreas (fondo gris suave) ── */
         .pastilla {
             border: 1px solid #e4dfd8;
             border-radius: 12px;
             padding: 20px 22px !important;
             margin-bottom: 16px;
-            background: #fff;
+            background: #f4f1ed;
             transition: box-shadow 0.22s, transform 0.22s;
             cursor: default;
         }
@@ -138,8 +156,11 @@
             transform: translateY(-2px);
         }
 
-        /* ── Tarjetas de colaboradores ── */
-        .colaborador-card {
+        /* ── Tarjetas de colaboradores (clicables) ── */
+        a.colaborador-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
             border: 1px solid #e4dfd8;
             border-radius: 14px;
             padding: 28px 24px;
@@ -147,9 +168,11 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.04);
             transition: box-shadow 0.22s, transform 0.22s;
         }
-        .colaborador-card:hover {
+        a.colaborador-card:hover {
             box-shadow: 0 8px 28px rgba(0,0,0,0.10);
             transform: translateY(-3px);
+            color: inherit;
+            text-decoration: none;
         }
 
         /* ── Botón de méritos ── */
@@ -519,7 +542,7 @@
 
                 <div class="colaboradores-grid">
                     <!-- Colaborador 1 -->
-                    <div class="colaborador-card">
+                    <a class="colaborador-card" href="https://legalexpertise.es/" target="_blank" rel="noopener">
                         <img class="colaborador-1" src="img/colaboradores/anahi.svg" alt="Anahí Luz Haleblian">
                         <h4 class=" carousel-title">Anahí Luz Haleblian</h4>
                         <p class="carousel-text">
@@ -528,13 +551,11 @@
                             Más de 20 años de experiencia en España y Argentina. Asesoramiento en español, inglés y
                             francés.
                         </p>
-                        <a href="https://www.linkedin.com/in/haleblian-acosta-4b880b14b/">
-                            <img src="img/linkedin-blue.svg" alt="Linkedin">
-                        </a>
-                    </div>
+                        <img src="img/linkedin-blue.svg" alt="Linkedin" style="width:20px;opacity:0.6;">
+                    </a>
 
                     <!-- Colaborador 2 -->
-                    <div class="colaborador-card">
+                    <a class="colaborador-card" href="https://pastorantoniocp-abogado.com/" target="_blank" rel="noopener">
                         <img class="colaborador-1" src="img/colaboradores/pastor.svg" alt="Pastor Antonio Cañas">
                         <h4 class=" carousel-title">Pastor Antonio Cañas Pérez</h4>
                         <p class="carousel-text">
@@ -542,10 +563,8 @@
                             Penal,
                             Familia y Administrativo. Atiende en español, inglés y catalán.
                         </p>
-                        <a href="https://www.linkedin.com/in/pastor-antonio-ca%C3%B1as-p%C3%A9rez-848baa19b/">
-                            <img src="img/linkedin-blue.svg" alt="Linkedin">
-                        </a>
-                    </div>
+                        <img src="img/linkedin-blue.svg" alt="Linkedin" style="width:20px;opacity:0.6;">
+                    </a>
                 </div>
             </div>
         </section>
