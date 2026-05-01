@@ -14,7 +14,7 @@
     </script>
 
     <title>Sobre nosotros | Antonio Gaitán Abogados en Adra, Almería</title>
-    <meta name="description" content="Conoce a Antonio Gaitán, abogado en Adra con amplia trayectoria en derecho de familia, segunda oportunidad, desahucios, familia, reclamación de deudas, accidentes de tráfico. Congresos internacionales, artículos especializados en Almería." />
+    <meta name="description" content="Conoce a Antonio Gaitán, abogado en Adra con amplia trayectoria en derecho de familia, segunda oportunidad, desahucios y accidentes de tráfico. Congresos internacionales, artículos especializados y más de una década de ejercicio en Almería." />
     <meta name="author" content="Antonio Gaitán Abogados" />
     <link rel="canonical" href="https://antoniogaitanabogados.com/nosotros.html" />
 
@@ -43,6 +43,9 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+        /* ── OVERRIDE HERO NOSOTROS — deja que el ::before teal del CSS funcione normal ── */
+        /* Sin override: el CSS global aplica el teal al 50% como en el resto de páginas */
+
         /* ── ANCHURA ── */
         .page-wrap { width: 100%; }
         .page-content-inner { max-width: 1160px; margin: 0 auto; padding: 2.8rem 28px; }
@@ -417,15 +420,14 @@
     <!-- ── HERO (mismo estilo que derechoFamilia) ── -->
     <div class="main">
         <section class="hero-hipoteca py-5" style="background-image:url('img/nosotros-mejorado.webp'); background-size:cover; background-position:center; position:relative;">
-            <div style="position:absolute;inset:0;background:rgba(0,0,0,0.52);"></div>
-            <div class="container" style="position:relative;z-index:1;">
+            <div class="container" style="position:relative;z-index:10;">
                 <div class="row hero-texto-cancela hipoteca-flex">
                     <div class="col-lg-6 contenido-hero-hipoteca">
                         <h1 style="margin-bottom:20px; font-size:20px; color:#fff;">Sobre Antonio Gaitán Abogados</h1>
                         <h2 class="h2-cancela fw-bold mb-3" style="color:#fff;">CONOCE TODO SOBRE NOSOTROS</h2>
                     </div>
                     <div class="contacto-hero-hipoteca col-lg-6">
-                        <h3 style="color:#fff;">CUÉNTANOS TU CASO</h3>
+                        <h3>CUÉNTANOS TU CASO</h3>
                         <a href="tel:+34671398925" class="btn llamar">Llamar</a>
                         <a href="https://wa.me/+34671398925" class="btn WhatsApp-b">WhatsApp</a>
                     </div>
