@@ -243,6 +243,34 @@
         .cta-btn-w { background: #25D366; color: #fff; }
         .cta-btn-w:hover { background: #1da851; color: #fff; }
 
+        /* ── SERVICE CARD ENLACE ── */
+        .service-card--link {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            position: relative;
+        }
+        .service-card--link:hover {
+            border-top-color: #007a7c;
+        }
+        .service-card--link h3 {
+            /* hereda color de .service-card h3 */
+        }
+        .card-read-more {
+            display: inline-block;
+            margin-top: auto;
+            padding-top: 0.9rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #00989A;
+            letter-spacing: .02em;
+            transition: color 0.2s ease;
+        }
+        .service-card--link:hover .card-read-more {
+            color: #007a7c;
+        }
+
         /* Separador suave entre bloques */
         .section-divider { border: none; border-top: 1px solid #e2eaea; margin: 2.5rem 0; }
 
@@ -348,10 +376,13 @@
                         <!-- Nuestros servicios -->
                         <h2 class="carousel-title">Nuestros servicios de derecho de familia</h2>
                         <div class="ventajas-grid">
-                            <div class="service-card">
+                            <a href="divorcio-mutuo-acuerdo-guia-adra-almeria.html"
+                               class="service-card service-card--link"
+                               aria-label="Más información sobre el divorcio de mutuo acuerdo">
                                 <h3>Divorcio de mutuo acuerdo</h3>
                                 <p>El procedimiento más rápido y económico cuando hay consenso. Redactamos el convenio regulador completo y coordinamos todo el proceso ante el juzgado o ante notario.</p>
-                            </div>
+                                <span class="card-read-more">Leer guía completa →</span>
+                            </a>
                             <div class="service-card">
                                 <h3>Divorcio contencioso</h3>
                                 <p>Cuando no hay acuerdo, te representamos con firmeza en el juzgado. Defendemos tus intereses y los de tus hijos en cada fase del proceso.</p>
@@ -557,7 +588,7 @@
                 <section class="cta-contacto">
                     <div class="container">
                         <div class="row text-center">
-                            <h2 class="carousel-title">Solicita tu consulta gratuita </h2>
+                            <h2 class="carousel-title">Solicita tu consulta gratuita en Adra (Almería)</h2>
                             <p class="carousel-text mb-4">
                                 Estudiaremos tu caso sin compromiso y te asesoraremos de forma clara y profesional. Contacta ahora con tu abogado de confianza en Adra.
                             </p>
