@@ -1003,7 +1003,18 @@ li {
     position: fixed;
     bottom: 66px;
     right: 7px;
-    z-index: 999;
+    z-index: 999
+
+    .whatsapp-boton-container {
+    background: #00989A;   /* teal de marca */
+    box-shadow: 0 4px 18px rgba(0,152,154,0.45);
+}
+
+.whatsapp-boton-container:hover {
+    background: #29524E;   /* verde oscuro al hover */
+    box-shadow: 0 6px 24px rgba(41,82,78,0.5);
+    transform: scale(1.12);
+}
 }
 
 .whatsapp-img {
