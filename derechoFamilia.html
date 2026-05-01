@@ -13,13 +13,11 @@
         gtag('config', 'G-0BFV875PX7');
     </script>
 
-    <!-- SEO -->
     <title>Abogado de Familia en Adra y Almería | Divorcios, Custodia, Pensiones | Antonio Gaitán</title>
     <meta name="description" content="Abogado especialista en derecho de familia en Adra, Almería. Divorcios de mutuo acuerdo, custodia de hijos, pensión alimenticia y convenio regulador. Primera consulta gratuita." />
     <meta name="author" content="Antonio Gaitán Abogados" />
     <link rel="canonical" href="https://antoniogaitanabogados.com/derechoFamilia.html" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Abogado de Familia en Adra y Almería | Divorcios, Custodia, Pensiones" />
     <meta property="og:description" content="Especialistas en derecho de familia en Almería: divorcios, custodia compartida, pensión alimenticia y convenio regulador. Consulta gratuita en Adra." />
     <meta property="og:image" content="https://antoniogaitanabogados.com/img/servicios/derecho-familia.jpg" />
@@ -28,22 +26,18 @@
     <meta property="og:site_name" content="Antonio Gaitán Abogados" />
     <meta property="og:locale" content="es_ES" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Abogado de Familia en Adra y Almería | Antonio Gaitán">
     <meta name="twitter:description" content="Divorcios, custodia, pensiones y convenios reguladores en Almería. Primera consulta gratuita en Adra.">
     <meta name="twitter:image" content="https://antoniogaitanabogados.com/img/servicios/derecho-familia.jpg">
 
-    <!-- Favicon -->
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-    <!-- Bootstrap -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
@@ -53,7 +47,6 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -74,11 +67,11 @@
         },
         "geo": { "@type": "GeoCoordinates", "latitude": 36.74887657059318, "longitude": -3.017259925486763 },
         "areaServed": [
-            { "@type": "City", "name": "Adra" },
-            { "@type": "City", "name": "Berja" },
-            { "@type": "City", "name": "El Ejido" },
-            { "@type": "City", "name": "Roquetas de Mar" },
-            { "@type": "City", "name": "Almería" }
+            {"@type":"City","name":"Adra"},
+            {"@type":"City","name":"Berja"},
+            {"@type":"City","name":"El Ejido"},
+            {"@type":"City","name":"Roquetas de Mar"},
+            {"@type":"City","name":"Almería"}
         ],
         "openingHours": "Mo-Th 09:00-18:30, Fr 09:00-14:00",
         "priceRange": "Consulta gratuita",
@@ -86,24 +79,47 @@
             "@type": "OfferCatalog",
             "name": "Servicios de Derecho de Familia",
             "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Divorcio de mutuo acuerdo" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Divorcio contencioso" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custodia de hijos" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pensión alimenticia" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Convenio regulador" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Modificación de medidas" } }
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Divorcio de mutuo acuerdo"}},
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Divorcio contencioso"}},
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Custodia de hijos"}},
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pensión alimenticia"}},
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Convenio regulador"}},
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Modificación de medidas"}}
             ]
         }
     }
     </script>
 
     <style>
-        /* ── LAYOUT GENERAL ── */
-        .page-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* ── ICONOS COLOREADOS ── */
+        /* Cuadrado redondeado con color de marca */
+        .icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            flex-shrink: 0;
         }
+        /* Verde oscuro */
+        .icon-p { background: rgba(41,82,78,0.10); color: #29524E; }
+        /* Verde claro / teal */
+        .icon-s { background: rgba(0,152,154,0.11); color: #00989A; }
+
+        /* Icono pequeño inline (para accent-cards y cajas) */
+        .icon-sm {
+            font-size: 1rem;
+            margin-right: 5px;
+            vertical-align: -2px;
+        }
+        .icon-sm.icon-p { background: none; color: #29524E; display: inline; width: auto; height: auto; border-radius: 0; }
+        .icon-sm.icon-s { background: none; color: #00989A; display: inline; width: auto; height: auto; border-radius: 0; }
+
+        /* ── LAYOUT ── */
+        .page-content { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 
         /* ── HERO ── */
         .hero-familia {
@@ -112,7 +128,7 @@
             text-align: center;
             color: #fff;
         }
-        .hero-familia .hero-eyebrow {
+        .hero-eyebrow {
             font-size: 0.82rem;
             font-weight: 600;
             letter-spacing: .12em;
@@ -123,63 +139,44 @@
         .hero-familia h1 {
             font-size: clamp(1.6rem, 4vw, 2.4rem);
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.25;
             margin-bottom: 18px;
             color: #fff;
         }
-        .hero-familia p {
+        .hero-familia > div > p {
             font-size: 1.05rem;
             color: rgba(255,255,255,0.88);
             max-width: 620px;
             margin: 0 auto 32px;
             line-height: 1.7;
         }
-        .hero-ctas {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
         .hero-ctas a {
-            padding: 13px 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 13px 26px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.94rem;
             text-decoration: none;
             transition: all 0.22s ease;
         }
-        .btn-llamar-hero {
-            background: #fff;
-            color: #29524E;
-        }
-        .btn-llamar-hero:hover { background: #e8f5f5; color: #29524E; }
-        .btn-wa-hero {
-            background: #25D366;
-            color: #fff;
-        }
-        .btn-wa-hero:hover { background: #1da851; color: #fff; }
-        .btn-consulta-hero {
-            background: #00989A;
-            color: #fff;
-        }
-        .btn-consulta-hero:hover { background: #007a7c; color: #fff; }
+        .btn-llamar-hero  { background: #fff; color: #29524E; }
+        .btn-llamar-hero:hover  { background: #e8f5f5; color: #29524E; }
+        .btn-wa-hero      { background: #25D366; color: #fff; }
+        .btn-wa-hero:hover      { background: #1da851; color: #fff; }
+        .btn-consulta-hero{ background: #00989A; color: #fff; }
+        .btn-consulta-hero:hover{ background: #007a7c; color: #fff; }
 
         /* ── SECCIÓN INTRO ── */
-        .intro-section {
-            padding: 52px 0 36px;
-            text-align: justify;
-        }
-        .intro-section p {
-            color: #4a5568;
-            line-height: 1.75;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
+        .intro-section { padding: 52px 0 36px; }
+        .intro-section p { color: #4a5568; line-height: 1.75; font-size: 1rem; margin-bottom: 1rem; text-align: justify; }
 
         /* ── TÍTULOS DE SECCIÓN ── */
         .section-title {
             color: #29524E;
-            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            font-size: clamp(1.15rem, 2.5vw, 1.45rem);
             font-weight: 800;
             margin: 48px 0 20px;
             padding-bottom: 10px;
@@ -187,32 +184,14 @@
             display: inline-block;
         }
 
-        /* ── CARDS GENERALES ── */
-        .ventajas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.4rem;
-            margin: 1.4rem 0;
-        }
-        .ventajas-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.4rem;
-            margin: 1.4rem 0;
-        }
-        .ventajas-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.4rem;
-            margin: 1.4rem 0;
-        }
-        @media (max-width: 720px) {
-            .ventajas-grid-2, .ventajas-grid-3 { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 520px) {
-            .ventajas-grid { grid-template-columns: 1fr; }
-        }
+        /* ── GRIDS ── */
+        .ventajas-grid   { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.4rem; margin: 1.4rem 0; }
+        .ventajas-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.4rem; margin: 1.4rem 0; }
+        .ventajas-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; margin: 1.4rem 0; }
+        @media (max-width: 720px) { .ventajas-grid-2, .ventajas-grid-3 { grid-template-columns: 1fr; } }
+        @media (max-width: 520px) { .ventajas-grid { grid-template-columns: 1fr; } }
 
+        /* ── CARD BASE ── */
         .info-card {
             background: #f8f9fa;
             border-radius: 16px;
@@ -220,20 +199,11 @@
             box-shadow: 0 4px 14px rgba(0,0,0,0.05);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .info-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(41,82,78,0.13);
-        }
-        .info-card h3 {
-            color: #29524E;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.55rem;
-        }
-        .info-card p { color: #4a5568; line-height: 1.6; margin: 0; font-size: 0.93rem; }
-        .card-icon { font-size: 1.8rem; margin-bottom: 0.6rem; display: block; }
+        .info-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(41,82,78,0.13); }
+        .info-card h3 { color: #29524E; font-size: 1rem; font-weight: 700; margin-bottom: 0.55rem; }
+        .info-card p  { color: #4a5568; line-height: 1.6; margin: 0; font-size: 0.93rem; }
 
-        /* Servicio card (con número) */
+        /* ── SERVICE CARD (sin número, con borde top) ── */
         .service-card {
             background: #fff;
             border-radius: 16px;
@@ -242,30 +212,14 @@
             border-top: 4px solid #00989A;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 30px rgba(41,82,78,0.14);
-        }
-        .service-card .service-num {
-            display: inline-block;
-            background: #29524E;
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-bottom: 0.9rem;
-            letter-spacing: .06em;
-        }
-        .service-card h3 {
-            color: #29524E;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .service-card p { color: #4a5568; font-size: 0.92rem; line-height: 1.6; margin: 0; }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(41,82,78,0.14); }
+        .service-card h3 { color: #29524E; font-size: 1rem; font-weight: 700; margin: 0.5rem 0 0.5rem; }
+        .service-card p  { color: #4a5568; font-size: 0.92rem; line-height: 1.6; margin: 0; }
 
-        /* Accent card */
+        /* Alterna el borde superior entre los dos verdes */
+        .service-card:nth-child(even) { border-top-color: #29524E; }
+
+        /* ── ACCENT CARD ── */
         .accent-card {
             border-left: 4px solid #00989A;
             background: #f0fafa;
@@ -276,7 +230,7 @@
         .accent-card strong { color: #29524E; display: block; margin-bottom: 0.3rem; }
         .accent-card p { color: #4a5568; margin: 0; font-size: 0.94rem; line-height: 1.6; }
 
-        /* Highlight box */
+        /* ── HIGHLIGHT BOX ── */
         .highlight-box {
             background: #e8f5f5;
             border-radius: 14px;
@@ -286,7 +240,7 @@
         }
         .highlight-box p { margin: 0; color: #29524E; font-size: 0.97rem; line-height: 1.7; }
 
-        /* ── IMAGEN CON TEXTO ── */
+        /* ── IMAGEN + TEXTO ── */
         .img-text-block {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -301,150 +255,70 @@
             object-fit: cover;
             box-shadow: 0 8px 24px rgba(41,82,78,0.13);
         }
-        .img-text-block .img-text-body p {
-            color: #4a5568;
-            line-height: 1.72;
-            font-size: 0.97rem;
-            text-align: justify;
-        }
+        .img-text-block p { color: #4a5568; line-height: 1.72; font-size: 0.97rem; text-align: justify; }
 
-        /* ── TABLA DE COMPARACIÓN ── */
-        .compare-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 8px;
-            margin: 1.2rem 0;
-        }
+        /* ── TABLA COMPARATIVA ── */
+        .compare-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; margin: 1.2rem 0; }
         .compare-table th {
-            background: #29524E;
-            color: #fff;
-            padding: 0.7rem 1.1rem;
-            font-size: 0.88rem;
-            font-weight: 600;
-            text-align: left;
+            background: #29524E; color: #fff;
+            padding: 0.7rem 1.1rem; font-size: 0.88rem; font-weight: 600; text-align: left;
         }
         .compare-table th:first-child { border-radius: 10px 0 0 10px; }
         .compare-table th:last-child  { border-radius: 0 10px 10px 0; }
-        .compare-table td {
-            padding: 0.8rem 1.1rem;
-            font-size: 0.93rem;
-            color: #4a5568;
-            background: #f8f9fa;
-        }
-        .compare-table td:first-child {
-            border-radius: 10px 0 0 10px;
-            font-weight: 600;
-            color: #29524E;
-        }
-        .compare-table td:last-child { border-radius: 0 10px 10px 0; }
+        .compare-table td { padding: 0.8rem 1.1rem; font-size: 0.93rem; color: #4a5568; background: #f8f9fa; }
+        .compare-table td:first-child { border-radius: 10px 0 0 10px; font-weight: 600; color: #29524E; }
+        .compare-table td:last-child  { border-radius: 0 10px 10px 0; }
         .compare-table tr:nth-child(even) td { background: #f0fafa; }
 
         /* ── FAQ ── */
         .faq-section { margin-top: 12px; }
         .faq-item { border-bottom: 1px solid #dde8e8; margin-bottom: 4px; }
         .faq-question {
-            cursor: pointer;
-            padding: 15px 10px;
-            font-weight: 600;
-            color: #29524E;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            user-select: none;
-            font-size: 0.98rem;
+            cursor: pointer; padding: 15px 10px; font-weight: 600; color: #29524E;
+            display: flex; justify-content: space-between; align-items: center;
+            gap: 1rem; user-select: none; font-size: 0.98rem;
         }
-        .faq-question::after {
-            content: '+';
-            font-size: 1.4rem;
-            color: #00989A;
-            flex-shrink: 0;
-            line-height: 1;
-        }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: #00989A; flex-shrink: 0; line-height: 1; }
         .faq-item.active .faq-question::after { content: '−'; }
-        .faq-answer {
-            display: none;
-            padding: 0 10px 16px;
-            color: #4a5568;
-            line-height: 1.65;
-            font-size: 0.96rem;
-        }
+        .faq-answer { display: none; padding: 0 10px 16px; color: #4a5568; line-height: 1.65; font-size: 0.96rem; }
         .faq-item.active .faq-answer { display: block; }
 
         /* ── FORMULARIO ── */
-        .form-section {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 2.5rem 2rem;
-            margin: 48px 0 0;
-        }
-        .form-section h2 {
-            color: #29524E;
-            font-size: 1.3rem;
-            font-weight: 800;
-            margin-bottom: 6px;
-        }
-        .form-section p { color: #4a5568; font-size: 0.95rem; margin-bottom: 1.6rem; }
+        .form-section { background: #f8f9fa; border-radius: 20px; padding: 2.5rem 2rem; margin: 48px 0 0; }
+        .form-section h2 { color: #29524E; font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
+        .form-section > p { color: #4a5568; font-size: 0.95rem; margin-bottom: 1.6rem; }
         .form-section .form-control,
         .form-section .input-text-area {
-            border: 1.5px solid #d0dede;
-            border-radius: 8px;
-            padding: 10px 14px;
-            font-size: 0.94rem;
-            width: 100%;
-            margin-bottom: 14px;
-            transition: border-color 0.2s;
+            border: 1.5px solid #d0dede; border-radius: 8px;
+            padding: 10px 14px; font-size: 0.94rem; width: 100%; margin-bottom: 14px;
+            transition: border-color 0.2s; box-sizing: border-box;
         }
         .form-section .form-control:focus,
-        .form-section .input-text-area:focus {
-            outline: none;
-            border-color: #00989A;
-        }
+        .form-section .input-text-area:focus { outline: none; border-color: #00989A; }
         .form-section .input-text-area { min-height: 120px; resize: vertical; }
         .btn-form-familia {
-            background: #29524E;
-            color: #fff;
-            border: none;
-            padding: 12px 32px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: background 0.22s ease;
-            width: 100%;
+            background: #29524E; color: #fff; border: none;
+            padding: 12px 32px; border-radius: 8px; font-weight: 700;
+            font-size: 0.95rem; cursor: pointer; transition: background 0.22s ease; width: 100%;
         }
         .btn-form-familia:hover { background: #00989A; }
 
         /* ── CTA BANDA ── */
-        .cta-band {
-            background: #29524E;
-            border-radius: 16px;
-            padding: 2.2rem 2rem;
-            text-align: center;
-            margin: 48px 0 0;
-        }
+        .cta-band { background: #29524E; border-radius: 16px; padding: 2.2rem 2rem; text-align: center; margin: 48px 0 0; }
         .cta-band h2 { color: #fff; font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
         .cta-band p  { color: rgba(255,255,255,0.88); font-size: 0.97rem; margin-bottom: 22px; }
-        .cta-band-btns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
+        .cta-band-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
         .cta-band-btns a {
-            padding: 12px 26px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.93rem;
-            text-decoration: none;
-            transition: all 0.22s ease;
+            display: inline-flex; align-items: center; gap: 7px;
+            padding: 12px 26px; border-radius: 8px; font-weight: 700;
+            font-size: 0.93rem; text-decoration: none; transition: all 0.22s ease;
         }
-        .cta-btn-p  { background: #00989A; color: #fff; }
-        .cta-btn-p:hover  { background: #007a7c; color: #fff; }
-        .cta-btn-t  { background: rgba(255,255,255,0.12); color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
-        .cta-btn-t:hover  { background: rgba(255,255,255,0.22); color: #fff; }
-        .cta-btn-w  { background: #25D366; color: #fff; }
-        .cta-btn-w:hover  { background: #1da851; color: #fff; }
+        .cta-btn-p { background: #00989A; color: #fff; }
+        .cta-btn-p:hover { background: #007a7c; color: #fff; }
+        .cta-btn-t { background: rgba(255,255,255,0.12); color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+        .cta-btn-t:hover { background: rgba(255,255,255,0.22); color: #fff; }
+        .cta-btn-w { background: #25D366; color: #fff; }
+        .cta-btn-w:hover { background: #1da851; color: #fff; }
     </style>
 </head>
 
@@ -454,10 +328,7 @@
         <div class="topbar-content">
             <a href="tel:+34671398925">+34 671 39 89 25</a>
             <a href="mailto:contacto@antoniogaitanabogados.com">contacto@antoniogaitanabogados.com</a>
-            <span class="topbar-item">
-                <i class="bi bi-clock"></i>
-                L–J 9:00–18:30 · V 9:00–14:00
-            </span>
+            <span class="topbar-item"><i class="bi bi-clock"></i> L–J 9:00–18:30 · V 9:00–14:00</span>
         </div>
     </div>
 
@@ -510,9 +381,15 @@
             <h1>Tu familia merece el mejor asesoramiento legal.<br>Estamos aquí para ayudarte.</h1>
             <p>Divorcios, custodia de hijos, pensiones alimenticias y convenios reguladores. Te acompañamos con profesionalidad y empatía en cada paso del proceso, buscando siempre la solución más justa y estable para toda tu familia.</p>
             <div class="hero-ctas">
-                <a href="tel:+34671398925" class="btn-llamar-hero">📞 Llamar ahora</a>
-                <a href="https://wa.me/34671398925" target="_blank" rel="noopener noreferrer" class="btn-wa-hero">💬 WhatsApp</a>
-                <a href="contacto.html" class="btn-consulta-hero">Consulta gratuita</a>
+                <a href="tel:+34671398925" class="btn-llamar-hero">
+                    <i class="bi bi-telephone-fill"></i> Llamar ahora
+                </a>
+                <a href="https://wa.me/34671398925" target="_blank" rel="noopener noreferrer" class="btn-wa-hero">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+                <a href="contacto.html" class="btn-consulta-hero">
+                    <i class="bi bi-calendar-check"></i> Consulta gratuita
+                </a>
             </div>
         </div>
     </section>
@@ -530,42 +407,43 @@
             <h2 class="section-title">Nuestros servicios de derecho de familia</h2>
 
             <div class="ventajas-grid">
+
                 <div class="service-card">
-                    <span class="service-num">SERVICIO 01</span>
-                    <span style="font-size:1.7rem; display:block; margin-bottom:0.6rem;">🤝</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-handshake-fill"></i></span>
                     <h3>Divorcio de mutuo acuerdo</h3>
                     <p>El procedimiento más rápido y económico cuando hay consenso. Redactamos el convenio regulador completo y coordinamos todo el proceso ante el juzgado o ante notario.</p>
                 </div>
+
                 <div class="service-card">
-                    <span class="service-num">SERVICIO 02</span>
-                    <span style="font-size:1.7rem; display:block; margin-bottom:0.6rem;">⚖️</span>
+                    <span class="icon-wrap icon-s"><i class="bi bi-briefcase-fill"></i></span>
                     <h3>Divorcio contencioso</h3>
                     <p>Cuando no hay acuerdo, te representamos con firmeza en el juzgado. Defendemos tus intereses y los de tus hijos en cada fase del proceso.</p>
                 </div>
+
                 <div class="service-card">
-                    <span class="service-num">SERVICIO 03</span>
-                    <span style="font-size:1.7rem; display:block; margin-bottom:0.6rem;">👨‍👩‍👧‍👦</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-people-fill"></i></span>
                     <h3>Custodia y régimen de visitas</h3>
                     <p>Asesoramiento sobre custodia compartida y monoparental, siempre priorizando el interés superior del menor. Negociamos el régimen de visitas más adecuado a tu situación.</p>
                 </div>
+
                 <div class="service-card">
-                    <span class="service-num">SERVICIO 04</span>
-                    <span style="font-size:1.7rem; display:block; margin-bottom:0.6rem;">📝</span>
+                    <span class="icon-wrap icon-s"><i class="bi bi-file-earmark-text-fill"></i></span>
                     <h3>Convenio regulador</h3>
                     <p>Redactamos el acuerdo que regula la pensión, la custodia, el uso de la vivienda y la patria potestad. Un convenio bien redactado evita conflictos durante años.</p>
                 </div>
+
                 <div class="service-card">
-                    <span class="service-num">SERVICIO 05</span>
-                    <span style="font-size:1.7rem; display:block; margin-bottom:0.6rem;">🔄</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-arrow-repeat"></i></span>
                     <h3>Modificación de medidas</h3>
                     <p>Las circunstancias cambian. Si hay una variación sustancial en la situación económica, laboral o familiar, solicitamos la modificación de pensiones o custodia.</p>
                 </div>
+
                 <div class="service-card">
-                    <span class="service-num">SERVICIO 06</span>
-                    <span style="font-size:1.7rem; display:block; margin-bottom:0.6rem;">🔒</span>
+                    <span class="icon-wrap icon-s"><i class="bi bi-shield-fill-check"></i></span>
                     <h3>Ejecución de sentencias</h3>
                     <p>Si tu expareja incumple lo acordado o decidido judicialmente —impago de pensiones, incumplimiento de visitas—, iniciamos el procedimiento de ejecución para hacerlo cumplir.</p>
                 </div>
+
             </div>
 
             <!-- ── DIVORCIO DETALLE ── -->
@@ -573,7 +451,7 @@
 
             <div class="img-text-block">
                 <img src="img/servicios/derecho-familia.jpg" alt="Abogado de familia en Adra, Almería — divorcios y custodia" loading="lazy">
-                <div class="img-text-body">
+                <div>
                     <p>El tipo de divorcio más adecuado depende fundamentalmente de si existe acuerdo entre las partes. Cuando ambos cónyuges están de acuerdo en divorciarse y en las condiciones —custodia, pensiones, vivienda—, el <strong>divorcio de mutuo acuerdo</strong> es con diferencia la opción más rápida, económica y menos desgastante.</p>
                     <p>Cuando no hay acuerdo, el <strong>divorcio contencioso</strong> es el camino: las partes exponen sus posiciones ante el juez, quien dicta sentencia. Es más largo y costoso, pero en ocasiones es el único recurso para proteger tus derechos y los de tus hijos.</p>
                 </div>
@@ -581,38 +459,14 @@
 
             <table class="compare-table">
                 <thead>
-                    <tr>
-                        <th></th>
-                        <th>Mutuo acuerdo</th>
-                        <th>Contencioso</th>
-                    </tr>
+                    <tr><th></th><th>Mutuo acuerdo</th><th>Contencioso</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Duración aproximada</td>
-                        <td>1 – 6 meses</td>
-                        <td>6 meses – más de 1 año</td>
-                    </tr>
-                    <tr>
-                        <td>Coste</td>
-                        <td>Más económico</td>
-                        <td>Más elevado</td>
-                    </tr>
-                    <tr>
-                        <td>Control sobre el acuerdo</td>
-                        <td>Total — lo pactáis vosotros</td>
-                        <td>Decide el juez</td>
-                    </tr>
-                    <tr>
-                        <td>Desgaste emocional</td>
-                        <td>Menor</td>
-                        <td>Mayor</td>
-                    </tr>
-                    <tr>
-                        <td>Requisito mínimo</td>
-                        <td>3 meses de matrimonio</td>
-                        <td>3 meses de matrimonio</td>
-                    </tr>
+                    <tr><td>Duración aproximada</td><td>1 – 6 meses</td><td>6 meses – más de 1 año</td></tr>
+                    <tr><td>Coste</td><td>Más económico</td><td>Más elevado</td></tr>
+                    <tr><td>Control sobre el acuerdo</td><td>Total — lo pactáis vosotros</td><td>Decide el juez</td></tr>
+                    <tr><td>Desgaste emocional</td><td>Menor</td><td>Mayor</td></tr>
+                    <tr><td>Requisito mínimo</td><td>3 meses de matrimonio</td><td>3 meses de matrimonio</td></tr>
                 </tbody>
             </table>
 
@@ -621,19 +475,22 @@
 
             <div class="ventajas-grid-2">
                 <div class="info-card">
-                    <span class="card-icon">👨‍👩‍👧‍👦</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-people-fill"></i></span>
                     <h3>Custodia compartida</h3>
-                    <p>Los hijos pasan tiempo equilibrado con ambos progenitores. Los tribunales españoles la favorecen cuando ambos padres viven cerca, tienen flexibilidad laboral y pueden comunicarse con madurez. Beneficia al menor mantener una relación plena con los dos.</p>
+                    <p>Los hijos pasan tiempo equilibrado con ambos progenitores. Los tribunales españoles la favorecen cuando ambos padres viven cerca, tienen flexibilidad laboral y pueden comunicarse con madurez.</p>
                 </div>
                 <div class="info-card">
-                    <span class="card-icon">🏠</span>
+                    <span class="icon-wrap icon-s"><i class="bi bi-house-fill"></i></span>
                     <h3>Custodia monoparental</h3>
-                    <p>Los hijos residen principalmente con uno de los progenitores, y el otro tiene un régimen de visitas pactado. Puede ser la mejor opción cuando existe gran distancia entre domicilios, horarios muy incompatibles o conflicto grave entre las partes.</p>
+                    <p>Los hijos residen principalmente con uno de los progenitores, y el otro tiene un régimen de visitas pactado. Puede ser la mejor opción cuando existe gran distancia o conflicto grave entre las partes.</p>
                 </div>
             </div>
 
             <div class="accent-card">
-                <strong>⚖️ El principio rector: el interés superior del menor</strong>
+                <strong>
+                    <i class="bi bi-balance-scale icon-sm icon-p"></i>
+                    El principio rector: el interés superior del menor
+                </strong>
                 <p>Toda decisión sobre custodia —sea acordada o decidida por el juez— debe guiarse por el bienestar del menor. No existe un modelo único válido para todas las familias. Te asesoramos sobre cuál es la mejor opción en tu caso concreto.</p>
             </div>
 
@@ -642,25 +499,28 @@
 
             <div class="ventajas-grid-3">
                 <div class="info-card" style="text-align:center;">
-                    <span class="card-icon">🍽️</span>
+                    <span class="icon-wrap icon-p" style="margin:0 auto 0.7rem;"><i class="bi bi-basket-fill"></i></span>
                     <h3>¿Qué cubre la pensión?</h3>
                     <p>Alimentación, ropa, sanidad, educación, ocio y actividades extraescolares de los hijos.</p>
                 </div>
                 <div class="info-card" style="text-align:center;">
-                    <span class="card-icon">📊</span>
+                    <span class="icon-wrap icon-s" style="margin:0 auto 0.7rem;"><i class="bi bi-bar-chart-fill"></i></span>
                     <h3>¿Cómo se calcula?</h3>
                     <p>Depende de los ingresos del obligado y las necesidades de los hijos. Los jueces usan las Tablas orientadoras del CGPJ como referencia.</p>
                 </div>
                 <div class="info-card" style="text-align:center;">
-                    <span class="card-icon">🔄</span>
+                    <span class="icon-wrap icon-p" style="margin:0 auto 0.7rem;"><i class="bi bi-arrow-repeat"></i></span>
                     <h3>¿Se puede modificar?</h3>
                     <p>Sí. Si cambia sustancialmente la situación económica o las necesidades del menor, puede solicitarse una modificación de medidas.</p>
                 </div>
             </div>
 
             <div class="accent-card">
-                <strong>💶 Pensión compensatoria</strong>
-                <p>Si el divorcio genera un desequilibrio económico significativo entre los cónyuges —por ejemplo, si uno de ellos dejó de trabajar para cuidar a los hijos—, puede pactarse o reclamarse una pensión compensatoria. Puede ser temporal o indefinida según las circunstancias. Te asesoramos sobre si te corresponde y en qué cuantía.</p>
+                <strong>
+                    <i class="bi bi-cash-coin icon-sm icon-s"></i>
+                    Pensión compensatoria
+                </strong>
+                <p>Si el divorcio genera un desequilibrio económico significativo entre los cónyuges —por ejemplo, si uno de ellos dejó de trabajar para cuidar a los hijos—, puede pactarse o reclamarse una pensión compensatoria. Puede ser temporal o indefinida según las circunstancias.</p>
             </div>
 
             <!-- ── VIVIENDA ── -->
@@ -668,24 +528,27 @@
 
             <div class="ventajas-grid">
                 <div class="info-card">
-                    <span class="card-icon">👨‍👧</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-person-fill"></i></span>
                     <h3>Uso al cónyuge custodio</h3>
                     <p>Lo más habitual cuando hay hijos menores. La vivienda queda para quien tiene la custodia de forma temporal, sin implicar cambio de titularidad.</p>
                 </div>
                 <div class="info-card">
-                    <span class="card-icon">🏷️</span>
+                    <span class="icon-wrap icon-s"><i class="bi bi-tag-fill"></i></span>
                     <h3>Venta y reparto</h3>
                     <p>Si ninguno puede o quiere quedarse con la vivienda, o si ambos necesitan liquidez, se acuerda la venta y el reparto del resultado.</p>
                 </div>
                 <div class="info-card">
-                    <span class="card-icon">🔑</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-key-fill"></i></span>
                     <h3>Adjudicación a uno</h3>
                     <p>Uno se queda con la vivienda y compensa económicamente al otro. Requiere tasación y habitualmente una novación hipotecaria con el banco.</p>
                 </div>
             </div>
 
             <div class="highlight-box">
-                <p>🏦 <strong>¿La hipoteca supera el valor del inmueble?</strong> En esos casos puede plantearse la <strong>dación en pago</strong>: entregar la vivienda al banco para saldar la deuda hipotecaria. No es un derecho automático, pero en algunos casos es la salida más razonable. <a href="dacion-en-pago.html" style="color:#29524E; font-weight:600;">Más información sobre dación en pago →</a></p>
+                <p>
+                    <i class="bi bi-bank icon-sm icon-s"></i>
+                    <strong>¿La hipoteca supera el valor del inmueble?</strong> En esos casos puede plantearse la <strong>dación en pago</strong>: entregar la vivienda al banco para saldar la deuda hipotecaria. No es un derecho automático, pero en algunos casos es la salida más razonable. <a href="dacion-en-pago.html" style="color:#29524E; font-weight:600;">Más información sobre dación en pago →</a>
+                </p>
             </div>
 
             <!-- ── POR QUÉ ELEGIRNOS ── -->
@@ -693,22 +556,22 @@
 
             <div class="ventajas-grid-2">
                 <div class="info-card">
-                    <span class="card-icon">📍</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-geo-alt-fill"></i></span>
                     <h3>Despacho local en Adra</h3>
                     <p>Conocemos los juzgados de la provincia de Almería, sus tiempos y sus particularidades. No somos un despacho masivo: conocemos tu caso y te asesoramos personalmente.</p>
                 </div>
                 <div class="info-card">
-                    <span class="card-icon">💬</span>
+                    <span class="icon-wrap icon-s"><i class="bi bi-chat-heart-fill"></i></span>
                     <h3>Trato humano y cercano</h3>
                     <p>Entendemos que un proceso de divorcio o custodia es mucho más que un trámite legal. Te explicamos todo con claridad, sin tecnicismos, y resolvemos tus dudas en cada paso.</p>
                 </div>
                 <div class="info-card">
-                    <span class="card-icon">💰</span>
+                    <span class="icon-wrap icon-p"><i class="bi bi-currency-euro"></i></span>
                     <h3>Presupuesto transparente</h3>
                     <p>Antes de empezar sabes exactamente lo que va a costar. Sin sorpresas ni cargos ocultos. En divorcios de mutuo acuerdo ofrecemos habitualmente un precio cerrado.</p>
                 </div>
                 <div class="info-card">
-                    <span class="card-icon">⚡</span>
+                    <span class="icon-wrap icon-s"><i class="bi bi-lightning-charge-fill"></i></span>
                     <h3>Agilidad y eficacia</h3>
                     <p>Sabemos que en estos procesos el tiempo importa. Coordinamos todos los trámites para que el procedimiento sea lo más ágil posible sin sacrificar ningún detalle.</p>
                 </div>
@@ -765,9 +628,9 @@
                 <h2>El primer paso para resolverlo empieza aquí</h2>
                 <p>Cuéntanos tu caso y nos pondremos en contacto contigo a la mayor brevedad posible. Primera consulta gratuita y sin compromiso.</p>
                 <form action="https://formsubmit.co/contacto@antoniogaitanabogados.com" method="POST">
-                    <input type="text" name="nombre" class="form-control" placeholder="Nombre y apellido" required aria-label="Nombre y apellido">
-                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required aria-label="Correo electrónico">
-                    <textarea class="input-text-area" name="mensaje" placeholder="Cuéntanos qué necesitas" required aria-label="Mensaje de consulta"></textarea>
+                    <input type="text"  name="nombre"  class="form-control"    placeholder="Nombre y apellido"      required aria-label="Nombre y apellido">
+                    <input type="email" name="email"   class="form-control"    placeholder="Correo electrónico"     required aria-label="Correo electrónico">
+                    <textarea          name="mensaje"  class="input-text-area" placeholder="Cuéntanos qué necesitas" required aria-label="Mensaje de consulta"></textarea>
                     <button type="submit" class="btn-form-familia">Enviar consulta</button>
                 </form>
             </div>
@@ -777,9 +640,15 @@
                 <h2>¿Tienes dudas sobre tu situación familiar?</h2>
                 <p>Analizamos tu caso sin compromiso y te explicamos las opciones reales con claridad. Atendemos en Adra, El Ejido, Roquetas, Berja y toda la provincia de Almería.</p>
                 <div class="cta-band-btns">
-                    <a href="contacto.html" class="cta-btn-p">Solicitar consulta gratuita</a>
-                    <a href="tel:+34671398925" class="cta-btn-t">📞 671 39 89 25</a>
-                    <a href="https://wa.me/34671398925" target="_blank" rel="noopener noreferrer" class="cta-btn-w">💬 WhatsApp</a>
+                    <a href="contacto.html" class="cta-btn-p">
+                        <i class="bi bi-calendar-check"></i> Solicitar consulta gratuita
+                    </a>
+                    <a href="tel:+34671398925" class="cta-btn-t">
+                        <i class="bi bi-telephone-fill"></i> 671 39 89 25
+                    </a>
+                    <a href="https://wa.me/34671398925" target="_blank" rel="noopener noreferrer" class="cta-btn-w">
+                        <i class="bi bi-whatsapp"></i> WhatsApp
+                    </a>
                 </div>
             </div>
 
@@ -836,7 +705,6 @@
         <img class="whatsapp-img" src="img/iconos/whatsapp-2.svg" alt="Icono de WhatsApp" loading="lazy">
     </a>
 
-    <!-- FAQ -->
     <script>
         document.querySelectorAll('.faq-question').forEach(q => {
             q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
