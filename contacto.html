@@ -74,6 +74,16 @@
         .form-map-grid iframe { width: 100%; height: 440px; border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.1); }
 
         .form-contacto-wrap { background: #fff; border: 2px solid #e2eaea; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 18px rgba(0,0,0,.06); }
+        .form-contacto-wrap form {
+            width: 100% !important;
+            flex-direction: column !important;
+            height: auto !important;
+            align-items: stretch !important;
+            justify-content: flex-start !important;
+        }
+        .form-contacto-wrap .input-form { width: 100%; }
+        .form-contacto-wrap .form-control { width: 100%; }
+        .form-contacto-wrap .input-text-area { width: 100%; height: 130px; }
         .form-contacto-wrap h3 { font-size: 1.1rem; font-weight: 700; color: #29524E; margin-bottom: 1.2rem; }
         .form-contacto-wrap .form-control { border: 1.5px solid #d1d5db; border-radius: 8px; padding: 10px 14px; font-size: .95rem; width: 100%; margin-bottom: 14px; transition: border-color .2s; }
         .form-contacto-wrap .form-control:focus { border-color: #00989A; outline: none; }
@@ -219,13 +229,23 @@
             <p class="section-subtitle">C. Natalio Rivas, 15, Portal 1, 3&ordf; Oficina &middot; Centro &middot; 04770 Adra, Almer&iacute;a</p>
 
             <div class="form-map-grid">
+                <!-- Formulario con formato estándar — anula el flex-row del CSS global -->
                 <div class="form-contacto-wrap">
-                    <h3>Cu&eacute;ntanos tu caso</h3>
-                    <form action="https://formsubmit.co/contacto@antoniogaitanabogados.com" method="POST">
-                        <input type="text" name="nombre" class="form-control" placeholder="Nombre y apellido" required aria-label="Nombre y apellido">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required aria-label="Correo electr&oacute;nico">
-                        <input type="tel" name="telefono" class="form-control" placeholder="Tel&eacute;fono (opcional)" aria-label="Tel&eacute;fono">
-                        <textarea class="input-text-area" name="mensaje" placeholder="Cu&eacute;ntanos qu&eacute; necesitas" required aria-label="Mensaje de consulta"></textarea>
+                    <h3>Cuéntanos tu caso</h3>
+                    <form action="https://formsubmit.co/contacto@antoniogaitanabogados.com" method="POST"
+                          style="width:100% !important; flex-direction:column !important; height:auto; align-items:stretch;">
+                        <div class="input-form mb-3">
+                            <input type="text" name="nombre" class="form-control" placeholder="Nombre y apellido" required aria-label="Nombre y apellido">
+                        </div>
+                        <div class="input-form mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required aria-label="Correo electrónico">
+                        </div>
+                        <div class="input-form mb-3">
+                            <input type="tel" name="telefono" class="form-control" placeholder="Teléfono (opcional)" aria-label="Teléfono">
+                        </div>
+                        <div class="input-form mb-3 form__text-area">
+                            <textarea class="input-text-area" name="mensaje" placeholder="Cuéntanos qué necesitas" required aria-label="Mensaje de consulta"></textarea>
+                        </div>
                         <button type="submit" class="btn-enviar">Enviar consulta gratuita</button>
                     </form>
                 </div>
