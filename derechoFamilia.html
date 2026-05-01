@@ -247,15 +247,22 @@
         .section-divider { border: none; border-top: 1px solid #e2eaea; margin: 2.5rem 0; }
 
         /* ── ANCHURA ── */
-        .info-section .container,
+        .page-wrap {
+            width: 100%;
+        }
+        .page-content-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 2.5rem 28px;
+        }
+        @media (max-width: 768px) {
+            .page-content-inner { padding: 1.5rem 16px; }
+        }
+        /* cta-contacto y formulario heredan el ancho normal de Bootstrap */
         .cta-contacto .container,
         .formulario.container {
             max-width: 1160px;
-            padding-left: 28px;
-            padding-right: 28px;
         }
-        .carousel-card { padding: 0 !important; }
-        .carousel-info  { padding: 0 !important; }
     </style>
 </head>
 
@@ -333,41 +340,10 @@
         </section>
 
         <!-- ══════════════════════════════════════════
-             BLOQUE ORIGINAL: foto + texto + servicios
+             CONTENIDO PRINCIPAL
         ══════════════════════════════════════════ -->
-        <div class="carousel-card">
-            <div class="carousel-info w-100">
-                <section class="info-section">
-                    <div class="container">
-                        <div class="row">
-
-                            <!-- Columna izquierda: texto -->
-                            <div class="col-12 col-lg-6">
-                                <h2 class="carousel-title">¿Enfrentando un cambio familiar? Podemos ayudarte</h2>
-                                <h3 class="carousel-title">Divorcios, custodia, convenios reguladores y pensión de alimentos</h3>
-                                <p class="carousel-text">
-                                    Te ofrecemos acompañamiento legal especializado y sensible para los momentos más delicados. Gestionamos divorcios y separaciones, convenios reguladores, pensiones de alimentos y régimen de custodia, siempre buscando la solución más estable y justa para todos, especialmente para los menores.
-                                </p>
-                                <p class="carousel-text">
-                                    Entendemos que cada familia es única. Por eso, trabajamos tanto por la vía amistosa (de mutuo acuerdo) como en la vía contenciosa, defendiendo tus derechos e intereses con profesionalidad y empatía. Te guiamos en cada paso, protegiendo tu bienestar y el de tu familia.
-                                </p>
-                            </div>
-
-                            <!-- Columna derecha: solo la imagen -->
-                            <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                                <img src="img/servicios/derecho-familia.jpg"
-                                    alt="Abogado de familia en Adra, Almería: divorcios, custodia y pensiones"
-                                    class="img-fluid"
-                                    style="border-radius:10px;">
-                            </div>
-
-                        </div>
-
-                        <!-- ══════════════════════════════════════════
-                             SECCIONES ENRIQUECIDAS (sin iconos)
-                        ══════════════════════════════════════════ -->
-
-                        <hr class="section-divider">
+        <div class="page-wrap">
+          <div class="page-content-inner">
 
                         <!-- Nuestros servicios -->
                         <h2 class="carousel-title">Nuestros servicios de derecho de familia</h2>
@@ -572,8 +548,8 @@
                             <div class="faq-answer">En divorcios de mutuo acuerdo ofrecemos habitualmente un presupuesto cerrado y único. Para casos contenciosos, los honorarios dependen de la complejidad y duración. En la primera consulta —que es gratuita— te explicamos con total transparencia los costes de tu caso concreto.</div>
                         </div>
 
-                    </div>
-                </section>
+          </div><!-- /page-content-inner -->
+        </div><!-- /page-wrap -->
 
                 <!-- ══════════════════════════════════════════
                      CTA CONTACTO ORIGINAL — intacto
@@ -581,7 +557,7 @@
                 <section class="cta-contacto">
                     <div class="container">
                         <div class="row text-center">
-                            <h2 class="carousel-title">Solicita tu consulta gratuita en Adra (Almería)</h2>
+                            <h2 class="carousel-title">Solicita tu consulta gratuita </h2>
                             <p class="carousel-text mb-4">
                                 Estudiaremos tu caso sin compromiso y te asesoraremos de forma clara y profesional. Contacta ahora con tu abogado de confianza en Adra.
                             </p>
@@ -619,9 +595,6 @@
                         </form>
                     </div>
                 </div>
-
-            </div>
-        </div>
 
     </div><!-- /.main -->
 
