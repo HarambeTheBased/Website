@@ -68,29 +68,33 @@
         /* ── SECCIÓN PERFIL ── */
         .perfil-grid {
             display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 3rem;
+            grid-template-columns: 420px 1fr;
+            gap: 2.8rem;
             align-items: start;
         }
-        @media (max-width: 820px) { .perfil-grid { grid-template-columns: 1fr; gap: 2rem; } }
+        @media (max-width: 900px) { .perfil-grid { grid-template-columns: 1fr; gap: 2rem; } }
 
-        /* ── FOTO CON OVERLAY ── */
+        /* ── FOTO — mismo efecto que colaboradores, sin filtro verde ── */
         .foto-wrap {
             position: relative;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 12px 36px rgba(41,82,78,0.18);
             cursor: pointer;
+            border: 2px solid #e2eaea;
+            transition: all .28s ease;
         }
         .foto-wrap img {
             width: 100%;
             display: block;
-            transition: filter 0.35s ease, transform 0.35s ease;
+            transition: transform 0.35s ease;
         }
-        .foto-wrap:hover img {
-            filter: brightness(0.55) saturate(1.4) hue-rotate(140deg);
-            transform: scale(1.03);
+        .foto-wrap:hover {
+            border-color: #00989A;
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0,152,154,0.2);
         }
+        .foto-wrap:hover img { transform: scale(1.03); }
         .foto-hint {
             position: absolute;
             bottom: 0; left: 0; right: 0;
@@ -210,19 +214,19 @@
         /* ── TARJETA VALOR ── */
         .valor-card { background: #f8f9fa; border-radius: 14px; padding: 1.5rem 1.6rem; box-shadow: 0 4px 14px rgba(0,0,0,.05); transition: transform .2s, box-shadow .2s; }
         .valor-card:hover { transform: translateY(-5px); box-shadow: 0 12px 26px rgba(0,152,154,.12); }
-        .valor-card h3 { color: #00989A; font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+        .valor-card h3 { color: #00989A; font-size: 1rem; font-weight: 700; margin-bottom: .5rem; text-align: center; }
         .valor-card p  { color: #4a5568; font-size: .93rem; line-height: 1.62; margin: 0; text-align: justify; }
 
         /* ── TARJETAS COLABORADORES ── */
         .colab-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.06); border: 2px solid #e2eaea; transition: all .28s ease; }
         .colab-card:hover { border-color: #00989A; transform: translateY(-6px); box-shadow: 0 16px 32px rgba(0,152,154,.16); }
-        .colab-img-wrap { width: 100%; aspect-ratio: 3/4; overflow: hidden; background: #e8f5f5; }
+        .colab-img-wrap { width: 100%; overflow: hidden; background: #e8f5f5; max-height: 240px; }
         .colab-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .35s ease; }
         .colab-card:hover .colab-img-wrap img { transform: scale(1.05); }
         .colab-body { padding: 1.3rem 1.4rem; }
-        .colab-name { font-size: 1rem; font-weight: 700; color: #29524E; margin-bottom: 4px; transition: color .28s; }
+        .colab-name { font-size: 1rem; font-weight: 700; color: #29524E; margin-bottom: 4px; transition: color .28s; text-align: center; }
         .colab-card:hover .colab-name { color: #00989A; }
-        .colab-role { font-size: .78rem; font-weight: 600; color: #00989A; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .7rem; }
+        .colab-role { font-size: .78rem; font-weight: 600; color: #00989A; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .7rem; text-align: center; }
         .colab-bio  { font-size: .88rem; color: #4a5568; line-height: 1.6; margin: 0; text-align: justify; }
 
         /* ── TARJETAS SERVICIO (clickables, animación scaleY) ── */
@@ -440,9 +444,9 @@
                 <div>
                     <p class="bio-nombre">Antonio Javier Gaitán Peña</p>
                     <p class="bio-titulo">Abogado colegiado · Adra, Almería</p>
-                    <p class="bio-text">Soy abogado, graduado en Derecho por la Universidad de Málaga, donde también cursé el Máster en Abogacía. Complementé mi formación con el Curso de Mediación Civil y Mercantil del Consejo General de la Abogacía Española, una especialización que me permite explorar vías de solución más ágiles para los conflictos. En la actualidad, continúo mi desarrollo académico como doctorando en Derecho en la UCAM.</p>
-                    <p class="bio-text">Mi trayectoria combina la práctica diaria con la investigación académica activa: congresos internacionales en Italia, Granada y Salamanca, y artículos publicados en las principales revistas jurídicas especializadas de España —LaLey ARANZADI y Sepín Editorial Jurídica—. Ese doble anclaje —investigación y ejercicio— me permite aplicar un enfoque riguroso y actualizado a cada caso.</p>
-                    <p class="bio-text">Trabajamos sobre una idea simple: cada asunto es único y merece atención que lo refleje. No aplicamos soluciones prefabricadas. Priorizamos una comunicación transparente en cada paso, asegurando que comprendas el proceso y las decisiones que se toman.</p>
+                    <p class="bio-text">Abogado con formación en <strong>Derecho y Abogacía</strong>, con especialización en <strong>Mediación Civil y Mercantil</strong> a través del Consejo General de la Abogacía Española. Actualmente desarrollo mi carrera investigadora como <strong>doctorando en Derecho en la UCAM</strong>, lo que me permite trabajar con un enfoque riguroso, actualizado y conectado con los últimos avances normativos y jurisprudenciales.</p>
+                    <p class="bio-text">Mi trayectoria combina la <strong>práctica profesional diaria</strong> con la <strong>investigación académica activa</strong>: he participado como ponente en congresos internacionales en España e Italia, y he publicado artículos en las principales revistas jurídicas especializadas del país. Esa doble perspectiva —despacho e investigación— es lo que pongo al servicio de cada caso.</p>
+                    <p class="bio-text">Trabajo sobre una idea clara: <strong>cada asunto es único</strong> y merece una atención que lo refleje. Sin soluciones prefabricadas, sin tecnicismos innecesarios. <strong>Transparencia en cada paso</strong>, para que entiendas el proceso y las decisiones que se toman.</p>
                 </div>
             </div>
 
@@ -610,7 +614,13 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/+34671398925" target="_blank" class="whatsapp-boton-container" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/+34671398925" target="_blank" class="whatsapp-boton-container" aria-label="Contactar por WhatsApp">¿Tienes un problema legal? Hablemos.
+
+Primera consulta gratuita y sin compromiso. Atiendo en Adra, El Ejido, Roquetas, Berja y toda la provincia de Almería.
+Solicitar consulta gratuita
+671 39 89 25
+WhatsApp
+
         <img class="whatsapp-img" src="img/iconos/whatsapp-2.svg" alt="Icono de WhatsApp" loading="lazy">
     </a>
 
@@ -635,4 +645,5 @@
     <script src="js/main.js" defer></script>
 </body>
 </html>
+
 
