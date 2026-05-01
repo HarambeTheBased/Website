@@ -245,6 +245,17 @@
 
         /* Separador suave entre bloques */
         .section-divider { border: none; border-top: 1px solid #e2eaea; margin: 2.5rem 0; }
+
+        /* ── ANCHURA ── */
+        .info-section .container,
+        .cta-contacto .container,
+        .formulario.container {
+            max-width: 1160px;
+            padding-left: 28px;
+            padding-right: 28px;
+        }
+        .carousel-card { padding: 0 !important; }
+        .carousel-info  { padding: 0 !important; }
     </style>
 </head>
 
@@ -342,28 +353,14 @@
                                 </p>
                             </div>
 
-                            <!-- Columna derecha: imagen + servicios -->
+                            <!-- Columna derecha: solo la imagen -->
                             <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                                 <img src="img/servicios/derecho-familia.jpg"
                                     alt="Abogado de familia en Adra, Almería: divorcios, custodia y pensiones"
-                                    class="img-fluid mb-4">
-
-                                <h3 class="carousel-title">¿Qué soluciones ofrecemos en derecho de familia?</h3>
-                                <p class="carousel-text">
-                                    <strong>· Divorcios de Mutuo Acuerdo</strong>: El procedimiento más rápido y económico si hay consenso.<br>
-                                    <strong>· Convenio Regulador Completo</strong>: Redactamos el acuerdo que regula pensión, custodia, uso de vivienda y patria potestad.<br>
-                                    <strong>· Defensa en Procesos Contenciosos</strong>: Representación firme en juicio cuando no hay acuerdo.<br>
-                                    <strong>· Modificación de Medidas</strong>: Cambios en pensiones o custodia por variación de circunstancias.<br>
-                                    <strong>· Ejecución de Sentencias</strong>: Reclamamos el cumplimiento de lo acordado o decidido judicialmente.
-                                </p>
+                                    class="img-fluid"
+                                    style="border-radius:10px;">
                             </div>
 
-                            <!-- Ver todos -->
-                            <div class="row mt-5">
-                                <div class="col text-center">
-                                    <a href="servicios.html" class="ver-servicios-universal">Ver todos los servicios</a>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- ══════════════════════════════════════════
@@ -502,6 +499,17 @@
                             <p><strong>¿La hipoteca supera el valor del inmueble?</strong> En esos casos puede plantearse la dación en pago: entregar la vivienda al banco para saldar la deuda hipotecaria. No es un derecho automático, pero en algunos casos es la salida más razonable. <a href="dacion-en-pago.html" style="color:#00989A; font-weight:600;">Más información sobre dación en pago →</a></p>
                         </div>
 
+                        <!-- ── CTA INTERMEDIO ── -->
+                        <div class="cta-band">
+                            <h2>¿Tienes dudas sobre tu situación familiar?</h2>
+                            <p>Analizamos tu caso sin compromiso y te explicamos las opciones reales con claridad. Atendemos en Adra, El Ejido, Roquetas, Berja y toda la provincia de Almería.</p>
+                            <div class="cta-band-btns">
+                                <a href="contacto.html" class="cta-btn-p">Solicitar consulta gratuita</a>
+                                <a href="tel:+34671398925" class="cta-btn-t">671 39 89 25</a>
+                                <a href="https://wa.me/34671398925" target="_blank" rel="noopener noreferrer" class="cta-btn-w">WhatsApp</a>
+                            </div>
+                        </div>
+
                         <hr class="section-divider">
 
                         <!-- Por qué elegirnos -->
@@ -564,17 +572,6 @@
                             <div class="faq-answer">En divorcios de mutuo acuerdo ofrecemos habitualmente un presupuesto cerrado y único. Para casos contenciosos, los honorarios dependen de la complejidad y duración. En la primera consulta —que es gratuita— te explicamos con total transparencia los costes de tu caso concreto.</div>
                         </div>
 
-                        <!-- ── CTA BANDA ── -->
-                        <div class="cta-band">
-                            <h2>¿Tienes dudas sobre tu situación familiar?</h2>
-                            <p>Analizamos tu caso sin compromiso y te explicamos las opciones reales con claridad. Atendemos en Adra, El Ejido, Roquetas, Berja y toda la provincia de Almería.</p>
-                            <div class="cta-band-btns">
-                                <a href="contacto.html" class="cta-btn-p">Solicitar consulta gratuita</a>
-                                <a href="tel:+34671398925" class="cta-btn-t">671 39 89 25</a>
-                                <a href="https://wa.me/34671398925" target="_blank" rel="noopener noreferrer" class="cta-btn-w">WhatsApp</a>
-                            </div>
-                        </div>
-
                     </div>
                 </section>
 
@@ -584,7 +581,7 @@
                 <section class="cta-contacto">
                     <div class="container">
                         <div class="row text-center">
-                            <h2 class="carousel-title">Solicita tu consulta gratuita </h2>
+                            <h2 class="carousel-title">Solicita tu consulta gratuita en Adra (Almería)</h2>
                             <p class="carousel-text mb-4">
                                 Estudiaremos tu caso sin compromiso y te asesoraremos de forma clara y profesional. Contacta ahora con tu abogado de confianza en Adra.
                             </p>
