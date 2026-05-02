@@ -287,32 +287,46 @@
       color: #fff !important;
     }
 
-    /* ── RESEÑAS ELFSIGHT MÓVIL — forzar visibilidad ── */
+    /* ── RESEÑAS ELFSIGHT — forzar carga inmediata ── */
     .elfsight-app-ecfc4bf1-a4fd-4c39-94d2-d446cc6f50a6 {
-      min-height: 200px;
       display: block !important;
+      width: 100% !important;
+      min-height: 260px;
       overflow: visible !important;
     }
     #reviews { overflow: visible !important; }
 
-    /* ── CENTRAR TÍTULOS Y BOTONES EN MÓVIL ── */
+    /* ── MÓVIL: títulos centrados, párrafos justificados, botones centrados ── */
     @media (max-width: 767px) {
+
+      /* Títulos — centrados */
+      h2, h3,
       .intro-titulo,
       .servicios-title,
-      .seccion-caracteristicas h3,
-      #entradas h3,
-      .preguntas h3,
-      h2.carousel-title,
-      h3.carousel-title,
       .form__title { text-align: center !important; }
 
+      /* Párrafos y textos — justificados (anula Bootstrap text-center en p) */
+      p,
+      .carousel-text,
+      .intro-parrafo,
+      .hero-text,
+      .servicio-text,
+      .servicios-subtitle,
+      .feature-text p,
+      p.servicios-subtitle,
+      p.text-center:not(.ayuda) {
+        text-align: justify !important;
+      }
+
+      /* Botones — centrados */
       .ver-servicios,
       .btn-sobreNosotros,
       .ver-servicios-home,
-      .preguntas .btn { display: block !important; text-align: center !important; width: 100% !important; }
-
-      .antonio-home { text-align: center !important; }
-      .intro-parrafo { text-align: center !important; }
+      .preguntas .btn {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+      }
 
       .cta-organica h2 { font-size: 1.3rem; }
     }
@@ -586,8 +600,8 @@
             <i class="bi bi-star-fill"></i> D&eacute;janos tu rese&ntilde;a
           </a>
         </div>
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-ecfc4bf1-a4fd-4c39-94d2-d446cc6f50a6" data-elfsight-app-lazy></div>
+        <script src="https://elfsightcdn.com/platform.js" defer></script>
+        <div class="elfsight-app-ecfc4bf1-a4fd-4c39-94d2-d446cc6f50a6"></div>
       </div>
     </section>
 
