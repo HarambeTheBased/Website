@@ -61,42 +61,53 @@
   </script>
 
   <style>
-    /* ── FOTO ANTONIO — pulso + ripple para invitar a clicar ── */
+    /* ── FOTO ANTONIO — dos ondas tipo sonar ── */
     .antonio-foto-wrap {
       position: relative;
       display: inline-block;
       cursor: pointer;
       border-radius: 8px;
-      overflow: visible;
     }
     .antonio-foto-wrap img {
       display: block;
       width: 100%;
       border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
     }
     .antonio-foto-wrap:hover img {
       transform: scale(1.02);
-      box-shadow: 0 0 0 4px rgba(0,152,154,0.45), 0 12px 32px rgba(0,0,0,0.15);
-      filter: brightness(1.04);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
     }
-    /* Anillo de pulso continuo */
+    /* Onda 1 — teal */
     .antonio-foto-wrap::before {
       content: '';
       position: absolute;
-      inset: -6px;
-      border-radius: 12px;
-      border: 2.5px solid rgba(0,152,154,0.5);
-      animation: fotoPulso 2.4s ease-in-out infinite;
+      inset: 0;
+      border-radius: 10px;
+      border: 2.5px solid rgba(0, 152, 154, 0.7);
+      animation: rippleA 2.6s ease-out infinite;
       pointer-events: none;
-      z-index: 1;
+      z-index: 2;
     }
-    @keyframes fotoPulso {
-      0%   { transform: scale(1);    opacity: 0.7; }
-      50%  { transform: scale(1.03); opacity: 0.25; }
-      100% { transform: scale(1);    opacity: 0.7; }
+    /* Onda 2 — verde oscuro, desfasada */
+    .antonio-foto-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 2px solid rgba(41, 82, 78, 0.45);
+      animation: rippleA 2.6s ease-out infinite 1.3s;
+      pointer-events: none;
+      z-index: 2;
     }
-    /* Badge "Ver méritos" encima de la foto */
+    @keyframes rippleA {
+      0%   { transform: scale(1);    opacity: 0.85; }
+      100% { transform: scale(1.14); opacity: 0; }
+    }
+
+    /* Badge "Ver méritos" */
     .foto-badge {
       position: absolute;
       bottom: 14px;
@@ -112,49 +123,82 @@
       backdrop-filter: blur(4px);
       white-space: nowrap;
       pointer-events: none;
-      z-index: 2;
-      transition: opacity 0.2s;
+      z-index: 3;
     }
 
-    /* ── MÉRITOS DESPLEGABLE ── */
-    .meritos-panel {
+    /* ── OVERLAY MÉRITOS (idéntico al de nosotros.html) ── */
+    .meritos-overlay {
+      position: fixed;
+      inset: 0;
       display: none;
-      margin-top: 1.2rem;
-      background: #f0fafa;
-      border: 1.5px solid #b2dede;
-      border-radius: 14px;
-      padding: 1.4rem 1.6rem;
-      animation: fadeSlideIn 0.3s ease;
+      align-items: flex-start;
+      justify-content: center;
+      z-index: 9998;
+      padding: 60px 20px 20px;
+      overflow-y: auto;
     }
-    .meritos-panel.open { display: block; }
-    @keyframes fadeSlideIn {
-      from { opacity: 0; transform: translateY(-8px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .meritos-overlay.active { display: flex; }
+    .meritos-overlay::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0,80,76,0.55);
+      backdrop-filter: blur(2px);
+      z-index: -1;
     }
-    .meritos-panel h4 {
-      color: #00989A;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin: 1rem 0 0.5rem;
-    }
-    .meritos-panel h4:first-child { margin-top: 0; }
-    .meritos-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .meritos-list li {
-      padding: 0.35rem 0 0.35rem 1.4rem;
+    .meritos-box {
+      background: rgba(0,152,154,0.88);
+      color: #fff;
+      padding: 2.4rem 2.8rem;
+      border-radius: 20px;
+      max-width: 680px;
+      width: 100%;
       position: relative;
-      color: #4a5568;
-      font-size: 0.88rem;
-      line-height: 1.55;
-      border-bottom: 1px solid #e2eaea;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+      animation: overlayIn 0.3s ease;
     }
-    .meritos-list li:last-child { border-bottom: none; }
-    .meritos-list li::before { content: '▸'; position: absolute; left: 0; color: #00989A; font-size: 0.75rem; top: 0.42rem; }
+    @keyframes overlayIn {
+      from { opacity: 0; transform: translateY(18px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .meritos-close {
+      position: absolute;
+      top: 14px; right: 16px;
+      background: rgba(255,255,255,0.18);
+      border: none; color: #fff;
+      font-size: 1.4rem; width: 36px; height: 36px;
+      border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s; line-height: 1;
+    }
+    .meritos-close:hover { background: rgba(255,255,255,0.32); }
+    .meritos-categoria {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin: 1.6rem 0 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .meritos-categoria:first-child { margin-top: 0; }
+    .timeline { list-style: none; padding: 0; margin: 0; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 42px 12px 1fr;
+      gap: 0 10px;
+      align-items: start;
+      margin-bottom: 1rem;
+    }
+    .timeline-year { font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.6); padding-top: 3px; text-align: right; }
+    .timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: #fff; margin-top: 5px; flex-shrink: 0; }
+    .timeline-content strong { display: block; font-size: 0.88rem; font-weight: 700; color: #fff; line-height: 1.4; margin-bottom: 3px; }
+    .timeline-content span { font-size: 0.82rem; color: rgba(255,255,255,0.78); line-height: 1.45; }
+    @media (max-width: 480px) {
+      .meritos-box { padding: 1.8rem 1.4rem; }
+      .timeline-item { grid-template-columns: 36px 10px 1fr; }
+    }
 
     /* ── CTA ORGÁNICA ── */
     .cta-organica {
@@ -580,18 +624,120 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
   <script src="js/main.js" defer></script>
 
-  <script>
-    /* ── Toggle méritos al clicar la foto ── */
-    const fotoBtn   = document.getElementById('fotoAntonio');
-    const panel     = document.getElementById('meritosPanel');
-    const badge     = fotoBtn.querySelector('.foto-badge');
+  <!-- ── OVERLAY MÉRITOS COMPLETO ── -->
+  <div class="meritos-overlay" id="meritos-overlay" role="dialog" aria-modal="true" aria-label="Formación y trayectoria de Antonio Gaitán">
+    <div class="meritos-box">
+      <button class="meritos-close" id="meritos-close" aria-label="Cerrar">&times;</button>
 
-    function toggleMeritos() {
-      const open = panel.classList.toggle('open');
-      badge.textContent = open ? '✕ Cerrar' : '📚 Ver méritos';
+      <p class="meritos-categoria">Congresos nacionales e internacionales</p>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>A vent'anni dal codice del consumo. Un'analisi comparata con altri Paesi &middot; Universidad de Perugia, Terni, Italia</strong>
+            <span>Ponencia: &laquo;La atribuci&oacute;n y exenci&oacute;n de responsabilidad civil por la venta en l&iacute;nea de productos defectuosos.&raquo;</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2026</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>XII Congreso Internacional de Derecho Privado, Consumo, Responsabilidad Civil y Representaci&oacute;n &middot; Universidad de Granada, Espa&ntilde;a</strong>
+            <span>Ponencia: &laquo;La formaci&oacute;n del consentimiento mediante inteligencia artificial algor&iacute;tmica y sus implicaciones en el &aacute;mbito del derecho de consumo.&raquo;</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2026</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>XV Forum Internacional de expertos y j&oacute;venes investigadores en Derecho y Nuevas Tecnolog&iacute;as &middot; Universidad de Salamanca, Espa&ntilde;a</strong>
+            <span>Ponencia: &laquo;La prueba de la autor&iacute;a del software desarrollado con asistencia de inteligencia artificial ag&eacute;ntica en el proceso civil.&raquo;</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2026</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>II Congreso Internacional y Multidisciplinar: Hacia una sociedad digital centrada en las necesidades de las personas &middot; Universidad de Granada, Espa&ntilde;a</strong>
+            <span>Ponencia: &laquo;Transmisi&oacute;n inter vivos y mortis causa del software desarrollado con inteligencia artificial: la &quot;capacidad de interacci&oacute;n&quot; como bien jur&iacute;dico patrimonializable.&raquo;</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="meritos-categoria">Art&iacute;culos en revistas especializadas</p>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>&laquo;La responsabilidad civil subsidiaria y los delitos contra el derecho al honor contra la libertad de expresi&oacute;n e informaci&oacute;n.&raquo;</strong>
+            <span>Revista Divisi&oacute;n Operativa de Criminal&iacute;stica (DOCRIM), n&ordm; 20. Universidad de Granada.</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>&laquo;La responsabilidad civil del abogado en caso de negligencia profesional.&raquo;</strong>
+            <span>Pr&aacute;ctica derecho de da&ntilde;os: Revista de Responsabilidad Civil y Seguros, n&ordm; 163. LaLey ARANZADI.</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>&laquo;Impugnaci&oacute;n de maternidad biol&oacute;gica en supuestos de gestaci&oacute;n subrogada de &aacute;mbito internacional.&raquo;</strong>
+            <span>Revista de Derecho de Familia: Doctrina, jurisprudencia, legislaci&oacute;n, n&ordm; 107. LaLey ARANZADI.</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>&laquo;El inter&eacute;s superior del menor en los procesos de custodia en que exista violencia de g&eacute;nero.&raquo;</strong>
+            <span>Revista Digital Familia y Sucesiones, art&iacute;culo monogr&aacute;fico (abril 2025). Sep&iacute;n Editorial Jur&iacute;dica.</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="meritos-categoria">Cap&iacute;tulos de libro</p>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <strong>&laquo;La atribuci&oacute;n y exenci&oacute;n de responsabilidad civil por la venta en l&iacute;nea de productos defectuosos&raquo;</strong>
+            <span>En: <em>A vent'anni dal codice del consumo: Un'analisi comparata con altri paesi</em> / coord. por Lorenzo Mezzasoma et al., 2025, ISBN 9788849560237, p&aacute;gs. 1287&ndash;1296.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    /* ── Toggle overlay méritos ── */
+    const overlay   = document.getElementById('meritos-overlay');
+    const closeBtn  = document.getElementById('meritos-close');
+    const fotoBtn   = document.getElementById('fotoAntonio');
+    const badge     = fotoBtn ? fotoBtn.querySelector('.foto-badge') : null;
+
+    function openMeritos() {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
-    fotoBtn.addEventListener('click', toggleMeritos);
-    fotoBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMeritos(); } });
+    function closeMeritos() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (fotoBtn) {
+      fotoBtn.addEventListener('click', openMeritos);
+      fotoBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openMeritos(); } });
+    }
+    closeBtn.addEventListener('click', closeMeritos);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeMeritos(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMeritos(); });
   </script>
 
 </body>
