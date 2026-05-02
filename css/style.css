@@ -988,32 +988,27 @@ li {
     display: flex;
 }
 
-/* ── CONTACTAR: botón destacado en escritorio ── */
-#contacto a {
-    font-weight: 700;
-    letter-spacing: .03em;
-}
-
-/* ── CONTACTAR: botón en menú móvil desplegado ── */
+/* ── CONTACTAR: botón sólido blanco en overlay móvil — destaca sobre el resto ── */
 .nav.active #contacto a {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.18);
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.55);
+    display: block;
+    background: #ffffff;
+    color: #00989A !important;
+    border: none;
     border-radius: 30px;
-    padding: 10px 28px;
-    font-size: 1.1rem;
-    font-weight: 700;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 800;
     letter-spacing: .04em;
-    backdrop-filter: blur(4px);
-    transition: background .22s ease, border-color .22s ease, transform .18s ease;
-    margin-top: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background .22s ease, color .22s ease, transform .18s ease;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    margin-top: 0.6rem;
 }
 .nav.active #contacto a:hover {
-    background: rgba(255, 255, 255, 0.32);
-    border-color: rgba(255, 255, 255, 0.85);
+    background: #e8f5f5;
+    color: #29524E !important;
     transform: scale(1.04);
-    color: #ffffff;
 }
 
 
@@ -2603,6 +2598,12 @@ ul.subinfo__politicas {
 }
 
 /* Móvil */
+/* ── ANIMACIÓN APERTURA NAV MÓVIL ── */
+@keyframes navIn {
+    from { opacity: 0; transform: scale(0.96) translateY(-6px); }
+    to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
 @media (max-width: 767px) {
     .texto-form { width: auto !important; }
     .formula { width: auto !important; }
@@ -2641,12 +2642,15 @@ ul.subinfo__politicas {
     body { padding-top: 80px; }
     .burguer { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
     .burguer-sticks { width: 26px; height: 3px; background: var(--color-white); transition: all 0.3s ease; }
-    .nav { position: fixed; top: 80px; left: 0; width: 100%; height: 40vh; background: var(--color-primary); transform: translateX(100%); transition: transform 0.35s ease; z-index: 999; overflow-y: auto; }
-    .nav.active { transform: translateX(0); }
-    .menu_link { font-size: 25px; }
-    .menu__nav { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; }
-    .submenu { position: static; display: none; padding-left: 1rem; }
-    .has-submenu.active .submenu { display: block; }
+    .nav { position: fixed; inset: 0; background: rgba(0,152,154,0.93); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; overflow-y: auto; }
+    .nav.active { display: flex; animation: navIn 0.28s ease forwards; }
+    .menu_link { display: block; width: 100%; background: rgba(255,255,255,0.13); border: 1.5px solid rgba(255,255,255,0.28); border-radius: 14px; padding: 14px 22px; font-size: 1rem; font-weight: 600; color: #fff; text-align: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s; letter-spacing: 0.02em; }
+    .menu_link:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.6); color: #fff; transform: scale(1.02); }
+    .menu__nav { flex-direction: column; align-items: center; gap: 0.55rem; padding: 5.5rem 1.5rem 2rem; width: 100%; max-width: 420px; }
+    .submenu { position: static; display: none; padding: 0.4rem 0 0.2rem 0.6rem; box-shadow: none; border-radius: 0; background: transparent; opacity: 1; visibility: visible; transform: none; }
+    .has-submenu.active .submenu { display: block; max-height: 600px; padding: 0.4rem 0 0.2rem 0.6rem; }
+    .submenu li a { display: block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; color: rgba(255,255,255,0.9) !important; font-size: 0.88rem; padding: 9px 16px; margin: 3px 0; transition: background 0.2s; }
+    .submenu li a:hover { background: rgba(255,255,255,0.2); color: #fff !important; }
     .formulario { max-width: 100%; }
     .nosotros-hero { padding: 70px 0; }
     .hero-card { flex-direction: column; text-align: center; padding: 40px 25px; gap: 30px; }
@@ -2678,12 +2682,15 @@ ul.subinfo__politicas {
     body { padding-top: 80px; }
     .burguer { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
     .burguer-sticks { width: 26px; height: 3px; background: var(--color-white); transition: all 0.3s ease; }
-    .nav { position: fixed; top: 80px; left: 0; width: 100%; height: 40vh; background: var(--color-primary); transform: translateX(100%); transition: transform 0.35s ease; z-index: 999; overflow-y: auto; }
-    .nav.active { transform: translateX(0); }
-    .menu_link { font-size: 25px; }
-    .menu__nav { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; }
-    .submenu { position: static; display: none; padding-left: 1rem; }
-    .has-submenu.active .submenu { display: block; }
+    .nav { position: fixed; inset: 0; background: rgba(0,152,154,0.93); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; overflow-y: auto; }
+    .nav.active { display: flex; animation: navIn 0.28s ease forwards; }
+    .menu_link { display: block; width: 100%; background: rgba(255,255,255,0.13); border: 1.5px solid rgba(255,255,255,0.28); border-radius: 14px; padding: 14px 22px; font-size: 1rem; font-weight: 600; color: #fff; text-align: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s; letter-spacing: 0.02em; }
+    .menu_link:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.6); color: #fff; transform: scale(1.02); }
+    .menu__nav { flex-direction: column; align-items: center; gap: 0.55rem; padding: 5.5rem 1.5rem 2rem; width: 100%; max-width: 420px; }
+    .submenu { position: static; display: none; padding: 0.4rem 0 0.2rem 0.6rem; box-shadow: none; border-radius: 0; background: transparent; opacity: 1; visibility: visible; transform: none; }
+    .has-submenu.active .submenu { display: block; max-height: 600px; padding: 0.4rem 0 0.2rem 0.6rem; }
+    .submenu li a { display: block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; color: rgba(255,255,255,0.9) !important; font-size: 0.88rem; padding: 9px 16px; margin: 3px 0; transition: background 0.2s; }
+    .submenu li a:hover { background: rgba(255,255,255,0.2); color: #fff !important; }
     .formulario { max-width: 100%; }
 }
 
@@ -2694,12 +2701,15 @@ ul.subinfo__politicas {
     body { padding-top: 80px; }
     .burguer { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
     .burguer-sticks { width: 26px; height: 3px; background: var(--color-white); transition: all 0.3s ease; }
-    .nav { position: fixed; top: 80px; left: 0; width: 100%; height: auto; background: var(--color-primary); transform: translateX(100%); transition: transform 0.35s ease; z-index: 999; overflow-y: auto; }
-    .nav.active { transform: translateX(0); text-align: center; color: var(--color-white); line-height: 60px; }
-    .menu_link { font-size: 25px; }
-    .menu__nav { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; }
-    .submenu { position: static; display: none; padding-left: 1rem; }
-    .has-submenu.active .submenu { display: block; }
+    .nav { position: fixed; inset: 0; background: rgba(0,152,154,0.93); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; overflow-y: auto; }
+    .nav.active { display: flex; animation: navIn 0.28s ease forwards; }
+    .menu_link { display: block; width: 100%; background: rgba(255,255,255,0.13); border: 1.5px solid rgba(255,255,255,0.28); border-radius: 14px; padding: 14px 22px; font-size: 1rem; font-weight: 600; color: #fff; text-align: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s; letter-spacing: 0.02em; }
+    .menu_link:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.6); color: #fff; transform: scale(1.02); }
+    .menu__nav { flex-direction: column; align-items: center; gap: 0.55rem; padding: 5.5rem 1.5rem 2rem; width: 100%; max-width: 420px; }
+    .submenu { position: static; display: none; padding: 0.4rem 0 0.2rem 0.6rem; box-shadow: none; border-radius: 0; background: transparent; opacity: 1; visibility: visible; transform: none; }
+    .has-submenu.active .submenu { display: block; max-height: 600px; padding: 0.4rem 0 0.2rem 0.6rem; }
+    .submenu li a { display: block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; color: rgba(255,255,255,0.9) !important; font-size: 0.88rem; padding: 9px 16px; margin: 3px 0; transition: background 0.2s; }
+    .submenu li a:hover { background: rgba(255,255,255,0.2); color: #fff !important; }
     .formulario { max-width: 100%; }
     .menu { margin: auto; }
 }
@@ -2735,4 +2745,3 @@ ul.subinfo__politicas {
     .error-code { font-size: 72px; }
     .error-content p { font-size: 15px; }
 }
- 
