@@ -983,6 +983,11 @@ li {
     display: none;
 }
 
+/* nav visible cuando está activo (global — imprescindible para móvil) */
+.nav.active {
+    display: flex;
+}
+
 /* ── CONTACTAR: botón destacado en escritorio ── */
 #contacto a {
     font-weight: 700;
