@@ -978,13 +978,39 @@ li {
     display: none;
 }
 
-.nav.active {
-    display: flex;
+/* ── CONTACTAR: ocultar icono teléfono ── */
+#contacto .bi-telephone {
+    display: none;
 }
 
-.menu_link:hover {
-    color: white;
+/* ── CONTACTAR: botón destacado en escritorio ── */
+#contacto a {
+    font-weight: 700;
+    letter-spacing: .03em;
 }
+
+/* ── CONTACTAR: botón en menú móvil desplegado ── */
+.nav.active #contacto a {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 30px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    backdrop-filter: blur(4px);
+    transition: background .22s ease, border-color .22s ease, transform .18s ease;
+    margin-top: 4px;
+}
+.nav.active #contacto a:hover {
+    background: rgba(255, 255, 255, 0.32);
+    border-color: rgba(255, 255, 255, 0.85);
+    transform: scale(1.04);
+    color: #ffffff;
+}
+
 
 .logo-container {
     width: 100%;
