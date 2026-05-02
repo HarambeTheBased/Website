@@ -59,3 +59,11 @@ window.addEventListener('scroll', () => {
 
   lastScroll = currentScroll;
 });
+
+
+document.getElementById('nav').addEventListener('click', function(e){
+  if (e.target === this || e.target.classList.contains('menu')) {
+    this.classList.remove('active');
+    document.getElementById('burguer').classList.remove('active');
+  }
+});
