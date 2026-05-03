@@ -40,24 +40,15 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
-// ═══ EVENT DELEGATION: capturamos clics en TODO el documento ═══
-// Esto funciona aunque los elementos no existan al cargar
-document.addEventListener('click', function(e) {
-  // 1. ¿Clic en "+ Servicios" o cualquier link dentro de .has-submenu?
-  const submenuLink = e.target.closest('.has-submenu > a');
-  if (submenuLink && window.innerWidth <= 1033) {
-    e.preventDefault();
-    e.stopPropagation();
-    const parent = submenuLink.closest('.has-submenu');
-    if (parent) parent.classList.toggle('active');
-    return;
-  }
+const navEl = document.getElementById('nav');
+if (navEl) {
+  navEl.addEventListener('click', function(e){
+    if (e.target === this || e.target.classList.contains('menu')) {
+      this.classList.remove('active');
+      const burg = document.getElementById('burguer');
+      if (burg) burg.classList.remove('active');
+    }
+  });
+}
 
-  // 2. ¿Clic en el fondo del nav (no en un link)?
-  const nav = document.getElementById('nav');
-  if (nav && (e.target === nav || e.target.classList.contains('menu'))) {
-    nav.classList.remove('active');
-    const burg = document.getElementById('burguer');
-    if (burg) burg.classList.remove('active');
-  }
-});
+// SIN listener de submenú — el botón "+ Servicios" navega normalmente a servicios.html
