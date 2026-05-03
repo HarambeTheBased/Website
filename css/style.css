@@ -1209,7 +1209,12 @@ main {
 }
 
 main.container.post-main {
-    padding-top: 30px;
+    padding-top: 110px;
+}
+@media (max-width: 767px) {
+    main.container.post-main {
+        padding-top: 16px;
+    }
 }
 
 .portada {
@@ -2726,8 +2731,8 @@ ul.subinfo__politicas {
     .menu_link { display: block; width: 100%; background: rgba(255,255,255,0.14); border: 1.5px solid rgba(255,255,255,0.32); border-radius: 12px; padding: 15px 20px; font-size: 1.05rem; font-weight: 600; color: #fff; text-align: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s; letter-spacing: 0.02em; }
     .menu_link:hover { background: rgba(255,255,255,0.26); border-color: rgba(255,255,255,0.65); color: #fff; transform: translateY(-2px); }
     .menu__nav { flex-direction: column; align-items: stretch; gap: 0.5rem; width: 100%; max-width: 480px; margin: 0 auto; padding: 0; }
-    .submenu { position: static; display: none; padding: 0.5rem; background: rgba(255,255,255,0.12); border-radius: 14px; margin-top: 0.4rem; box-shadow: none; border: 1px solid rgba(255,255,255,0.2); opacity: 1; visibility: visible; transform: none; }
-    .has-submenu.active .submenu { display: flex; flex-direction: column; gap: 4px; }
+    .submenu { position: static !important; display: none !important; padding: 0.5rem !important; background: rgba(255,255,255,0.12) !important; border-radius: 14px !important; margin-top: 0.4rem !important; box-shadow: none !important; border: 1px solid rgba(255,255,255,0.2) !important; opacity: 1 !important; visibility: visible !important; transform: none !important; min-width: 0 !important; left: auto !important; }
+    .has-submenu.active .submenu { display: flex !important; flex-direction: column !important; gap: 4px !important; }
     .submenu li a { display: block; background: rgba(255,255,255,0.0); border-radius: 9px; color: #fff !important; font-size: 0.88rem; font-weight: 600; padding: 10px 16px; margin: 0; text-align: left; transition: background 0.18s ease, transform 0.15s ease; }
     .submenu li a:hover { background: rgba(255,255,255,0.18); color: #fff !important; transform: translateX(4px); }
     .formulario { max-width: 100%; }
@@ -2768,8 +2773,8 @@ ul.subinfo__politicas {
     .menu_link { display: block; width: 100%; background: rgba(255,255,255,0.14); border: 1.5px solid rgba(255,255,255,0.32); border-radius: 12px; padding: 15px 20px; font-size: 1.05rem; font-weight: 600; color: #fff; text-align: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s; letter-spacing: 0.02em; }
     .menu_link:hover { background: rgba(255,255,255,0.26); border-color: rgba(255,255,255,0.65); color: #fff; transform: translateY(-2px); }
     .menu__nav { flex-direction: column; align-items: stretch; gap: 0.5rem; width: 100%; max-width: 480px; margin: 0 auto; padding: 0; }
-    .submenu { position: static; display: none; padding: 0.5rem; background: rgba(255,255,255,0.12); border-radius: 14px; margin-top: 0.4rem; box-shadow: none; border: 1px solid rgba(255,255,255,0.2); opacity: 1; visibility: visible; transform: none; }
-    .has-submenu.active .submenu { display: flex; flex-direction: column; gap: 4px; }
+    .submenu { position: static !important; display: none !important; padding: 0.5rem !important; background: rgba(255,255,255,0.12) !important; border-radius: 14px !important; margin-top: 0.4rem !important; box-shadow: none !important; border: 1px solid rgba(255,255,255,0.2) !important; opacity: 1 !important; visibility: visible !important; transform: none !important; min-width: 0 !important; left: auto !important; }
+    .has-submenu.active .submenu { display: flex !important; flex-direction: column !important; gap: 4px !important; }
     .submenu li a { display: block; background: rgba(255,255,255,0.0); border-radius: 9px; color: #fff !important; font-size: 0.88rem; font-weight: 600; padding: 10px 16px; margin: 0; text-align: left; transition: background 0.18s ease, transform 0.15s ease; }
     .submenu li a:hover { background: rgba(255,255,255,0.18); color: #fff !important; transform: translateX(4px); }
     .formulario { max-width: 100%; }
@@ -2789,8 +2794,8 @@ ul.subinfo__politicas {
     .menu_link { display: block; width: 100%; background: rgba(255,255,255,0.14); border: 1.5px solid rgba(255,255,255,0.32); border-radius: 12px; padding: 15px 20px; font-size: 1.05rem; font-weight: 600; color: #fff; text-align: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s; letter-spacing: 0.02em; }
     .menu_link:hover { background: rgba(255,255,255,0.26); border-color: rgba(255,255,255,0.65); color: #fff; transform: translateY(-2px); }
     .menu__nav { flex-direction: column; align-items: stretch; gap: 0.5rem; width: 100%; max-width: 480px; margin: 0 auto; padding: 0; }
-    .submenu { position: static; display: none; padding: 0.5rem; background: rgba(255,255,255,0.12); border-radius: 14px; margin-top: 0.4rem; box-shadow: none; border: 1px solid rgba(255,255,255,0.2); opacity: 1; visibility: visible; transform: none; }
-    .has-submenu.active .submenu { display: flex; flex-direction: column; gap: 4px; }
+    .submenu { position: static !important; display: none !important; padding: 0.5rem !important; background: rgba(255,255,255,0.12) !important; border-radius: 14px !important; margin-top: 0.4rem !important; box-shadow: none !important; border: 1px solid rgba(255,255,255,0.2) !important; opacity: 1 !important; visibility: visible !important; transform: none !important; min-width: 0 !important; left: auto !important; }
+    .has-submenu.active .submenu { display: flex !important; flex-direction: column !important; gap: 4px !important; }
     .submenu li a { display: block; background: rgba(255,255,255,0.0); border-radius: 9px; color: #fff !important; font-size: 0.88rem; font-weight: 600; padding: 10px 16px; margin: 0; text-align: left; transition: background 0.18s ease, transform 0.15s ease; }
     .submenu li a:hover { background: rgba(255,255,255,0.18); color: #fff !important; transform: translateX(4px); }
     .formulario { max-width: 100%; }
