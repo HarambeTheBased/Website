@@ -5,27 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BFV875PX7"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0BFV875PX7');</script>
-
   <title>Servicios | Antonio Gait&aacute;n Abogados &ndash; Adra y Almer&iacute;a</title>
   <meta name="description" content="Servicios jurídicos en Adra y Almería: Ley de Segunda Oportunidad, desahucios, derecho de familia, accidentes de tráfico, regularización de fincas y reclamación de deudas. Primera consulta gratuita.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Antonio Gaitán Abogados">
   <link rel="canonical" href="https://antoniogaitanabogados.com/servicios.html">
-  <meta property="og:title" content="Servicios Legales | Antonio Gaitán Abogados"/>
-  <meta property="og:description" content="Ley de Segunda Oportunidad, desahucios, derecho de familia, regularización de fincas y más. Despacho en Adra, Almería."/>
+  <meta property="og:title" content="Servicios | Antonio Gaitán Abogados"/>
+  <meta property="og:description" content="Ley de Segunda Oportunidad, desahucios, derecho de familia, regularización de fincas y más. Adra, Almería."/>
   <meta property="og:image" content="https://antoniogaitanabogados.com/img/logo-Antonio-Gaitan-abogados.svg"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Antonio Gaitán Abogados"/>
   <meta property="og:locale" content="es_ES"/>
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Servicios | Antonio Gaitán Abogados">
-  <meta name="twitter:description" content="Asesoramiento legal en derecho civil, familia, deudas y más. Adra, Almería.">
-  <meta name="twitter:image" content="https://antoniogaitanabogados.com/img/logo-Antonio-Gaitan-abogados.svg">
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LegalService","name":"Antonio Gaitán Abogados","url":"https://antoniogaitanabogados.com","logo":"https://antoniogaitanabogados.com/img/logo-Antonio-Gaitan-abogados.svg","telephone":"+34671398925","email":"contacto@antoniogaitanabogados.com","address":{"@type":"PostalAddress","streetAddress":"C. Natalio Rivas, 15, Portal 1, 3º Oficina 20","addressLocality":"Adra","addressRegion":"Almería","postalCode":"04770","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":36.74887657059318,"longitude":-3.017259925486763},"openingHours":"Mo-Th 09:00-18:30, Fr 09:00-14:00"}
-  </script>
-
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -39,67 +29,194 @@
   <link rel="stylesheet" href="css/style.css" fetchpriority="high">
 
   <style>
-    /* ── HOVERING BOTONES "Más información" y "Ver servicio" ── */
-    .servicio-item a,
-    .servicio-card .btn {
-      transition: background-color .22s ease, color .22s ease, transform .2s ease, box-shadow .2s ease !important;
+    /* ── FRANJA INTRODUCTORIA ── */
+    .intro-franja {
+      background: #29524E;
+      padding: 3rem 0;
     }
-    .servicio-item a {
-      display: inline-block;
-      color: #00989A;
+    .intro-franja blockquote {
+      border-left: 4px solid #00989A;
+      padding-left: 1.6rem;
+      margin: 0;
+      color: rgba(255,255,255,.9);
+      font-size: clamp(.97rem, 2vw, 1.1rem);
+      line-height: 1.75;
+      font-style: normal;
+    }
+    .intro-franja blockquote strong {
+      color: #fff;
       font-weight: 700;
-      font-size: .9rem;
-      text-decoration: none;
-      padding: 8px 18px;
-      border: 2px solid #00989A;
-      border-radius: 8px;
-      margin-top: .5rem;
     }
-    .servicio-item a:hover {
+
+    /* ── SERVICIOS CON PÁGINA ── */
+    .servicios-con-pagina { padding: 60px 0 40px; background: #fafafa; }
+    .servicios-con-pagina h2 {
+      color: #29524E;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .servicios-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+    @media(max-width:640px){ .servicios-grid-2 { grid-template-columns: 1fr; } }
+
+    .servicio-item {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      gap: 1.1rem;
+      align-items: flex-start;
+      box-shadow: 0 3px 14px rgba(0,0,0,.06);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .servicio-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,152,154,.14);
+    }
+    .servicio-item img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .servicio-content h3 {
+      color: #00989A;
+      font-size: .97rem;
+      font-weight: 700;
+      margin-bottom: .35rem;
+    }
+    .servicio-content p {
+      color: #4a5568;
+      font-size: .88rem;
+      line-height: 1.6;
+      margin-bottom: .75rem;
+      text-align: justify;
+    }
+    /* Botón teal + blanco */
+    .btn-mas-info {
+      display: inline-block;
+      background: #00989A;
+      color: #fff !important;
+      font-size: .82rem;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background .22s ease, transform .2s ease, box-shadow .2s ease;
+    }
+    .btn-mas-info:hover {
+      background: #29524E;
+      color: #fff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,152,154,.3);
+    }
+    /* Botón outline blanco+teal */
+    .btn-consulta {
+      display: inline-block;
+      background: #fff;
+      color: #00989A !important;
+      border: 2px solid #00989A;
+      font-size: .82rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background .22s ease, color .22s ease, transform .2s ease;
+    }
+    .btn-consulta:hover {
+      background: #00989A;
+      color: #fff !important;
+      transform: translateY(-2px);
+    }
+    .btn-group-srv { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    /* ── SERVICIOS SIN PÁGINA ESPECÍFICA ── */
+    .servicios-extra {
+      background: #fff;
+      padding: 40px 0 50px;
+      border-top: 1px solid #e8f0ef;
+    }
+    .servicios-extra h2 {
+      color: #29524E;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.4rem;
+    }
+    .extra-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      justify-content: center;
+    }
+    .extra-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f0fafa;
+      border: 1.5px solid #b2dede;
+      border-radius: 30px;
+      padding: 9px 18px;
+      color: #29524E;
+      font-size: .88rem;
+      font-weight: 600;
+    }
+    .extra-tag img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    /* ── CTA BAND ── */
+    .cta-band-srv {
+      background: linear-gradient(135deg, #29524E 0%, #00989A 100%);
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .cta-band-srv h2 {
+      color: #fff;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-weight: 800;
+      margin-bottom: .5rem;
+    }
+    .cta-band-srv p {
+      color: rgba(255,255,255,.82);
+      font-size: .97rem;
+      margin-bottom: 1.6rem;
+    }
+    .cta-band-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .cta-band-btns a {
+      padding: 13px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: .93rem;
+      text-decoration: none;
+      transition: all .22s ease;
+    }
+    .cta-b-contact { background: #fff; color: #00989A; }
+    .cta-b-contact:hover { background: #e8f5f5; color: #29524E; transform: translateY(-3px); }
+    .cta-b-tel { background: rgba(255,255,255,.15); color: #fff; border: 2px solid rgba(255,255,255,.5); }
+    .cta-b-tel:hover { background: rgba(255,255,255,.28); color: #fff; transform: translateY(-3px); }
+    .cta-b-wa { background: #25D366; color: #fff; }
+    .cta-b-wa:hover { background: #1da851; color: #fff; transform: translateY(-3px); }
+
+    /* Servicio-card botones */
+    .servicio-card .btn {
       background-color: #00989A !important;
       color: #fff !important;
-      transform: translateY(-3px) !important;
-      box-shadow: 0 8px 18px rgba(0,152,154,.3) !important;
+      transition: background .22s ease, transform .2s ease, box-shadow .2s ease !important;
     }
-    /* Botón monitorio — destaca en teal sólido */
-    .servicio-item .btn-monitorio {
-      background-color: #00989A;
-      color: #fff;
-      border: none;
-      margin-top: .5rem;
-    }
-    .servicio-item .btn-monitorio:hover {
+    .servicio-card .btn:hover {
       background-color: #29524E !important;
       color: #fff !important;
       transform: translateY(-3px) !important;
-      box-shadow: 0 8px 18px rgba(41,82,78,.3) !important;
-    }
-    /* Servicio-card botones */
-    .servicio-card .btn {
-      background-color: var(--color-primary) !important;
-      color: #fff !important;
-    }
-    .servicio-card .btn:hover {
-      background-color: var(--color-secundary) !important;
-      color: #fff !important;
-      transform: translateY(-3px) !important;
       box-shadow: 0 8px 18px rgba(0,152,154,.3) !important;
-    }
-
-    /* ── RECLAMACIONES — tarjeta separada visualmente ── */
-    .reclamaciones-wrap {
-      border-top: 1px solid #e2eaea;
-      margin-top: 2rem;
-      padding-top: 2rem;
-    }
-    .reclamaciones-wrap .servicio-item {
-      max-width: 480px;
-    }
-    .btn-group-servicios {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: .5rem;
     }
   </style>
 </head>
@@ -115,7 +232,7 @@
 
   <header class="cabecera" role="banner">
     <div class="logo-container">
-      <a href="index.html"><img class="logo" src="img/logo-Antonio-Gaitan-abogados.svg" alt="Logo Antonio Gait&aacute;n Abogados" loading="lazy"></a>
+      <a href="index.html"><img class="logo" src="img/logo-Antonio-Gaitan-abogados.svg" alt="Antonio Gait&aacute;n Abogados" loading="lazy"></a>
     </div>
     <button class="burguer" id="burguer" aria-label="Abrir men&uacute;">
       <div class="burguer-sticks"></div>
@@ -132,8 +249,6 @@
             <a class="menu_link submenu-link" href="servicios.html">+ Servicios</a>
             <ul class="submenu">
               <li><a href="leySegundaOportunidad.html">Ley de segunda oportunidad</a></li>
-              <li><a href="gestion-de-deudas.html">Gesti&oacute;n de deudas</a></li>
-              <li><a href="reclamacion-de-deudas.html">Reclamaci&oacute;n de deudas</a></li>
               <li><a href="regularizacion-de-fincas.html">Regularizaci&oacute;n de fincas</a></li>
               <li><a href="derechoFamilia.html">Derecho de familia</a></li>
               <li><a href="gastoshipoteca.html">Desahucios</a></li>
@@ -180,7 +295,7 @@
         <div class="row g-4">
           <div class="col-12 col-md-4">
             <div class="servicio-card h-100">
-              <img style="width:100%;border-radius:5px;" src="img/servicios/SEGUNA OPORTUNIDAD MOVIL.svg" alt="Ley de Segunda Oportunidad Almer&iacute;a">
+              <img style="width:100%;border-radius:5px;" src="img/servicios/SEGUNA OPORTUNIDAD MOVIL.svg" alt="Ley de Segunda Oportunidad">
               <h3 class="servicio-title carousel-title">Ley de Segunda Oportunidad</h3>
               <p class="servicio-text carousel-text">Cancela tus deudas de forma legal y empieza de nuevo con el respaldo de un abogado especializado.</p>
               <a href="leySegundaOportunidad.html" class="btn">Ver servicio</a>
@@ -188,17 +303,17 @@
           </div>
           <div class="col-12 col-md-4">
             <div class="servicio-card h-100">
-              <img style="width:100%;border-radius:5px;" src="img/servicios/GASTOS HIPOTECA MOVIL.svg" alt="Desahucios Almer&iacute;a">
+              <img style="width:100%;border-radius:5px;" src="img/servicios/GASTOS HIPOTECA MOVIL.svg" alt="Desahucios">
               <h3 class="servicio-title carousel-title">Desahucios</h3>
-              <p class="servicio-text carousel-text">Asesoramiento y defensa legal en procedimientos de desahucio, tanto para propietarios como inquilinos.</p>
+              <p class="servicio-text carousel-text">Asesoramiento y defensa legal en procedimientos de desahucio, para propietarios e inquilinos.</p>
               <a href="gastoshipoteca.html" class="btn">Ver servicio</a>
             </div>
           </div>
           <div class="col-12 col-md-4">
             <div class="servicio-card h-100">
-              <img style="width:100%;border-radius:5px;" src="img/servicios/familia.jpg" alt="Derecho de familia Almer&iacute;a">
+              <img style="width:100%;border-radius:5px;" src="img/servicios/familia.jpg" alt="Derecho de familia">
               <h3 class="servicio-title carousel-title">Derecho de Familia</h3>
-              <p class="servicio-text carousel-text">Divorcios, custodia, convenios reguladores y pensi&oacute;n de alimentos con un enfoque humano y responsable.</p>
+              <p class="servicio-text carousel-text">Divorcios, custodia, convenios reguladores y pensi&oacute;n de alimentos con enfoque humano y responsable.</p>
               <a href="derechoFamilia.html" class="btn">Ver servicio</a>
             </div>
           </div>
@@ -206,144 +321,123 @@
       </div>
     </section>
 
-    <!-- TEXTO PRESENTACIÓN -->
-    <div class="container introduccion">
-      <div class="row">
-        <div class="container presentacion">
-          <div class="row">
-            <p class="intro-text">En nuestro despacho entendemos que cada conflicto legal tiene un impacto real en tu vida. Por eso, ofrecemos un asesoramiento integral, riguroso y adaptado a tu situaci&oacute;n. No creemos en soluciones gen&eacute;ricas ni en tr&aacute;mites impersonales: creemos en el trato directo, en el estudio minucioso y en la defensa firme de tus intereses. Atendemos asuntos de derecho civil, bancario, de familia y m&aacute;s, con una vocaci&oacute;n clara: resolver.</p>
+    <!-- FRANJA INTRODUCTORIA — texto integrado en banda oscura -->
+    <div class="intro-franja">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <blockquote>
+              En nuestro despacho entendemos que cada conflicto legal tiene un impacto real en tu vida. Por eso ofrecemos un asesoramiento <strong>integral, riguroso y adaptado</strong> a tu situaci&oacute;n. No creemos en soluciones gen&eacute;ricas ni en tr&aacute;mites impersonales: creemos en el trato directo, en el estudio minucioso y en la defensa firme de tus intereses. Nuestra vocaci&oacute;n es clara: <strong>resolver</strong>.
+            </blockquote>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- GRID COMPLETO DE SERVICIOS -->
-    <section class="servicios">
+    <!-- TODOS LOS SERVICIOS CON PÁGINA -->
+    <section class="servicios-con-pagina">
       <div class="container">
-        <h2 class="carousel-title servicios-heading">Todos nuestros servicios</h2>
-
+        <h2>Todos nuestros servicios</h2>
         <div class="servicios-grid-2">
 
-          <!-- Gestión de deudas -->
-          <article class="servicio-item">
-            <img src="img/iconos/ley_segunda_oportunidad.png" alt="Gesti&oacute;n de deudas">
-            <div class="servicio-content">
-              <h3 class="carousel-title">Gesti&oacute;n de deudas</h3>
-              <p class="carousel-text">Daci&oacute;n en pago y negociaci&oacute;n con acreedores: quitas, esperas y acuerdos extrajudiciales para cerrar la deuda definitivamente.</p>
-              <a href="gestion-de-deudas.html">M&aacute;s informaci&oacute;n</a>
-            </div>
-          </article>
-
-          <!-- Reclamación de deudas -->
-          <article class="servicio-item">
-            <img src="img/iconos/reclamaciones_de_cantidad.png" alt="Reclamaci&oacute;n de deudas">
-            <div class="servicio-content">
-              <h3 class="carousel-title">Reclamaci&oacute;n de deudas</h3>
-              <p class="carousel-text">Proceso monitorio y negociaci&oacute;n extrajudicial para recuperar lo que te deben de forma &aacute;gil y eficaz.</p>
-              <a href="reclamacion-de-deudas.html">M&aacute;s informaci&oacute;n</a>
-            </div>
-          </article>
-
-          <!-- LSO -->
           <article class="servicio-item">
             <img src="img/iconos/ley_segunda_oportunidad.png" alt="Ley de Segunda Oportunidad">
             <div class="servicio-content">
-              <h3 class="carousel-title">Ley de segunda oportunidad</h3>
-              <p class="carousel-text">Gestionamos la cancelaci&oacute;n legal de tus deudas para que puedas empezar de nuevo con tranquilidad.</p>
-              <a href="leySegundaOportunidad.html">M&aacute;s informaci&oacute;n</a>
+              <h3>Ley de segunda oportunidad</h3>
+              <p>Gestionamos la cancelaci&oacute;n legal de tus deudas para que puedas empezar de nuevo con tranquilidad.</p>
+              <a href="leySegundaOportunidad.html" class="btn-mas-info">M&aacute;s informaci&oacute;n</a>
             </div>
           </article>
 
-          <!-- Derecho de familia -->
           <article class="servicio-item">
             <img src="img/iconos/derecho_de_familia.png" alt="Derecho de familia">
             <div class="servicio-content">
-              <h3 class="carousel-title">Derecho de familia</h3>
-              <p class="carousel-text">Divorcios, custodias y pensiones tratados con sensibilidad y firmeza jur&iacute;dica.</p>
-              <a href="derechoFamilia.html">M&aacute;s informaci&oacute;n</a>
+              <h3>Derecho de familia</h3>
+              <p>Divorcios, custodias y pensiones tratados con sensibilidad y firmeza jur&iacute;dica.</p>
+              <a href="derechoFamilia.html" class="btn-mas-info">M&aacute;s informaci&oacute;n</a>
             </div>
           </article>
 
-          <!-- Desahucios (antes Gastos de hipoteca) -->
           <article class="servicio-item">
             <img src="img/iconos/derecho_hipotecario_IRPH_gastos_hipoteca.png" alt="Desahucios">
             <div class="servicio-content">
-              <h3 class="carousel-title">Desahucios e impagos de alquiler</h3>
-              <p class="carousel-text">Gestionamos procedimientos de desahucio con rapidez y eficacia, protegiendo tus derechos como propietario o inquilino.</p>
-              <a href="gastoshipoteca.html">M&aacute;s informaci&oacute;n</a>
+              <h3>Desahucios e impagos de alquiler</h3>
+              <p>Gestionamos procedimientos de desahucio con rapidez y eficacia, protegiendo tus derechos.</p>
+              <a href="gastoshipoteca.html" class="btn-mas-info">M&aacute;s informaci&oacute;n</a>
             </div>
           </article>
 
-          <!-- Accidentes de tráfico -->
           <article class="servicio-item">
             <img src="img/iconos/accidente_de_trafico.png" alt="Accidentes de tr&aacute;fico">
             <div class="servicio-content">
-              <h3 class="carousel-title">Accidentes de tr&aacute;fico</h3>
-              <p class="carousel-text">Reclamamos tu indemnizaci&oacute;n y te defendemos frente a las aseguradoras desde el primer momento.</p>
-              <a href="accidentesTrafico.html">M&aacute;s informaci&oacute;n</a>
+              <h3>Accidentes de tr&aacute;fico</h3>
+              <p>Reclamamos tu indemnizaci&oacute;n y te defendemos frente a las aseguradoras desde el primer momento.</p>
+              <a href="accidentesTrafico.html" class="btn-mas-info">M&aacute;s informaci&oacute;n</a>
             </div>
           </article>
 
-          <!-- Derecho penal -->
           <article class="servicio-item">
-            <img src="img/iconos/derecho_penal.png" alt="Derecho penal">
-            <div class="servicio-content">
-              <h3 class="carousel-title">Derecho penal</h3>
-              <p class="carousel-text">Asistencia inmediata al detenido y defensa completa durante todo el procedimiento penal.</p>
-            </div>
-          </article>
-
-          <!-- Despidos -->
-          <article class="servicio-item">
-            <img src="img/iconos/despidos.png" alt="Despidos">
-            <div class="servicio-content">
-              <h3 class="carousel-title">Despidos</h3>
-              <p class="carousel-text">Defendemos tus derechos frente a despidos improcedentes o injustificados.</p>
-            </div>
-          </article>
-
-          <!-- Extranjería -->
-          <article class="servicio-item">
-            <img src="img/iconos/extranjeria.png" alt="Extranjer&iacute;a">
-            <div class="servicio-content">
-              <h3 class="carousel-title">Extranjer&iacute;a</h3>
-              <p class="carousel-text">Tramitamos nacionalidad, residencia y regularizaci&oacute;n en Espa&ntilde;a.</p>
-            </div>
-          </article>
-
-          <!-- Regularización de fincas (nueva — sustituye a seguros) -->
-          <article class="servicio-item">
-            <img src="img/iconos/regularizacion_fincas.png" alt="Regularizaci&oacute;n de fincas"
+            <img src="img/iconos/reclamaciones_de_cantidad.png" alt="Regularizaci&oacute;n de fincas"
                  onerror="this.src='img/iconos/reclamaciones_de_cantidad.png'">
             <div class="servicio-content">
-              <h3 class="carousel-title">Regularizaci&oacute;n de fincas</h3>
-              <p class="carousel-text">Segregaciones, expedientes de dominio, inmatriculaciones y rectificaci&oacute;n de linderos. Regularizamos tu propiedad con plena seguridad jur&iacute;dica.</p>
-              <a href="regularizacion-de-fincas.html">M&aacute;s informaci&oacute;n</a>
+              <h3>Regularizaci&oacute;n de fincas</h3>
+              <p>Segregaciones, expedientes de dominio, inmatriculaciones y rectificaci&oacute;n de linderos con plena seguridad jur&iacute;dica.</p>
+              <a href="regularizacion-de-fincas.html" class="btn-mas-info">M&aacute;s informaci&oacute;n</a>
             </div>
           </article>
 
-        </div><!-- /.servicios-grid-2 -->
-
-        <!-- RECLAMACIONES DE CANTIDAD — separada, con botón al blog -->
-        <div class="reclamaciones-wrap">
           <article class="servicio-item">
             <img src="img/iconos/reclamaciones_de_cantidad.png" alt="Reclamaciones de cantidad">
             <div class="servicio-content">
-              <h3 class="carousel-title">Reclamaciones de cantidad</h3>
-              <p class="carousel-text">Procesos r&aacute;pidos y eficaces para recuperar cantidades impagadas. Utilizamos el proceso monitorio y otras v&iacute;as civiles para que cobres lo que te deben.</p>
-              <div class="btn-group-servicios">
-                <a href="proceso-monitorio-recuperar-dinero.html" class="btn-monitorio">Gu&iacute;a del proceso monitorio</a>
-                <a href="contacto.html">Consultar mi caso</a>
+              <h3>Reclamaciones de cantidad</h3>
+              <p>Procesos r&aacute;pidos y eficaces para recuperar cantidades impagadas mediante el proceso monitorio y otras v&iacute;as civiles.</p>
+              <div class="btn-group-srv">
+                <a href="proceso-monitorio-recuperar-dinero.html" class="btn-mas-info">Gu&iacute;a del monitorio</a>
+                <a href="contacto.html" class="btn-consulta">Consultar mi caso</a>
               </div>
             </div>
           </article>
-        </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND — orgánica -->
+    <div class="cta-band-srv">
+      <div class="container">
+        <h2>Primera consulta gratuita y sin compromiso</h2>
+        <p>Cu&eacute;ntanos tu caso y te explicamos con claridad qu&eacute; podemos hacer por ti.</p>
+        <div class="cta-band-btns">
+          <a href="contacto.html" class="cta-b-contact">Solicitar consulta</a>
+          <a href="tel:+34671398925" class="cta-b-tel"><i class="bi bi-telephone-fill" style="margin-right:6px;"></i>671 39 89 25</a>
+          <a href="https://wa.me/34671398925" target="_blank" rel="noopener" class="cta-b-wa">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICIOS SIN PÁGINA ESPECÍFICA -->
+    <section class="servicios-extra">
+      <div class="container">
+        <h2>Tambi&eacute;n atendemos</h2>
+        <div class="extra-grid">
+          <span class="extra-tag">
+            <img src="img/iconos/derecho_penal.png" alt="">
+            Derecho penal
+          </span>
+          <span class="extra-tag">
+            <img src="img/iconos/despidos.png" alt="">
+            Despidos
+          </span>
+          <span class="extra-tag">
+            <img src="img/iconos/extranjeria.png" alt="">
+            Extranjer&iacute;a
+          </span>
+        </div>
       </div>
     </section>
 
     <!-- FORMULARIO -->
-    <div class="container formulario" style="margin-bottom:80px;">
+    <div class="container formulario" style="margin-bottom:80px; margin-top:60px;">
       <div class="texto-form row">
         <h3 class="form__title">El primer paso para <span class="resolverlo">resolverlo</span> <span style="font-family:meddon;">empieza aqu&iacute;</span></h3>
         <p class="form-info">Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
