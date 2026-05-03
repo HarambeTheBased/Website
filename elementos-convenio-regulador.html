@@ -46,25 +46,40 @@
     .info-card p { color:#4a5568; line-height:1.6; margin:0; font-size:.95rem; text-align:justify; }
     .card-icon { font-size:1.9rem; margin-bottom:.65rem; display:block; text-align:center; }
 
-    /* BLOQUES TEMÁTICOS */
+    /* BLOQUES TEMÁTICOS — estilo criterio-card con icono lateral */
     .bloque-stack { display:flex; flex-direction:column; gap:1.2rem; margin:1.5rem 0; }
     .bloque-card {
       background:#fff; border-radius:16px; padding:1.5rem 1.8rem;
       box-shadow:0 4px 16px rgba(0,0,0,.06);
       border-left:5px solid #00989A;
+      display:flex; gap:1.2rem; align-items:flex-start;
       transition:transform .2s, box-shadow .2s;
     }
     .bloque-card:hover { transform:translateY(-4px); box-shadow:0 10px 28px rgba(0,152,154,.12); }
-    .bloque-card h3 { color:#29524E; font-size:1rem; font-weight:700; margin-bottom:.6rem; }
-    .bloque-card p { color:#4a5568; font-size:.93rem; line-height:1.65; margin:0; text-align:justify; }
-    .bloque-card ul { color:#4a5568; font-size:.93rem; line-height:1.65; margin:.5rem 0 0 1rem; padding:0; list-style:disc; }
-    .bloque-card ul li { margin-bottom:.3rem; }
-    .bloque-etiqueta {
-      display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.07em;
-      text-transform:uppercase; background:#e8f5f5; color:#00989A;
-      padding:3px 10px; border-radius:20px; margin-bottom:.7rem;
+    .bloque-card.opcional { border-left-color: #c8a94a; }
+    .bloque-icono {
+      font-size:1.6rem; flex-shrink:0;
+      background:#e8f5f5; border-radius:12px;
+      width:52px; height:52px;
+      display:flex; align-items:center; justify-content:center;
     }
-    .bloque-etiqueta.opcional { background:#fdf6e8; color:#8B6914; }
+    .bloque-card.opcional .bloque-icono { background:#fdf6e8; }
+    .bloque-body { flex:1; }
+    .bloque-body h3 { color:#29524E; font-size:1rem; font-weight:700; margin-bottom:.4rem; display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+    .bloque-body p { color:#4a5568; font-size:.93rem; line-height:1.65; margin:0; text-align:justify; }
+    .bloque-body ul { color:#4a5568; font-size:.93rem; line-height:1.65; margin:.5rem 0 0 1rem; padding:0; list-style:disc; }
+    .bloque-body ul li { margin-bottom:.3rem; }
+    .bloque-etiqueta {
+      display:inline-block; font-size:.68rem; font-weight:700; letter-spacing:.07em;
+      text-transform:uppercase; background:#e8f5f5; color:#00989A;
+      padding:2px 9px; border-radius:20px;
+    }
+    .bloque-card.opcional .bloque-etiqueta { background:#fdf6e8; color:#8B6914; }
+    /* check-list */
+    .check-list { list-style:none; padding:0; margin:1rem 0; }
+    .check-list li { padding:.5rem 0 .5rem 1.8rem; position:relative; color:#4a5568; font-size:.95rem; line-height:1.6; border-bottom:1px solid #eef2f2; }
+    .check-list li:last-child { border-bottom:none; }
+    .check-list li::before { content:'✓'; position:absolute; left:0; color:#00989A; font-weight:700; }
 
     .highlight-box { background:#e8f5f5; border-radius:14px; padding:1.3rem 1.8rem; margin:1.5rem 0; border:1px solid #b2dede; }
     .highlight-box p { margin:0; color:#29524E; font-size:.97rem; line-height:1.7; }
@@ -194,41 +209,51 @@
         <div class="bloque-stack">
 
           <div class="bloque-card">
-            <span class="bloque-etiqueta">Obligatorio</span>
-            <h3>&#128101; Patria potestad</h3>
-            <p>El convenio debe indicar si la patria potestad se ejercer&aacute; de forma conjunta por ambos progenitores &mdash;que es lo habitual&mdash; o si, excepcionalmente, se atribuye en exclusiva a uno de ellos. La patria potestad conjunta implica que las decisiones relevantes sobre la vida del menor (cambio de colegio, intervenciones m&eacute;dicas no urgentes, viajes al extranjero) requieren el acuerdo de ambos. Es distinta de la custodia.</p>
+            <div class="bloque-icono">&#128101;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Obligatorio</span> Patria potestad</h3>
+              <p>El convenio debe indicar si la patria potestad se ejercer&aacute; de forma conjunta por ambos progenitores &mdash;que es lo habitual&mdash; o si, excepcionalmente, se atribuye en exclusiva a uno de ellos. La patria potestad conjunta implica que las decisiones relevantes sobre la vida del menor (cambio de colegio, intervenciones m&eacute;dicas no urgentes, viajes al extranjero) requieren el acuerdo de ambos. Es distinta de la custodia.</p>
+            </div>
           </div>
 
           <div class="bloque-card">
-            <span class="bloque-etiqueta">Obligatorio</span>
-            <h3>&#127968; Guarda y custodia</h3>
-            <p>Determina con qui&eacute;n reside el menor de forma habitual. Puede ser monoparental &mdash;el menor vive principalmente con un progenitor&mdash; o compartida &mdash;los tiempos se reparten de forma equitativa entre ambos&mdash;. Esta es habitualmente la cuesti&oacute;n m&aacute;s sensible del convenio y la que m&aacute;s conflicto genera cuando no hay acuerdo.</p>
+            <div class="bloque-icono">&#127968;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Obligatorio</span> Guarda y custodia</h3>
+              <p>Determina con qui&eacute;n reside el menor de forma habitual. Puede ser monoparental &mdash;el menor vive principalmente con un progenitor&mdash; o compartida &mdash;los tiempos se reparten de forma equitativa entre ambos&mdash;. Esta es habitualmente la cuesti&oacute;n m&aacute;s sensible del convenio y la que m&aacute;s conflicto genera cuando no hay acuerdo.</p>
+            </div>
           </div>
 
           <div class="bloque-card">
-            <span class="bloque-etiqueta">Obligatorio</span>
-            <h3>&#128197; R&eacute;gimen de visitas y estancias</h3>
-            <p>Si la custodia es monoparental, el convenio debe regular con detalle c&oacute;mo y cu&aacute;ndo el progenitor no custodio estar&aacute; con los hijos. Esto incluye:</p>
-            <ul>
-              <li>Fines de semana alternos (horarios de recogida y entrega, lugar)</li>
-              <li>Periodos vacacionales: Navidad, Semana Santa, verano</li>
-              <li>D&iacute;as festivos y puentes</li>
-              <li>D&iacute;as especiales: cumplea&ntilde;os, d&iacute;a del padre, d&iacute;a de la madre</li>
-              <li>Comunicaciones telef&oacute;nicas o por videoconferencia</li>
-            </ul>
-            <p style="margin-top:.6rem;">Cuanto m&aacute;s detallado est&eacute; este apartado, menos margen hay para conflictos posteriores.</p>
+            <div class="bloque-icono">&#128197;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Obligatorio</span> R&eacute;gimen de visitas y estancias</h3>
+              <p>Si la custodia es monoparental, el convenio debe regular con detalle c&oacute;mo y cu&aacute;ndo el progenitor no custodio estar&aacute; con los hijos. Esto incluye:</p>
+              <ul>
+                <li>Fines de semana alternos (horarios de recogida y entrega, lugar)</li>
+                <li>Periodos vacacionales: Navidad, Semana Santa, verano</li>
+                <li>D&iacute;as festivos y puentes</li>
+                <li>D&iacute;as especiales: cumplea&ntilde;os, d&iacute;a del padre, d&iacute;a de la madre</li>
+                <li>Comunicaciones telef&oacute;nicas o por videoconferencia</li>
+              </ul>
+              <p style="margin-top:.6rem;">Cuanto m&aacute;s detallado est&eacute; este apartado, menos margen hay para conflictos posteriores.</p>
+            </div>
           </div>
 
           <div class="bloque-card">
-            <span class="bloque-etiqueta">Obligatorio</span>
-            <h3>&#128184; Pensi&oacute;n de alimentos</h3>
-            <p>El progenitor no custodio &mdash;o el de menor capacidad econ&oacute;mica en custodia compartida&mdash; abona una cantidad mensual para cubrir las necesidades ordinarias del menor: alimentaci&oacute;n, ropa, educaci&oacute;n b&aacute;sica, sanidad ordinaria. El convenio debe fijar la cuant&iacute;a, el d&iacute;a de pago, la cuenta bancaria destinataria y el mecanismo de actualizaci&oacute;n anual (habitualmente vinculado al IPC).</p>
+            <div class="bloque-icono">&#128184;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Obligatorio</span> Pensi&oacute;n de alimentos</h3>
+              <p>El progenitor no custodio &mdash;o el de menor capacidad econ&oacute;mica en custodia compartida&mdash; abona una cantidad mensual para cubrir las necesidades ordinarias del menor: alimentaci&oacute;n, ropa, educaci&oacute;n b&aacute;sica, sanidad ordinaria. El convenio debe fijar la cuant&iacute;a, el d&iacute;a de pago, la cuenta bancaria destinataria y el mecanismo de actualizaci&oacute;n anual (habitualmente vinculado al IPC).</p>
+            </div>
           </div>
 
           <div class="bloque-card">
-            <span class="bloque-etiqueta">Obligatorio</span>
-            <h3>&#128203; Gastos extraordinarios</h3>
-            <p>Son los gastos no cubiertos por la pensi&oacute;n ordinaria: material escolar, actividades extraescolares, gafas, ortodoncia, tratamientos m&eacute;dicos no cubiertos por el seguro, campamentos, carnet de conducir, estudios universitarios... El convenio debe definir qu&eacute; se considera gasto extraordinario, en qu&eacute; porcentaje los asume cada progenitor y el procedimiento para comunicarlos y aprobarlos. Si no se regula bien, este apartado es fuente frecuente de conflictos.</p>
+            <div class="bloque-icono">&#128203;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Obligatorio</span> Gastos extraordinarios</h3>
+              <p>Son los gastos no cubiertos por la pensi&oacute;n ordinaria: material escolar, actividades extraescolares, gafas, ortodoncia, tratamientos m&eacute;dicos no cubiertos por el seguro, campamentos, carnet de conducir, estudios universitarios... El convenio debe definir qu&eacute; se considera gasto extraordinario, en qu&eacute; porcentaje los asume cada progenitor y el procedimiento para comunicarlos y aprobarlos. Si no se regula bien, este apartado es fuente frecuente de conflictos.</p>
+            </div>
           </div>
 
         </div>
@@ -267,28 +292,36 @@
 
         <div class="bloque-stack">
 
-          <div class="bloque-card">
-            <span class="bloque-etiqueta opcional">Recomendable</span>
-            <h3>&#9992; Traslado al extranjero con el menor</h3>
-            <p>Si uno de los progenitores puede necesitar moverse por trabajo u otras razones, es conveniente regular de antemano qu&eacute; ocurre con la custodia y el r&eacute;gimen de visitas si uno de ellos traslada su residencia fuera de Espa&ntilde;a. Sin este pacto, cualquier traslado requiere autorizaci&oacute;n judicial o del otro progenitor.</p>
+          <div class="bloque-card opcional">
+            <div class="bloque-icono">&#9992;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Recomendable</span> Traslado al extranjero con el menor</h3>
+              <p>Si uno de los progenitores puede necesitar moverse por trabajo u otras razones, es conveniente regular de antemano qu&eacute; ocurre con la custodia y el r&eacute;gimen de visitas si uno de ellos traslada su residencia fuera de Espa&ntilde;a. Sin este pacto, cualquier traslado requiere autorizaci&oacute;n judicial o del otro progenitor.</p>
+            </div>
           </div>
 
-          <div class="bloque-card">
-            <span class="bloque-etiqueta opcional">Recomendable</span>
-            <h3>&#128222; Protocolo de comunicaci&oacute;n entre progenitores</h3>
-            <p>Establecer el canal habitual de comunicaci&oacute;n entre ambos progenitores respecto al menor (correo electr&oacute;nico, mensajes de texto) y el plazo de respuesta en las decisiones que requieran acuerdo evita ambig&uuml;edades y acredita mejor los incumplimientos si los hubiera.</p>
+          <div class="bloque-card opcional">
+            <div class="bloque-icono">&#128222;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Recomendable</span> Protocolo de comunicaci&oacute;n entre progenitores</h3>
+              <p>Establecer el canal habitual de comunicaci&oacute;n entre ambos progenitores respecto al menor (correo electr&oacute;nico, mensajes de texto) y el plazo de respuesta en las decisiones que requieran acuerdo evita ambig&uuml;edades y acredita mejor los incumplimientos si los hubiera.</p>
+            </div>
           </div>
 
-          <div class="bloque-card">
-            <span class="bloque-etiqueta opcional">Recomendable</span>
-            <h3>&#9878; Cl&aacute;usula de revisi&oacute;n</h3>
-            <p>Prever expresamente en qu&eacute; circunstancias se revisar&aacute; el convenio (cambio de trabajo, traslado de domicilio, cambio significativo en los ingresos) ahorra procedimientos judiciales de modificaci&oacute;n de medidas. No es vinculante en sentido estricto, pero orienta a las partes y demuestra buena fe ante el juzgado.</p>
+          <div class="bloque-card opcional">
+            <div class="bloque-icono">&#9878;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Recomendable</span> Cl&aacute;usula de revisi&oacute;n</h3>
+              <p>Prever expresamente en qu&eacute; circunstancias se revisar&aacute; el convenio (cambio de trabajo, traslado de domicilio, cambio significativo en los ingresos) ahorra procedimientos judiciales de modificaci&oacute;n de medidas. No es vinculante en sentido estricto, pero orienta a las partes y demuestra buena fe ante el juzgado.</p>
+            </div>
           </div>
 
-          <div class="bloque-card">
-            <span class="bloque-etiqueta opcional">Recomendable</span>
-            <h3>&#128100; Tutela para el caso de fallecimiento</h3>
-            <p>Si ambos progenitores fallecen, es posible designar en el convenio a la persona que se har&iacute;a cargo del menor. No sustituye al testamento, pero puede dejar constancia de la voluntad com&uacute;n y facilitar los tr&aacute;mites.</p>
+          <div class="bloque-card opcional">
+            <div class="bloque-icono">&#128100;</div>
+            <div class="bloque-body">
+              <h3><span class="bloque-etiqueta">Recomendable</span> Tutela para el caso de fallecimiento</h3>
+              <p>Si ambos progenitores fallecen, es posible designar en el convenio a la persona que se har&iacute;a cargo del menor. No sustituye al testamento, pero puede dejar constancia de la voluntad com&uacute;n y facilitar los tr&aacute;mites.</p>
+            </div>
           </div>
 
         </div>
@@ -299,7 +332,7 @@
         <h2 class="blog-titulo">Lo que el juez puede no aprobar</h2>
         <p class="carousel-text">El convenio regulador no es un contrato privado ordinario. El juez tiene facultad para rechazar los pactos que considere da&ntilde;osos para los hijos menores o gravemente perjudiciales para uno de los c&oacute;nyuges. En la pr&aacute;ctica, los motivos de rechazo m&aacute;s frecuentes son:</p>
         <br>
-        <ul style="color:#4a5568; line-height:1.8; padding-left:1.4rem; font-size:.97rem;">
+        <ul class="check-list">
           <li>Una pensi&oacute;n de alimentos claramente insuficiente para las necesidades del menor</li>
           <li>Un r&eacute;gimen de visitas tan restrictivo que vulnere el derecho del menor a relacionarse con ambos progenitores</li>
           <li>Pactos sobre la vivienda que perjudiquen al menor de forma manifiesta</li>
