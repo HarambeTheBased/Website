@@ -15,7 +15,7 @@ html, body {
 
 /* ── POST-MAIN: compensación correcta del header fijo ── */
 .post-main {
-    padding-top: 30px;
+    padding-top: 40px;
 }
 @media (max-width: 767px) {
     .post-main {
