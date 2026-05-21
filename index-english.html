@@ -318,5 +318,27 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click',e=>{if(e.target===overlay)closeMeritos();});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMeritos();});
   </script>
+
+  <script>
+    // Translate newsletter popup loaded dynamically
+    (function() {
+      function translateNewsletter() {
+        var popup = document.getElementById('newsletter-popup');
+        if (!popup) return;
+        var title = popup.querySelector('h3');
+        var desc  = popup.querySelector('p');
+        var btn   = popup.querySelector('button[type="submit"]');
+        var input = popup.querySelector('input[type="email"]');
+        if (title) title.textContent = 'Subscribe to our legal newsletter';
+        if (desc)  desc.textContent  = 'Receive clear, practical legal articles on Spanish law directly in your inbox.';
+        if (btn)   btn.textContent   = 'Subscribe';
+        if (input) input.placeholder = 'Your email address';
+      }
+      // Try immediately and after short delay (in case it loads async)
+      document.addEventListener('DOMContentLoaded', translateNewsletter);
+      setTimeout(translateNewsletter, 1000);
+      setTimeout(translateNewsletter, 2500);
+    })();
+  </script>
 </body>
 </html>
