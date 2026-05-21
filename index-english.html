@@ -207,7 +207,6 @@
 
     <section id="entradas" class="text-center"><div class="row entradas">
       <h3>Latest articles</h3>
-      <p style="font-size:12px;color:#4a5568;margin-bottom:8px;font-family:'Helvetica Neue',sans-serif;">Some articles are available in Spanish — use the language switcher to explore.</p>
       <div id="ultimas-entradas"></div>
     </div></section>
     <script>fetch('blog.html?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error();return r.text();}).then(html=>{const doc=new DOMParser().parseFromString(html,'text/html');const posts=Array.from(doc.querySelectorAll('.post')).slice(0,3);const c=document.getElementById('ultimas-entradas');c.innerHTML='';posts.forEach(p=>c.appendChild(p.cloneNode(true)));}).catch(()=>{});</script>
